@@ -145,7 +145,7 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {team.map((member, index) => (
               <Card key={index} className="border-2 border-border">
                 <CardContent className="p-6 text-center">
