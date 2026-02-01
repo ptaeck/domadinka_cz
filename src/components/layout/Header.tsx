@@ -5,7 +5,7 @@ import logo from "@/assets/domadinka-logo.png";
 
 // Links always visible in header
 const mainNavLinks = [
-  { to: "/registration", label: "Registrace" },
+  { to: "/registration", label: "Přihláška" },
   { to: "/contact", label: "Kontakt" },
 ];
 
@@ -14,7 +14,7 @@ const allNavLinks = [
   { to: "/", label: "Domů" },
   { to: "/about", label: "O nás" },
   { to: "/gallery", label: "Galerie" },
-  { to: "/registration", label: "Registrace" },
+  { to: "/registration", label: "Přihláška" },
   { to: "/contact", label: "Kontakt" },
 ];
 
