@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Layout from "@/components/layout/Layout";
 import { Camera, ChevronLeft, ChevronRight, X } from "lucide-react";
 import domaslavMap from "@/assets/domaslav-map-landscape.jpg";
@@ -155,6 +155,29 @@ const Gallery = () => {
   const currentSlide = currentSlideIndex !== null ? allSlides[currentSlideIndex] : null;
   const hasPrev = currentSlideIndex !== null && currentSlideIndex > 0;
   const hasNext = currentSlideIndex !== null && currentSlideIndex < allSlides.length - 1;
+
+  // Keyboard navigation for lightbox
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (currentSlideIndex === null) return;
+    
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      goToPrevSlide();
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      goToNextSlide();
+    } else if (e.key === 'Escape') {
+      e.preventDefault();
+      closeLightbox();
+    }
+  }, [currentSlideIndex]);
+
+  useEffect(() => {
+    if (currentSlideIndex !== null) {
+      window.addEventListener('keydown', handleKeyDown);
+      return () => window.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [currentSlideIndex, handleKeyDown]);
 
   return (
     <Layout>
