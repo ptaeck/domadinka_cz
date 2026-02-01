@@ -333,9 +333,9 @@ const Gallery = () => {
                         className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
                         style={{ transform: `rotate(${rotation}deg)` }}
                       />
-                      <span className="mt-0.5 px-1.5 py-0.5 rounded text-[8px] sm:text-[9px] font-bold bg-background/90 text-foreground shadow-sm border border-border opacity-80 group-hover:opacity-100 transition-opacity duration-200 text-center leading-tight max-w-[80px] sm:max-w-[100px]">
+                      <span className="mt-1 px-2 py-1 rounded-md text-[10px] sm:text-xs font-bold bg-background text-foreground shadow-md border border-border/50 group-hover:shadow-lg transition-all duration-200 text-center leading-snug">
                         <span className="block">{year}</span>
-                        <span className="block font-medium text-muted-foreground truncate">{yearThemes[year] || "?"}</span>
+                        <span className="block font-semibold text-muted-foreground text-[9px] sm:text-[10px]">{yearThemes[year] || "?"}</span>
                       </span>
                     </button>
                   </div>
@@ -367,9 +367,9 @@ const Gallery = () => {
                         className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
                         style={{ transform: `rotate(${rotation}deg)` }}
                       />
-                      <span className="mt-0.5 px-1.5 py-0.5 rounded text-[8px] sm:text-[9px] font-bold bg-background/90 text-foreground shadow-sm border border-border opacity-80 group-hover:opacity-100 transition-opacity duration-200 text-center leading-tight max-w-[80px] sm:max-w-[100px]">
+                      <span className="mt-1 px-2 py-1 rounded-md text-[10px] sm:text-xs font-bold bg-background text-foreground shadow-md border border-border/50 group-hover:shadow-lg transition-all duration-200 text-center leading-snug">
                         <span className="block">{year}</span>
-                        <span className="block font-medium text-muted-foreground truncate">{splitYearThemes[year]?.upper || "?"}</span>
+                        <span className="block font-semibold text-muted-foreground text-[9px] sm:text-[10px]">{splitYearThemes[year]?.upper || "?"}</span>
                       </span>
                     </button>
                   </div>
@@ -401,9 +401,9 @@ const Gallery = () => {
                         className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
                         style={{ transform: `rotate(${rotation}deg)` }}
                       />
-                      <span className="mt-0.5 px-1.5 py-0.5 rounded text-[8px] sm:text-[9px] font-bold bg-background/90 text-foreground shadow-sm border border-border opacity-80 group-hover:opacity-100 transition-opacity duration-200 text-center leading-tight max-w-[80px] sm:max-w-[100px]">
+                      <span className="mt-1 px-2 py-1 rounded-md text-[10px] sm:text-xs font-bold bg-background text-foreground shadow-md border border-border/50 group-hover:shadow-lg transition-all duration-200 text-center leading-snug">
                         <span className="block">{year}</span>
-                        <span className="block font-medium text-muted-foreground truncate">{splitYearThemes[year]?.lower || "?"}</span>
+                        <span className="block font-semibold text-muted-foreground text-[9px] sm:text-[10px]">{splitYearThemes[year]?.lower || "?"}</span>
                       </span>
                     </button>
                   </div>
