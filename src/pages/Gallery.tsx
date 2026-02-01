@@ -70,10 +70,10 @@ const mainPathPoints = [
   { x: 5, y: 6 },      // 2006 - Domalend
   { x: 12, y: 10 },    // 2007 - Kosmodom
   { x: 20, y: 16 },    // 2008
-  { x: 30, y: 20 },    // 2009
-  { x: 40, y: 16 },    // 2011
-  { x: 50, y: 12 },    // 2012
-  { x: 60, y: 10 },    // 2013
+  { x: 22, y: 20 },    // 2009
+  { x: 34, y: 16 },    // 2011
+  { x: 46, y: 12 },    // 2012
+  { x: 58, y: 10 },    // 2013
   { x: 70, y: 12 },    // 2014
   // Row 2: going left (2015-2020) - following middle green dots
   { x: 88, y: 14 },    // 2015 - upper right corner
