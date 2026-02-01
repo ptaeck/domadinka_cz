@@ -51,9 +51,9 @@ const Header = () => {
               </Link>
             ))}
             
-            {/* Mobile Menu Toggle - for additional links */}
+            {/* Menu Toggle - always visible */}
             <button
-              className="lg:hidden p-2 ml-1 rounded-lg hover:bg-muted transition-colors"
+              className="p-2 ml-1 rounded-lg hover:bg-muted transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Přepnout menu"
             >
@@ -66,9 +66,9 @@ const Header = () => {
           </nav>
         </div>
 
-        {/* Mobile Navigation - Full menu */}
+        {/* Navigation Menu - Full menu */}
         {isMenuOpen && (
-          <nav className="lg:hidden pb-4 border-t border-border pt-4">
+          <nav className="pb-4 border-t border-border pt-4">
             <div className="flex flex-col gap-2">
               {allNavLinks.map((link) => (
                 <Link
