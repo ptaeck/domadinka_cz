@@ -11,26 +11,39 @@ const splitYears = [2023, 2024, 2025, 2026];
 // All years for navigation
 const allYears = [...singleYears, ...splitYears];
 
-const yearPhotos: Record<number, { alt: string; hasPhoto: boolean }> = {
-  2008: { alt: "Rok založení", hasPhoto: false },
-  2009: { alt: "První dobrodružství", hasPhoto: false },
-  2010: { alt: "Objevování přírody", hasPhoto: false },
-  2011: { alt: "Komunitní akce", hasPhoto: false },
-  2012: { alt: "Speciální oslavy", hasPhoto: false },
-  2013: { alt: "5 let – milník", hasPhoto: false },
-  2014: { alt: "Rozšířené programy", hasPhoto: false },
-  2015: { alt: "Nová přátelství", hasPhoto: false },
-  2016: { alt: "Kreativní dílny", hasPhoto: false },
-  2017: { alt: "Dobrodružné tábory", hasPhoto: false },
-  2018: { alt: "10 let radosti", hasPhoto: false },
-  2019: { alt: "Rosteme silnější", hasPhoto: false },
-  2020: { alt: "Společně se přizpůsobujeme", hasPhoto: false },
-  2021: { alt: "Návrat do přírody", hasPhoto: false },
-  2022: { alt: "Nové začátky", hasPhoto: false },
-  2023: { alt: "Oslava 15 let", hasPhoto: false },
-  2024: { alt: "Pohled vpřed", hasPhoto: false },
-  2025: { alt: "Současná dobrodružství", hasPhoto: false },
-  2026: { alt: "Plány do budoucna", hasPhoto: false },
+// Themes for single-path years (2008-2022)
+const yearThemes: Record<number, string> = {
+  2008: "Železná",
+  2009: "Šukačka",
+  2010: "?",
+  2011: "Kytice",
+  2012: "Historie českých zemí",
+  2013: "Alenka",
+  2014: "Hmyzno",
+  2015: "Bluebear",
+  2016: "Řemesla",
+  2017: "Vesmír",
+  2018: "Farales",
+  2019: "Sirotčinec slečny Peregrinové",
+  2020: "Řecko",
+  2021: "Domadinka",
+  2022: "Staré pověsti české",
+};
+
+// Themes for split-path years (2023-2026) - upper and lower branches
+const splitYearThemes: Record<number, { upper: string; lower: string }> = {
+  2023: { upper: "Domorka", lower: "Atlantslav" },
+  2024: { upper: "Dobitín", lower: "Jumanji" },
+  2025: { upper: "Doma-Kinkó", lower: "Agnes" },
+  2026: { upper: "?", lower: "?" },
+};
+
+// Helper to get display title
+const getYearTitle = (year: number, branch?: 'upper' | 'lower') => {
+  if (branch && splitYearThemes[year]) {
+    return `${year} – ${splitYearThemes[year][branch]}`;
+  }
+  return `${year} – ${yearThemes[year] || "?"}`;
 };
 
 // Color palette for placeholder images based on camp theme
@@ -438,8 +451,7 @@ const Gallery = () => {
             <div className={`w-full h-full rounded-2xl bg-gradient-to-br ${getYearColor(currentSlide.year)} flex flex-col items-center justify-center`}>
               <Camera className="w-16 h-16 text-foreground/30 mb-4" />
               <p className="text-lg text-foreground/50 text-center font-medium px-4">
-                {yearPhotos[currentSlide.year].alt}
-                {currentSlide.branch && ` (${currentSlide.branch === 'upper' ? 'Cesta A' : 'Cesta B'})`}
+                {getYearTitle(currentSlide.year, currentSlide.branch)}
               </p>
             </div>
             
