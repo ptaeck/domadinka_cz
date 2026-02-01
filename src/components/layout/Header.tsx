@@ -5,17 +5,17 @@ import logo from "@/assets/domadinka-logo.png";
 
 // Links always visible in header
 const mainNavLinks = [
-  { to: "/registration", label: "Registration" },
-  { to: "/contact", label: "Contact" },
+  { to: "/registration", label: "Registrace" },
+  { to: "/contact", label: "Kontakt" },
 ];
 
 // Additional links for mobile menu
 const allNavLinks = [
-  { to: "/", label: "Home" },
-  { to: "/about", label: "About Us" },
-  { to: "/gallery", label: "Gallery" },
-  { to: "/registration", label: "Registration" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", label: "Domů" },
+  { to: "/about", label: "O nás" },
+  { to: "/gallery", label: "Galerie" },
+  { to: "/registration", label: "Registrace" },
+  { to: "/contact", label: "Kontakt" },
 ];
 
 const Header = () => {
@@ -55,7 +55,7 @@ const Header = () => {
             <button
               className="lg:hidden p-2 ml-1 rounded-lg hover:bg-muted transition-colors"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label="Přepnout menu"
             >
               {isMenuOpen ? (
                 <X className="w-5 h-5 text-foreground" />

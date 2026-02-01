@@ -6,70 +6,70 @@ import { Calendar, Clock, Users, DollarSign, CheckCircle, ExternalLink, Backpack
 
 const sessions = [
   {
-    name: "Session 1",
-    dates: "June 16 - June 27, 2025",
-    status: "Open",
+    name: "1. turnus",
+    dates: "16. června – 27. června 2025",
+    status: "Otevřeno",
   },
   {
-    name: "Session 2",
-    dates: "June 30 - July 11, 2025",
-    status: "Open",
+    name: "2. turnus",
+    dates: "30. června – 11. července 2025",
+    status: "Otevřeno",
   },
   {
-    name: "Session 3",
-    dates: "July 14 - July 25, 2025",
-    status: "Open",
+    name: "3. turnus",
+    dates: "14. července – 25. července 2025",
+    status: "Otevřeno",
   },
   {
-    name: "Session 4",
-    dates: "July 28 - August 8, 2025",
-    status: "Limited Spots",
+    name: "4. turnus",
+    dates: "28. července – 8. srpna 2025",
+    status: "Omezená místa",
   },
 ];
 
 const whatToBring = [
-  "Comfortable clothes for outdoor activities",
-  "Closed-toe shoes (sneakers recommended)",
-  "Sunscreen (SPF 30+)",
-  "Hat or cap",
-  "Reusable water bottle",
-  "Packed lunch and snacks",
-  "Change of clothes",
-  "Small backpack",
+  "Pohodlné oblečení na aktivity venku",
+  "Uzavřené boty (tenisky doporučeny)",
+  "Opalovací krém (SPF 30+)",
+  "Klobouk nebo čepice",
+  "Láhev na vodu",
+  "Svačinu a oběd",
+  "Náhradní oblečení",
+  "Malý batoh",
 ];
 
 const faqs = [
   {
-    question: "What ages do you accept?",
-    answer: "Sunny Camp welcomes children ages 5-12. We group campers by age to ensure activities are appropriate and engaging for everyone.",
+    question: "Jaký věk přijímáte?",
+    answer: "Domadinka přijímá děti ve věku 5–12 let. Děti rozdělujeme do skupin podle věku, aby aktivity byly pro všechny vhodné a zajímavé.",
   },
   {
-    question: "What are the camp hours?",
-    answer: "Camp runs from 8:30 AM to 4:00 PM, Monday through Friday. Early drop-off (7:30 AM) and late pickup (5:30 PM) are available for an additional fee.",
+    question: "Jaká je provozní doba tábora?",
+    answer: "Tábor probíhá od 8:30 do 16:00, pondělí až pátek. Ranní příchod (7:30) a pozdější vyzvednutí (17:30) jsou k dispozici za příplatek.",
   },
   {
-    question: "Is lunch provided?",
-    answer: "Campers should bring their own packed lunch and snacks. We have a refrigerator and microwave available. Please note we are a nut-free facility.",
+    question: "Je oběd součástí?",
+    answer: "Děti si nosí vlastní svačinu a oběd. K dispozici máme lednici a mikrovlnku. Upozorňujeme, že jsme zařízení bez ořechů.",
   },
   {
-    question: "What is your counselor-to-camper ratio?",
-    answer: "We maintain a 1:6 counselor-to-camper ratio to ensure every child receives proper attention and supervision.",
+    question: "Jaký je poměr vedoucích a dětí?",
+    answer: "Udržujeme poměr 1:6 (vedoucí:děti), abychom zajistili, že každé dítě dostane náležitou pozornost a dohled.",
   },
   {
-    question: "What happens if it rains?",
-    answer: "We have plenty of indoor activities planned for rainy days, including arts and crafts, games, movies, and indoor sports in our gymnasium.",
+    question: "Co se děje, když prší?",
+    answer: "Máme připraveno spoustu aktivit do interiéru na deštivé dny, včetně výtvarných činností, her, filmů a halových sportů.",
   },
   {
-    question: "Do you offer scholarships?",
-    answer: "Yes! We offer need-based scholarships. Please contact us for more information about our scholarship program.",
+    question: "Nabízíte slevy?",
+    answer: "Ano! Nabízíme slevy pro sociálně slabší rodiny. Kontaktujte nás pro více informací o našem programu podpory.",
   },
   {
-    question: "Can I register for multiple sessions?",
-    answer: "Absolutely! Many families register for multiple sessions. We offer a 10% discount for families registering for 2 or more sessions.",
+    question: "Mohu se registrovat na více turnusů?",
+    answer: "Rozhodně! Mnoho rodin se registruje na více turnusů. Nabízíme 10% slevu pro rodiny registrující se na 2 a více turnusů.",
   },
   {
-    question: "What is your refund policy?",
-    answer: "Full refunds are available up to 30 days before the session starts. After that, a 50% refund is available up to 14 days before. No refunds within 14 days of the session.",
+    question: "Jaká je vaše storno politika?",
+    answer: "Plné vrácení peněz je možné do 30 dnů před začátkem turnusu. Poté je možné 50% vrácení do 14 dnů před turnem. V období kratším než 14 dnů peníze nevracíme.",
   },
 ];
 
@@ -81,17 +81,17 @@ const Registration = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Registration
+              Registrace
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
-              Secure your child's spot for an unforgettable summer adventure!
+              Zajistěte svému dítěti místo na nezapomenutelném letním dobrodružství!
             </p>
             <Button
               size="lg"
               className="gap-2 rounded-full px-8"
               onClick={() => window.open("https://forms.google.com", "_blank")}
             >
-              Register Now
+              Registrovat se
               <ExternalLink className="w-4 h-4" />
             </Button>
           </div>
@@ -105,29 +105,29 @@ const Registration = () => {
             <Card className="text-center border-2 border-border">
               <CardContent className="p-6">
                 <Users className="w-10 h-10 text-camp-grass mx-auto mb-3" />
-                <h3 className="font-display font-semibold text-foreground mb-1">Ages</h3>
-                <p className="text-muted-foreground">5 - 12 years old</p>
+                <h3 className="font-display font-semibold text-foreground mb-1">Věk</h3>
+                <p className="text-muted-foreground">5–12 let</p>
               </CardContent>
             </Card>
             <Card className="text-center border-2 border-border">
               <CardContent className="p-6">
                 <Clock className="w-10 h-10 text-camp-sky mx-auto mb-3" />
-                <h3 className="font-display font-semibold text-foreground mb-1">Hours</h3>
-                <p className="text-muted-foreground">8:30 AM - 4:00 PM</p>
+                <h3 className="font-display font-semibold text-foreground mb-1">Provozní doba</h3>
+                <p className="text-muted-foreground">8:30 – 16:00</p>
               </CardContent>
             </Card>
             <Card className="text-center border-2 border-border">
               <CardContent className="p-6">
                 <Calendar className="w-10 h-10 text-camp-coral mx-auto mb-3" />
-                <h3 className="font-display font-semibold text-foreground mb-1">Duration</h3>
-                <p className="text-muted-foreground">2-week sessions</p>
+                <h3 className="font-display font-semibold text-foreground mb-1">Délka</h3>
+                <p className="text-muted-foreground">2týdenní turnusy</p>
               </CardContent>
             </Card>
             <Card className="text-center border-2 border-border">
               <CardContent className="p-6">
                 <DollarSign className="w-10 h-10 text-camp-sun mx-auto mb-3" />
-                <h3 className="font-display font-semibold text-foreground mb-1">Price</h3>
-                <p className="text-muted-foreground">$450 per session</p>
+                <h3 className="font-display font-semibold text-foreground mb-1">Cena</h3>
+                <p className="text-muted-foreground">8 500 Kč za turnus</p>
               </CardContent>
             </Card>
           </div>
@@ -135,7 +135,7 @@ const Registration = () => {
           {/* Sessions */}
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-3xl font-bold text-foreground mb-8 text-center">
-              2025 Summer Sessions
+              Letní turnusy 2025
             </h2>
             <div className="grid sm:grid-cols-2 gap-4 mb-12">
               {sessions.map((session, index) => (
@@ -144,7 +144,7 @@ const Registration = () => {
                     <CardTitle className="font-display text-lg flex items-center justify-between">
                       {session.name}
                       <span className={`text-xs px-3 py-1 rounded-full ${
-                        session.status === "Open" 
+                        session.status === "Otevřeno" 
                           ? "bg-camp-grass/20 text-camp-grass" 
                           : "bg-camp-coral/20 text-camp-coral"
                       }`}>
@@ -169,11 +169,11 @@ const Registration = () => {
                 className="gap-2 rounded-full px-8"
                 onClick={() => window.open("https://forms.google.com", "_blank")}
               >
-                Complete Registration Form
+                Vyplnit registrační formulář
                 <ExternalLink className="w-4 h-4" />
               </Button>
               <p className="text-sm text-muted-foreground mt-4">
-                You'll be redirected to our secure registration form
+                Budete přesměrováni na náš zabezpečený registrační formulář
               </p>
             </div>
           </div>
@@ -187,10 +187,10 @@ const Registration = () => {
             <div className="text-center mb-10">
               <Backpack className="w-12 h-12 text-camp-earth mx-auto mb-4" />
               <h2 className="font-display text-3xl font-bold text-secondary-foreground mb-4">
-                What to Bring
+                Co s sebou
               </h2>
               <p className="text-secondary-foreground/80">
-                Make sure your camper is prepared for a great day!
+                Ujistěte se, že je váš táborník připraven na skvělý den!
               </p>
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
@@ -211,10 +211,10 @@ const Registration = () => {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">
               <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-                Frequently Asked Questions
+                Často kladené otázky
               </h2>
             <p className="text-muted-foreground">
-              Find answers to common questions about Domadinka
+              Najděte odpovědi na běžné otázky o Domadince
             </p>
             </div>
             <Accordion type="single" collapsible className="space-y-3">

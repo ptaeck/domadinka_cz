@@ -17,13 +17,13 @@ const contactInfo = [
   },
   {
     icon: Mail,
-    label: "Email",
+    label: "E-mail",
     value: "info@domadinka.cz",
     href: "mailto:info@domadinka.cz",
   },
   {
     icon: MapPin,
-    label: "Address",
+    label: "Adresa",
     value: "Sladkovského 2757/38\nVýchodní Předměstí, 326 00 Plzeň",
     href: "https://maps.google.com/?q=Sladkovského+2757/38,+Plzeň",
   },
@@ -49,10 +49,10 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Contact Us
+              Kontakt
             </h1>
             <p className="text-lg text-muted-foreground">
-              Have questions? We'd love to hear from you!
+              Máte otázky? Rádi se vám ozveme!
             </p>
           </div>
         </div>
@@ -65,15 +65,15 @@ const Contact = () => {
             {/* Contact Info */}
             <div>
               <h2 className="font-display text-2xl font-bold text-foreground mb-6 text-center">
-                Get in Touch
+                Spojte se s námi
               </h2>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <a
                     key={index}
                     href={info.href}
-                    target={info.label === "Address" ? "_blank" : undefined}
-                    rel={info.label === "Address" ? "noopener noreferrer" : undefined}
+                    target={info.label === "Adresa" ? "_blank" : undefined}
+                    rel={info.label === "Adresa" ? "noopener noreferrer" : undefined}
                     className="flex items-start gap-4 p-4 bg-card rounded-xl border-2 border-border hover:border-primary/50 transition-colors group"
                   >
                     <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
@@ -95,7 +95,7 @@ const Contact = () => {
                 <div className="flex items-center gap-3 mb-4">
                   <Building2 className="w-6 h-6 text-camp-grass" />
                   <h3 className="font-display text-lg font-semibold text-foreground">
-                    Organization Details
+                    Údaje o organizaci
                   </h3>
                 </div>
                 <div className="space-y-3">
@@ -115,16 +115,16 @@ const Contact = () => {
                 <div className="flex items-center gap-3 mb-4">
                   <Landmark className="w-6 h-6 text-camp-sky" />
                   <h3 className="font-display text-lg font-semibold text-foreground">
-                    Bank Account
+                    Bankovní účet
                   </h3>
                 </div>
                 <div className="space-y-3">
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Bank</span>
+                    <span className="text-muted-foreground">Banka</span>
                     <span className="text-foreground font-medium">{bankInfo.bankName}</span>
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Account Number</span>
+                    <span className="text-muted-foreground">Číslo účtu</span>
                     <span className="text-foreground font-medium">{bankInfo.accountNumber}</span>
                   </div>
                   <div className="flex justify-between text-sm">
