@@ -28,7 +28,7 @@ const yearThemes: Record<number, string> = {
   2019: "Sirotčinec slečny Vorlové",
   2020: "Domapolis",
   2021: "Domadinka",
-  2022: "Staré pověsti české",
+  2022: "Pramaslav",
 };
 
 // Themes for split-path years (2023-2026) - upper and lower branches
