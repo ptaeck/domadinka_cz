@@ -77,11 +77,11 @@ const mainPathPoints = [
   { x: 70, y: 12 },    // 2014
   // Row 2: going left (2015-2020) - following middle green dots
   { x: 88, y: 14 },    // 2015 - upper right corner
-  { x: 78, y: 26 },    // 2016
-  { x: 64, y: 34 },    // 2017
-  { x: 40, y: 42 },    // 2018
-  { x: 26, y: 46 },    // 2019 - Leskau area
-  { x: 14, y: 44 },    // 2020 - turn down (moved in from edge)
+  { x: 72, y: 32 },    // 2016
+  { x: 56, y: 38 },    // 2017
+  { x: 42, y: 42 },    // 2018
+  { x: 28, y: 46 },    // 2019
+  { x: 14, y: 44 },    // 2020
   // Row 3: going right (2021-2022) - following lower green dots
   { x: 12, y: 62 },    // 2021 - Brak area
   { x: 24, y: 70 },    // 2022 - Boley Dornschlag - split point (moved in)
