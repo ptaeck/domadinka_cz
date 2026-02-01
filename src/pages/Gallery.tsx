@@ -313,8 +313,9 @@ const Gallery = () => {
                         className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
                         style={{ transform: `rotate(${rotation}deg)` }}
                       />
-                      <span className="mt-0.5 px-1.5 py-0.5 rounded text-[9px] sm:text-[10px] font-bold bg-background/90 text-foreground shadow-sm border border-border opacity-80 group-hover:opacity-100 transition-opacity duration-200">
-                        {year}
+                      <span className="mt-0.5 px-1.5 py-0.5 rounded text-[8px] sm:text-[9px] font-bold bg-background/90 text-foreground shadow-sm border border-border opacity-80 group-hover:opacity-100 transition-opacity duration-200 text-center leading-tight max-w-[80px] sm:max-w-[100px]">
+                        <span className="block">{year}</span>
+                        <span className="block font-medium text-muted-foreground truncate">{yearThemes[year] || "?"}</span>
                       </span>
                     </button>
                   </div>
@@ -349,8 +350,9 @@ const Gallery = () => {
                         className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
                         style={{ transform: `rotate(${rotation}deg)` }}
                       />
-                      <span className="mt-0.5 px-1.5 py-0.5 rounded text-[9px] sm:text-[10px] font-bold bg-background/90 text-foreground shadow-sm border border-border opacity-80 group-hover:opacity-100 transition-opacity duration-200">
-                        {year}
+                      <span className="mt-0.5 px-1.5 py-0.5 rounded text-[8px] sm:text-[9px] font-bold bg-background/90 text-foreground shadow-sm border border-border opacity-80 group-hover:opacity-100 transition-opacity duration-200 text-center leading-tight max-w-[80px] sm:max-w-[100px]">
+                        <span className="block">{year}</span>
+                        <span className="block font-medium text-muted-foreground truncate">{splitYearThemes[year]?.upper || "?"}</span>
                       </span>
                     </button>
                   </div>
@@ -385,8 +387,9 @@ const Gallery = () => {
                         className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
                         style={{ transform: `rotate(${rotation}deg)` }}
                       />
-                      <span className="mt-0.5 px-1.5 py-0.5 rounded text-[9px] sm:text-[10px] font-bold bg-background/90 text-foreground shadow-sm border border-border opacity-80 group-hover:opacity-100 transition-opacity duration-200">
-                        {year}
+                      <span className="mt-0.5 px-1.5 py-0.5 rounded text-[8px] sm:text-[9px] font-bold bg-background/90 text-foreground shadow-sm border border-border opacity-80 group-hover:opacity-100 transition-opacity duration-200 text-center leading-tight max-w-[80px] sm:max-w-[100px]">
+                        <span className="block">{year}</span>
+                        <span className="block font-medium text-muted-foreground truncate">{splitYearThemes[year]?.lower || "?"}</span>
                       </span>
                     </button>
                   </div>
@@ -455,10 +458,10 @@ const Gallery = () => {
               </p>
             </div>
             
-            {/* Year indicator */}
+            {/* Year and theme indicator */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-              <span className="px-4 py-2 rounded-full bg-black/50 text-white font-display font-bold">
-                {currentSlide.year}
+              <span className="px-4 py-2 rounded-full bg-black/60 text-white font-display font-bold text-center">
+                {getYearTitle(currentSlide.year, currentSlide.branch)}
               </span>
             </div>
           </div>
