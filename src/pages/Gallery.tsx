@@ -75,14 +75,14 @@ const mainPathPoints = [
   { x: 78, y: 8 },     // 2014 - Pollschütz - turn down
   // Row 2: going left (2015-2020) - following middle green dots
   { x: 82, y: 32 },    // 2015 - Tschetif area
-  { x: 72, y: 42 },    // 2016
-  { x: 58, y: 48 },    // 2017 - Schwan B. area
-  { x: 42, y: 55 },    // 2018
-  { x: 28, y: 62 },    // 2019 - Leskau area
-  { x: 12, y: 58 },    // 2020 - turn down
+  { x: 72, y: 36 },    // 2016 (moved up)
+  { x: 58, y: 40 },    // 2017 - Schwan B. area (moved up)
+  { x: 42, y: 46 },    // 2018 (moved up)
+  { x: 28, y: 52 },    // 2019 - Leskau area (moved up)
+  { x: 12, y: 50 },    // 2020 - turn down (moved up)
   // Row 3: going right (2021-2022) - following lower green dots
-  { x: 8, y: 78 },     // 2021 - Brak area
-  { x: 22, y: 85 },    // 2022 - Boley Dornschlag - split point
+  { x: 8, y: 72 },     // 2021 - Brak area (adjusted)
+  { x: 22, y: 80 },    // 2022 - Boley Dornschlag - split point (adjusted)
 ];
 
 // Upper branch (2023-2026) - continues right on upper track
@@ -236,13 +236,13 @@ const Gallery = () => {
                       C 53 9, 57 14, 62 12 
                       C 67 10, 73 6, 78 8
                       C 84 10, 83 20, 82 32
-                      C 81 38, 76 40, 72 42
-                      C 68 44, 62 46, 58 48
-                      C 52 50, 46 54, 42 55
-                      C 36 56, 32 60, 28 62
-                      C 22 64, 16 61, 12 58
-                      C 8 55, 6 65, 8 78
-                      C 10 84, 16 86, 22 85`}
+                      C 81 34, 76 35, 72 36
+                      C 68 37, 62 39, 58 40
+                      C 52 42, 46 45, 42 46
+                      C 36 47, 32 50, 28 52
+                      C 22 54, 16 52, 12 50
+                      C 8 48, 6 58, 8 72
+                      C 10 78, 16 81, 22 80`}
                   fill="none"
                   stroke="hsl(var(--camp-coral))"
                   strokeWidth="0.5"
@@ -253,8 +253,8 @@ const Gallery = () => {
                 />
                 {/* Upper branch (2023-2026) - winding ascending curve */}
                 <path
-                  d={`M 22 85 
-                      C 26 82, 32 79, 38 78
+                  d={`M 22 80 
+                      C 26 78, 32 76, 38 78
                       C 44 77, 48 73, 52 72
                       C 58 71, 62 69, 68 68
                       C 74 67, 78 64, 82 62`}
@@ -268,8 +268,8 @@ const Gallery = () => {
                 />
                 {/* Lower branch (2023-2026) - winding descending curve */}
                 <path
-                  d={`M 22 85 
-                      C 26 88, 32 91, 38 92
+                  d={`M 22 80 
+                      C 26 84, 32 88, 38 92
                       C 44 90, 50 87, 54 88
                       C 60 89, 66 91, 72 92
                       C 78 91, 84 89, 88 88`}
