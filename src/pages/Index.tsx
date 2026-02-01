@@ -56,18 +56,17 @@ const Index = () => {
               <Sparkles className="w-4 h-4 text-camp-sun" />
               <span className="text-sm font-medium text-foreground">Registrace na léto 2025 otevřena!</span>
             </div>
-            
+
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Kde se každé{" "}
-              <span className="text-camp-grass">léto</span>{" "}
-              stává{" "}
+              Kde se každé <span className="text-camp-grass">léto</span> stává{" "}
               <span className="text-camp-coral">dobrodružstvím</span>
             </h1>
-            
+
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Připojte se k naší přátelské komunitě, kde děti ve věku 5–12 let objevují, tvoří a rostou prostřednictvím zábavných letních aktivit v bezpečném a láskyplném prostředí.
+              Připojte se k naší přátelské komunitě, kde děti ve věku 5–12 let objevují, tvoří a rostou prostřednictvím
+              zábavných letních aktivit v bezpečném a láskyplném prostředí.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/registration">
                 <Button size="lg" className="w-full sm:w-auto gap-2 rounded-full px-8 text-base">
@@ -83,7 +82,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Decorative elements */}
         <div className="absolute -bottom-1 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" />
       </section>
@@ -99,7 +98,7 @@ const Index = () => {
               Každý den je příležitostí k objevování, přátelství a zábavě.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
               <Card key={index} className="border-2 border-border hover:border-primary/50 transition-colors group">
@@ -107,12 +106,8 @@ const Index = () => {
                   <div className="w-14 h-14 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors">
                     <feature.icon className="w-7 h-7 text-accent-foreground group-hover:text-primary-foreground transition-colors" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {feature.description}
-                  </p>
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -128,7 +123,8 @@ const Index = () => {
               Připraveni dopřát svému dítěti nezapomenutelné léto?
             </h2>
             <p className="text-secondary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Místa se rychle plní! Zajistěte svému dítěti místo v Domadince ještě dnes a sledujte, jak vytváří vzpomínky na celý život.
+              Místa se rychle plní! Zajistěte svému dítěti místo v Domadince ještě dnes a sledujte, jak vytváří
+              vzpomínky na celý život.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/registration">
@@ -151,14 +147,10 @@ const Index = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Co říkají rodiny
-            </h2>
-            <p className="text-muted-foreground">
-              Poslechněte si naši úžasnou táborovou komunitu
-            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Co říkají rodiny</h2>
+            <p className="text-muted-foreground">Poslechněte si naši úžasnou táborovou komunitu</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="bg-card border-2 border-border">
@@ -179,7 +171,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
     </Layout>
   );
 };

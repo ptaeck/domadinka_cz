@@ -5,7 +5,7 @@ import domaslavMap from "@/assets/domaslav-map-landscape.jpg";
 import domadinkaBadge from "@/assets/domadinka-megaphone.png";
 
 // Single path years (2006-2022, excluding 2010)
-const singleYears = Array.from({ length: 17 }, (_, i) => 2006 + i).filter(y => y !== 2010);
+const singleYears = Array.from({ length: 17 }, (_, i) => 2006 + i).filter((y) => y !== 2010);
 // Split path years (2023-2026) - two badges per year
 const splitYears = [2023, 2024, 2025, 2026];
 // All years for navigation
@@ -40,7 +40,7 @@ const splitYearThemes: Record<number, { upper: string; lower: string }> = {
 };
 
 // Helper to get display title
-const getYearTitle = (year: number, branch?: 'upper' | 'lower') => {
+const getYearTitle = (year: number, branch?: "upper" | "lower") => {
   if (branch && splitYearThemes[year]) {
     return `${year} – ${splitYearThemes[year][branch]}`;
   }
@@ -62,45 +62,45 @@ const getYearColor = (year: number) => {
 
 // Natural path following green dots on the Kaiser map
 // Row 1: 2006-2014 going RIGHT (top area) - excluding 2010
-// Row 2: 2015-2020 going LEFT (middle area)  
+// Row 2: 2015-2020 going LEFT (middle area)
 // Row 3: 2021-2022 + split 2023-2026 going RIGHT (bottom area)
 
 const mainPathPoints = [
   // Row 1: going right (2006-2014, no 2010) - following upper green dots
-  { x: 5, y: 6 },      // 2006 - Domalend
-  { x: 12, y: 10 },    // 2007 - Kosmodom
-  { x: 20, y: 16 },    // 2008
-  { x: 26, y: 20 },    // 2009
-  { x: 38, y: 16 },    // 2011
-  { x: 50, y: 12 },    // 2012
-  { x: 62, y: 10 },    // 2013
-  { x: 74, y: 12 },    // 2014
+  { x: 5, y: 6 }, // 2006 - Domalend
+  { x: 12, y: 10 }, // 2007 - Kosmodom
+  { x: 20, y: 16 }, // 2008
+  { x: 26, y: 20 }, // 2009
+  { x: 38, y: 16 }, // 2011
+  { x: 50, y: 12 }, // 2012
+  { x: 62, y: 10 }, // 2013
+  { x: 74, y: 12 }, // 2014
   // Row 2: going left (2015-2020) - following middle green dots
-  { x: 88, y: 14 },    // 2015 - upper right corner
-  { x: 72, y: 38 },    // 2016
-  { x: 56, y: 44 },    // 2017
-  { x: 42, y: 48 },    // 2018
-  { x: 28, y: 50 },    // 2019
-  { x: 14, y: 48 },    // 2020
+  { x: 88, y: 14 }, // 2015 - upper right corner
+  { x: 72, y: 38 }, // 2016
+  { x: 56, y: 44 }, // 2017
+  { x: 42, y: 48 }, // 2018
+  { x: 28, y: 50 }, // 2019
+  { x: 14, y: 48 }, // 2020
   // Row 3: going right (2021-2022) - following lower green dots
-  { x: 12, y: 62 },    // 2021 - Brak area
-  { x: 24, y: 70 },    // 2022 - Boley Dornschlag - split point (moved in)
+  { x: 12, y: 62 }, // 2021 - Brak area
+  { x: 24, y: 70 }, // 2022 - Boley Dornschlag - split point (moved in)
 ];
 
 // Upper branch (2023-2026) - continues right on upper track
 const upperBranchPoints = [
-  { x: 38, y: 68 },    // 2023 upper (moved up)
-  { x: 52, y: 62 },    // 2024 upper (moved up)
-  { x: 68, y: 58 },    // 2025 upper (moved up)
-  { x: 82, y: 52 },    // 2026 upper - Kokaschütz area (moved up)
+  { x: 38, y: 68 }, // 2023 upper (moved up)
+  { x: 52, y: 62 }, // 2024 upper (moved up)
+  { x: 68, y: 58 }, // 2025 upper (moved up)
+  { x: 82, y: 52 }, // 2026 upper - Kokaschütz area (moved up)
 ];
 
 // Lower branch (2023-2026) - continues right on lower track
 const lowerBranchPoints = [
-  { x: 38, y: 88 },    // 2023 lower - Atlantslav (moved down to avoid overlap)
-  { x: 54, y: 78 },    // 2024 lower - Jumanji (moved up)
-  { x: 72, y: 82 },    // 2025 lower (moved up)
-  { x: 88, y: 78 },    // 2026 lower - Sczlur area (moved up)
+  { x: 38, y: 88 }, // 2023 lower - Atlantslav (moved down to avoid overlap)
+  { x: 54, y: 78 }, // 2024 lower - Jumanji (moved up)
+  { x: 72, y: 82 }, // 2025 lower (moved up)
+  { x: 88, y: 78 }, // 2026 lower - Sczlur area (moved up)
 ];
 
 // Calculate rotation angle between two points (in degrees)
@@ -157,25 +157,23 @@ const getBranchRotation = (points: typeof upperBranchPoints, index: number) => {
 };
 
 // Build sequential slide list: single years + split years with upper/lower variants
-type LightboxSlide = { year: number; branch?: 'upper' | 'lower' };
+type LightboxSlide = { year: number; branch?: "upper" | "lower" };
 const allSlides: LightboxSlide[] = [
-  ...singleYears.map(year => ({ year })),
-  ...splitYears.flatMap(year => [
-    { year, branch: 'upper' as const },
-    { year, branch: 'lower' as const },
+  ...singleYears.map((year) => ({ year })),
+  ...splitYears.flatMap((year) => [
+    { year, branch: "upper" as const },
+    { year, branch: "lower" as const },
   ]),
 ];
 
 const Gallery = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number | null>(null);
 
-  const openLightbox = (year: number, branch?: 'upper' | 'lower') => {
-    const index = allSlides.findIndex(
-      s => s.year === year && s.branch === branch
-    );
+  const openLightbox = (year: number, branch?: "upper" | "lower") => {
+    const index = allSlides.findIndex((s) => s.year === year && s.branch === branch);
     setCurrentSlideIndex(index >= 0 ? index : null);
   };
-  
+
   const closeLightbox = () => setCurrentSlideIndex(null);
 
   const goToPrevSlide = () => {
@@ -197,25 +195,28 @@ const Gallery = () => {
   const hasNext = currentSlideIndex !== null && currentSlideIndex < allSlides.length - 1;
 
   // Keyboard navigation for lightbox
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    if (currentSlideIndex === null) return;
-    
-    if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      goToPrevSlide();
-    } else if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      goToNextSlide();
-    } else if (e.key === 'Escape') {
-      e.preventDefault();
-      closeLightbox();
-    }
-  }, [currentSlideIndex]);
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (currentSlideIndex === null) return;
+
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        goToPrevSlide();
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        goToNextSlide();
+      } else if (e.key === "Escape") {
+        e.preventDefault();
+        closeLightbox();
+      }
+    },
+    [currentSlideIndex],
+  );
 
   useEffect(() => {
     if (currentSlideIndex !== null) {
-      window.addEventListener('keydown', handleKeyDown);
-      return () => window.removeEventListener('keydown', handleKeyDown);
+      window.addEventListener("keydown", handleKeyDown);
+      return () => window.removeEventListener("keydown", handleKeyDown);
     }
   }, [currentSlideIndex, handleKeyDown]);
 
@@ -225,12 +226,8 @@ const Gallery = () => {
       <section className="bg-gradient-to-b from-camp-grass/20 via-accent/30 to-background py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Časová osa Domadinky
-            </h1>
-            <p className="text-muted-foreground">
-              Cesta 19 lety vzpomínek v Domaslavi (2008–2026)
-            </p>
+            <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">Časová osa Domadinky</h1>
+            <p className="text-muted-foreground">Cesta 20 lety vzpomínek v Domaslavi (2006–2026)</p>
           </div>
         </div>
       </section>
@@ -241,12 +238,8 @@ const Gallery = () => {
           <div className="relative max-w-6xl mx-auto">
             {/* Kaiser Map Background */}
             <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border-4 border-camp-earth/30">
-              <img
-                src={domaslavMap}
-                alt="Historická mapa Domaslavska"
-                className="w-full h-auto"
-              />
-              
+              <img src={domaslavMap} alt="Historická mapa Domaslavska" className="w-full h-auto" />
+
               {/* SVG Path overlay connecting the years with natural curves */}
               <svg
                 className="absolute inset-0 w-full h-full pointer-events-none"
@@ -310,13 +303,13 @@ const Gallery = () => {
                   opacity="0.85"
                 />
               </svg>
-              
+
               {/* Main path badges (2008-2022) */}
               {singleYears.map((year, index) => {
                 const point = mainPathPoints[index];
                 const rotation = getMainPathRotation(index);
                 const { offsetX, offsetY } = getOffsetForRotation(rotation);
-                
+
                 return (
                   <div
                     key={year}
@@ -338,7 +331,9 @@ const Gallery = () => {
                       />
                       <span className="mt-1 px-2 py-1 rounded-md text-[10px] sm:text-xs font-bold bg-background text-foreground shadow-md border border-border/50 group-hover:shadow-lg transition-all duration-200 text-center leading-snug">
                         <span className="block">{year}</span>
-                        <span className="block font-semibold text-muted-foreground text-[9px] sm:text-[10px]">{yearThemes[year] || "?"}</span>
+                        <span className="block font-semibold text-muted-foreground text-[9px] sm:text-[10px]">
+                          {yearThemes[year] || "?"}
+                        </span>
                       </span>
                     </button>
                   </div>
@@ -350,7 +345,7 @@ const Gallery = () => {
                 const point = upperBranchPoints[index];
                 const rotation = getBranchRotation(upperBranchPoints, index);
                 const { offsetX, offsetY } = getOffsetForRotation(rotation);
-                
+
                 return (
                   <div
                     key={`${year}-upper`}
@@ -361,7 +356,7 @@ const Gallery = () => {
                     }}
                   >
                     <button
-                      onClick={() => openLightbox(year, 'upper')}
+                      onClick={() => openLightbox(year, "upper")}
                       className="relative flex flex-col items-center transition-all duration-300 hover:scale-110 z-10"
                     >
                       <img
@@ -372,7 +367,9 @@ const Gallery = () => {
                       />
                       <span className="mt-1 px-2 py-1 rounded-md text-[10px] sm:text-xs font-bold bg-background text-foreground shadow-md border border-border/50 group-hover:shadow-lg transition-all duration-200 text-center leading-snug">
                         <span className="block">{year}</span>
-                        <span className="block font-semibold text-muted-foreground text-[9px] sm:text-[10px]">{splitYearThemes[year]?.upper || "?"}</span>
+                        <span className="block font-semibold text-muted-foreground text-[9px] sm:text-[10px]">
+                          {splitYearThemes[year]?.upper || "?"}
+                        </span>
                       </span>
                     </button>
                   </div>
@@ -384,7 +381,7 @@ const Gallery = () => {
                 const point = lowerBranchPoints[index];
                 const rotation = getBranchRotation(lowerBranchPoints, index);
                 const { offsetX, offsetY } = getOffsetForRotation(rotation);
-                
+
                 return (
                   <div
                     key={`${year}-lower`}
@@ -395,7 +392,7 @@ const Gallery = () => {
                     }}
                   >
                     <button
-                      onClick={() => openLightbox(year, 'lower')}
+                      onClick={() => openLightbox(year, "lower")}
                       className="relative flex flex-col items-center transition-all duration-300 hover:scale-110 z-10"
                     >
                       <img
@@ -406,7 +403,9 @@ const Gallery = () => {
                       />
                       <span className="mt-1 px-2 py-1 rounded-md text-[10px] sm:text-xs font-bold bg-background text-foreground shadow-md border border-border/50 group-hover:shadow-lg transition-all duration-200 text-center leading-snug">
                         <span className="block">{year}</span>
-                        <span className="block font-semibold text-muted-foreground text-[9px] sm:text-[10px]">{splitYearThemes[year]?.lower || "?"}</span>
+                        <span className="block font-semibold text-muted-foreground text-[9px] sm:text-[10px]">
+                          {splitYearThemes[year]?.lower || "?"}
+                        </span>
                       </span>
                     </button>
                   </div>
@@ -426,9 +425,7 @@ const Gallery = () => {
           {/* Note about adding photos */}
           <div className="mt-10 text-center p-6 bg-muted rounded-2xl max-w-xl mx-auto">
             <Camera className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
-            <h3 className="font-display text-base font-semibold text-foreground mb-2">
-              Přidejte své fotky
-            </h3>
+            <h3 className="font-display text-base font-semibold text-foreground mb-2">Přidejte své fotky</h3>
             <p className="text-sm text-muted-foreground">
               Klikněte na libovolný rok na mapě. Tyto zástupné obrázky nahraďte skutečnými fotkami z historie Domadinky.
             </p>
@@ -438,7 +435,7 @@ const Gallery = () => {
 
       {/* Lightbox Modal */}
       {currentSlide && (
-        <div 
+        <div
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center animate-fade-in"
           onClick={closeLightbox}
         >
@@ -453,7 +450,10 @@ const Gallery = () => {
 
           {/* Left arrow */}
           <button
-            onClick={(e) => { e.stopPropagation(); goToPrevSlide(); }}
+            onClick={(e) => {
+              e.stopPropagation();
+              goToPrevSlide();
+            }}
             disabled={!hasPrev}
             className={`absolute left-4 p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all ${
               hasPrev ? "text-white hover:bg-white/20" : "text-white/30 cursor-not-allowed"
@@ -464,17 +464,16 @@ const Gallery = () => {
           </button>
 
           {/* Image container */}
-          <div 
-            className="relative max-w-4xl w-full mx-16 aspect-[4/3]"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className={`w-full h-full rounded-2xl bg-gradient-to-br ${getYearColor(currentSlide.year)} flex flex-col items-center justify-center`}>
+          <div className="relative max-w-4xl w-full mx-16 aspect-[4/3]" onClick={(e) => e.stopPropagation()}>
+            <div
+              className={`w-full h-full rounded-2xl bg-gradient-to-br ${getYearColor(currentSlide.year)} flex flex-col items-center justify-center`}
+            >
               <Camera className="w-16 h-16 text-foreground/30 mb-4" />
               <p className="text-lg text-foreground/50 text-center font-medium px-4">
                 {getYearTitle(currentSlide.year, currentSlide.branch)}
               </p>
             </div>
-            
+
             {/* Year and theme indicator */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
               <span className="px-4 py-2 rounded-full bg-black/60 text-white font-display font-bold text-center">
@@ -485,7 +484,10 @@ const Gallery = () => {
 
           {/* Right arrow */}
           <button
-            onClick={(e) => { e.stopPropagation(); goToNextSlide(); }}
+            onClick={(e) => {
+              e.stopPropagation();
+              goToNextSlide();
+            }}
             disabled={!hasNext}
             className={`absolute right-4 p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all ${
               hasNext ? "text-white hover:bg-white/20" : "text-white/30 cursor-not-allowed"
