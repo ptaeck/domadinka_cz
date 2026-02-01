@@ -108,6 +108,32 @@ const getRotation = (from: { x: number; y: number }, to: { x: number; y: number 
   return Math.atan2(dy, dx) * (180 / Math.PI);
 };
 
+// Black dot position on badge image (relative to badge center, in pixels)
+// x: 40px right, y: -140px up (negative because it's above center)
+const DOT_OFFSET_X = 40;
+const DOT_OFFSET_Y = -140;
+// Calculate the angle of the dot from badge center
+const DOT_BASE_ANGLE = Math.atan2(DOT_OFFSET_Y, DOT_OFFSET_X); // ≈ -74° in radians
+// Distance from center to dot (for percentage calculation)
+const DOT_DISTANCE = Math.sqrt(DOT_OFFSET_X ** 2 + DOT_OFFSET_Y ** 2); // ≈ 145.6px
+
+// Get offset to place black dot on path point (as percentage of container)
+// Badge is roughly 48px at md size, so dot distance as % of container width
+const getOffsetForRotation = (rotationDeg: number) => {
+  // Convert rotation to radians
+  const rotationRad = rotationDeg * (Math.PI / 180);
+  // After rotating the badge, the dot moves. Calculate new dot position relative to center
+  // CSS rotation is clockwise, so we use standard rotation matrix
+  const newDotAngle = DOT_BASE_ANGLE + rotationRad;
+  // We need to offset the badge center by the NEGATIVE of the rotated dot position
+  // Scale factor: dot is ~145px from center, badge is ~48px, container is ~1000px wide
+  // So 145px / 48px badge * (48/1000) ≈ 0.145 or roughly 1.5-2% of container
+  const scaleFactor = 1.4; // Adjusted for visual alignment
+  const offsetX = -Math.cos(newDotAngle) * scaleFactor;
+  const offsetY = -Math.sin(newDotAngle) * scaleFactor;
+  return { offsetX, offsetY };
+};
+
 // Get rotation for main path points
 const getMainPathRotation = (index: number) => {
   if (index < mainPathPoints.length - 1) {
@@ -287,12 +313,7 @@ const Gallery = () => {
               {singleYears.map((year, index) => {
                 const point = mainPathPoints[index];
                 const rotation = getMainPathRotation(index);
-                // Offset to place point (40, 140) from badge top-left on the path
-                // This is the black dot position - roughly 38% left of center
-                const offsetDistance = 1.8; // percentage units
-                const radians = rotation * (Math.PI / 180);
-                const offsetX = Math.cos(radians) * offsetDistance;
-                const offsetY = Math.sin(radians) * offsetDistance;
+                const { offsetX, offsetY } = getOffsetForRotation(rotation);
                 
                 return (
                   <div
@@ -326,10 +347,7 @@ const Gallery = () => {
               {splitYears.map((year, index) => {
                 const point = upperBranchPoints[index];
                 const rotation = getBranchRotation(upperBranchPoints, index);
-                const offsetDistance = 1.8;
-                const radians = rotation * (Math.PI / 180);
-                const offsetX = Math.cos(radians) * offsetDistance;
-                const offsetY = Math.sin(radians) * offsetDistance;
+                const { offsetX, offsetY } = getOffsetForRotation(rotation);
                 
                 return (
                   <div
@@ -363,10 +381,7 @@ const Gallery = () => {
               {splitYears.map((year, index) => {
                 const point = lowerBranchPoints[index];
                 const rotation = getBranchRotation(lowerBranchPoints, index);
-                const offsetDistance = 1.8;
-                const radians = rotation * (Math.PI / 180);
-                const offsetX = Math.cos(radians) * offsetDistance;
-                const offsetY = Math.sin(radians) * offsetDistance;
+                const { offsetX, offsetY } = getOffsetForRotation(rotation);
                 
                 return (
                   <div
