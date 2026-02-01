@@ -12,25 +12,25 @@ const splitYears = [2023, 2024, 2025, 2026];
 const allYears = [...singleYears, ...splitYears];
 
 const yearPhotos: Record<number, { alt: string; hasPhoto: boolean }> = {
-  2008: { alt: "Foundation year", hasPhoto: false },
-  2009: { alt: "First adventures", hasPhoto: false },
-  2010: { alt: "Nature exploration", hasPhoto: false },
-  2011: { alt: "Community events", hasPhoto: false },
-  2012: { alt: "Special celebrations", hasPhoto: false },
-  2013: { alt: "5 year milestone", hasPhoto: false },
-  2014: { alt: "Expanded programs", hasPhoto: false },
-  2015: { alt: "New friendships", hasPhoto: false },
-  2016: { alt: "Creative workshops", hasPhoto: false },
-  2017: { alt: "Adventure camps", hasPhoto: false },
-  2018: { alt: "10 years of joy", hasPhoto: false },
-  2019: { alt: "Growing stronger", hasPhoto: false },
-  2020: { alt: "Adapting together", hasPhoto: false },
-  2021: { alt: "Return to nature", hasPhoto: false },
-  2022: { alt: "New beginnings", hasPhoto: false },
-  2023: { alt: "15 years celebration", hasPhoto: false },
-  2024: { alt: "Looking forward", hasPhoto: false },
-  2025: { alt: "Current adventures", hasPhoto: false },
-  2026: { alt: "Future plans", hasPhoto: false },
+  2008: { alt: "Rok založení", hasPhoto: false },
+  2009: { alt: "První dobrodružství", hasPhoto: false },
+  2010: { alt: "Objevování přírody", hasPhoto: false },
+  2011: { alt: "Komunitní akce", hasPhoto: false },
+  2012: { alt: "Speciální oslavy", hasPhoto: false },
+  2013: { alt: "5 let – milník", hasPhoto: false },
+  2014: { alt: "Rozšířené programy", hasPhoto: false },
+  2015: { alt: "Nová přátelství", hasPhoto: false },
+  2016: { alt: "Kreativní dílny", hasPhoto: false },
+  2017: { alt: "Dobrodružné tábory", hasPhoto: false },
+  2018: { alt: "10 let radosti", hasPhoto: false },
+  2019: { alt: "Rosteme silnější", hasPhoto: false },
+  2020: { alt: "Společně se přizpůsobujeme", hasPhoto: false },
+  2021: { alt: "Návrat do přírody", hasPhoto: false },
+  2022: { alt: "Nové začátky", hasPhoto: false },
+  2023: { alt: "Oslava 15 let", hasPhoto: false },
+  2024: { alt: "Pohled vpřed", hasPhoto: false },
+  2025: { alt: "Současná dobrodružství", hasPhoto: false },
+  2026: { alt: "Plány do budoucna", hasPhoto: false },
 };
 
 // Color palette for placeholder images based on camp theme
@@ -163,10 +163,10 @@ const Gallery = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Domadinka Timeline
+              Časová osa Domadinky
             </h1>
             <p className="text-muted-foreground">
-              A journey through 19 years of memories in Domaslav (2008–2026)
+              Cesta 19 lety vzpomínek v Domaslavi (2008–2026)
             </p>
           </div>
         </div>
@@ -180,7 +180,7 @@ const Gallery = () => {
             <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border-4 border-camp-earth/30">
               <img
                 src={domaslavMap}
-                alt="Historical Kaiser map of Domaslav region"
+                alt="Historická mapa Domaslavska"
                 className="w-full h-auto"
               />
               
@@ -362,7 +362,7 @@ const Gallery = () => {
             <div className="mt-6 flex items-center justify-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <img src={domadinkaBadge} alt="" className="w-5 h-5 object-contain" />
-                <span>Click a year to see photos</span>
+                <span>Klikněte na rok pro zobrazení fotek</span>
               </div>
             </div>
           </div>
@@ -371,10 +371,10 @@ const Gallery = () => {
           <div className="mt-10 text-center p-6 bg-muted rounded-2xl max-w-xl mx-auto">
             <Camera className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
             <h3 className="font-display text-base font-semibold text-foreground mb-2">
-              Add Your Photos
+              Přidejte své fotky
             </h3>
             <p className="text-sm text-muted-foreground">
-              Click on any year marker on the map to select it. Replace these placeholders with real photos from each year of Domadinka's history.
+              Klikněte na libovolný rok na mapě. Tyto zástupné obrázky nahraďte skutečnými fotkami z historie Domadinky.
             </p>
           </div>
         </div>
@@ -390,7 +390,7 @@ const Gallery = () => {
           <button
             onClick={closeLightbox}
             className="absolute top-4 right-4 p-2 text-white/80 hover:text-white transition-colors z-10"
-            aria-label="Close"
+            aria-label="Zavřít"
           >
             <X className="w-8 h-8" />
           </button>
@@ -402,7 +402,7 @@ const Gallery = () => {
             className={`absolute left-4 p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all ${
               hasPrev ? "text-white hover:bg-white/20" : "text-white/30 cursor-not-allowed"
             }`}
-            aria-label="Previous"
+            aria-label="Předchozí"
           >
             <ChevronLeft className="w-8 h-8" />
           </button>
@@ -416,20 +416,15 @@ const Gallery = () => {
               <Camera className="w-16 h-16 text-foreground/30 mb-4" />
               <p className="text-lg text-foreground/50 text-center font-medium px-4">
                 {yearPhotos[currentSlide.year].alt}
-                {currentSlide.branch && ` (${currentSlide.branch === 'upper' ? 'Path A' : 'Path B'})`}
+                {currentSlide.branch && ` (${currentSlide.branch === 'upper' ? 'Cesta A' : 'Cesta B'})`}
               </p>
             </div>
             
-            {/* Year caption overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 rounded-b-2xl">
-              <h2 className="text-4xl md:text-5xl font-display font-bold text-white text-center">
+            {/* Year indicator */}
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+              <span className="px-4 py-2 rounded-full bg-black/50 text-white font-display font-bold">
                 {currentSlide.year}
-                {currentSlide.branch && (
-                  <span className="text-xl md:text-2xl ml-3 opacity-70">
-                    {currentSlide.branch === 'upper' ? 'A' : 'B'}
-                  </span>
-                )}
-              </h2>
+              </span>
             </div>
           </div>
 
@@ -440,7 +435,7 @@ const Gallery = () => {
             className={`absolute right-4 p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all ${
               hasNext ? "text-white hover:bg-white/20" : "text-white/30 cursor-not-allowed"
             }`}
-            aria-label="Next"
+            aria-label="Další"
           >
             <ChevronRight className="w-8 h-8" />
           </button>

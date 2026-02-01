@@ -5,23 +5,23 @@ import { Heart, Target, Users, Star, Shield, Sparkles } from "lucide-react";
 const values = [
   {
     icon: Heart,
-    title: "Compassion",
-    description: "We treat every child with kindness, understanding, and respect.",
+    title: "Soucit",
+    description: "Ke každému dítěti přistupujeme s laskavostí, porozuměním a respektem.",
   },
   {
     icon: Shield,
-    title: "Safety",
-    description: "A secure, nurturing environment where children can thrive.",
+    title: "Bezpečnost",
+    description: "Bezpečné a pečující prostředí, kde děti mohou prospívat.",
   },
   {
     icon: Sparkles,
-    title: "Creativity",
-    description: "Encouraging imagination and self-expression in everything we do.",
+    title: "Kreativita",
+    description: "Podporujeme fantazii a sebevyjádření ve všem, co děláme.",
   },
   {
     icon: Users,
-    title: "Community",
-    description: "Building lasting friendships and a sense of belonging.",
+    title: "Komunita",
+    description: "Budujeme trvalá přátelství a pocit sounáležitosti.",
   },
 ];
 
@@ -42,10 +42,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              About Domadinka
+              O Domadince
             </h1>
             <p className="text-lg text-muted-foreground">
-              Creating magical summer memories since 2010
+              Vytváříme kouzelné letní vzpomínky od roku 2010
             </p>
           </div>
         </div>
@@ -58,17 +58,17 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="font-display text-3xl font-bold text-foreground mb-6">
-                  Our Story
+                  Náš příběh
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Domadinka z.s. began with a simple dream: to create a place where every child could experience the joy of summer. What started as a small community program has grown into a beloved institution serving hundreds of families each year.
+                    Domadinka z.s. začala s jednoduchým snem: vytvořit místo, kde každé dítě může zažít radost z léta. Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, která každý rok slouží stovkám rodin.
                   </p>
                   <p>
-                    Founded by a group of passionate educators and parents, we believed that every child deserves access to enriching summer experiences, regardless of their background. This belief continues to drive everything we do.
+                    Založena skupinou nadšených pedagogů a rodičů, věřili jsme, že každé dítě si zaslouží přístup k obohacujícím letním zážitkům bez ohledu na své zázemí. Toto přesvědčení nadále pohání vše, co děláme.
                   </p>
                   <p>
-                    Today, we're proud to be a nonprofit organization dedicated to providing safe, fun, and educational summer programs that help children grow, learn, and make lifelong friends.
+                    Dnes jsme hrdí na to, že jsme nezisková organizace zaměřená na poskytování bezpečných, zábavných a vzdělávacích letních programů, které pomáhají dětem růst, učit se a navazovat přátelství na celý život.
                   </p>
                 </div>
               </div>
@@ -77,8 +77,8 @@ const About = () => {
                   <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <Star className="w-12 h-12 text-primary-foreground" />
                   </div>
-                  <p className="font-display text-2xl font-bold text-foreground">15+ Years</p>
-                  <p className="text-muted-foreground">of Summer Magic</p>
+                  <p className="font-display text-2xl font-bold text-foreground">15+ let</p>
+                  <p className="text-muted-foreground">letní magie</p>
                 </div>
               </div>
             </div>
@@ -92,10 +92,10 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center">
             <Target className="w-12 h-12 text-camp-grass mx-auto mb-6" />
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground mb-6">
-              Our Mission
+              Naše mise
             </h2>
             <p className="text-xl text-secondary-foreground/80 leading-relaxed">
-              To provide a safe, inclusive, and joyful summer experience where children can explore their interests, develop new skills, build lasting friendships, and create cherished memories that inspire them throughout their lives.
+              Poskytovat bezpečný, inkluzivní a radostný letní zážitek, kde děti mohou objevovat své zájmy, rozvíjet nové dovednosti, budovat trvalá přátelství a vytvářet vzpomínky, které je budou inspirovat po celý život.
             </p>
           </div>
         </div>
@@ -106,10 +106,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Our Values
+              Naše hodnoty
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              These core principles guide everything we do at Domadinka
+              Tyto základní principy vedou vše, co v Domadince děláme
             </p>
           </div>
           
@@ -138,10 +138,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Meet Our Team
+              Poznejte náš tým
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Dedicated professionals who make every summer special
+              Oddaní profesionálové, kteří dělají každé léto výjimečným
             </p>
           </div>
           
@@ -175,7 +175,7 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-              What Children Can Expect
+              Co mohou děti očekávat
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
@@ -184,8 +184,8 @@ const About = () => {
                     <span className="text-primary-foreground font-bold text-sm">1</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Fun Daily Activities</h3>
-                    <p className="text-sm text-muted-foreground">From arts and crafts to sports and games, every day brings new adventures.</p>
+                    <h3 className="font-semibold text-foreground mb-1">Zábavné denní aktivity</h3>
+                    <p className="text-sm text-muted-foreground">Od výtvarných aktivit po sporty a hry – každý den přináší nová dobrodružství.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -193,8 +193,8 @@ const About = () => {
                     <span className="text-white font-bold text-sm">2</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">New Friends</h3>
-                    <p className="text-sm text-muted-foreground">Meet other kids, work together, and build friendships that last beyond summer.</p>
+                    <h3 className="font-semibold text-foreground mb-1">Noví kamarádi</h3>
+                    <p className="text-sm text-muted-foreground">Seznámí se s dalšími dětmi, spolupracují a budují přátelství, která přetrvají i po létě.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -202,8 +202,8 @@ const About = () => {
                     <span className="text-white font-bold text-sm">3</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Caring Counselors</h3>
-                    <p className="text-sm text-muted-foreground">Our trained staff provides guidance, support, and lots of encouragement.</p>
+                    <h3 className="font-semibold text-foreground mb-1">Pečující vedoucí</h3>
+                    <p className="text-sm text-muted-foreground">Náš vyškolený tým poskytuje vedení, podporu a spoustu povzbuzení.</p>
                   </div>
                 </div>
               </div>
@@ -213,8 +213,8 @@ const About = () => {
                     <span className="text-white font-bold text-sm">4</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Outdoor Exploration</h3>
-                    <p className="text-sm text-muted-foreground">Discover nature, learn about the environment, and enjoy the fresh air.</p>
+                    <h3 className="font-semibold text-foreground mb-1">Objevování přírody</h3>
+                    <p className="text-sm text-muted-foreground">Poznávají přírodu, učí se o životním prostředí a užívají si čerstvý vzduch.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -222,8 +222,8 @@ const About = () => {
                     <span className="text-white font-bold text-sm">5</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Skill Building</h3>
-                    <p className="text-sm text-muted-foreground">Learn new things, from swimming to crafting, and gain confidence along the way.</p>
+                    <h3 className="font-semibold text-foreground mb-1">Rozvoj dovedností</h3>
+                    <p className="text-sm text-muted-foreground">Učí se nové věci, od plavání po tvoření, a získávají sebevědomí.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -231,8 +231,8 @@ const About = () => {
                     <span className="text-primary-foreground font-bold text-sm">6</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Unforgettable Memories</h3>
-                    <p className="text-sm text-muted-foreground">Take home stories, projects, and memories that will be cherished forever.</p>
+                    <h3 className="font-semibold text-foreground mb-1">Nezapomenutelné vzpomínky</h3>
+                    <p className="text-sm text-muted-foreground">Odnášejí si domů příběhy, výrobky a vzpomínky, které budou navždy cenit.</p>
                   </div>
                 </div>
               </div>

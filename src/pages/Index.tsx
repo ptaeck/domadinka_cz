@@ -7,41 +7,41 @@ import { Users, Sparkles, TreePine, Palette, Music, ArrowRight, Star } from "luc
 const features = [
   {
     icon: TreePine,
-    title: "Outdoor Adventures",
-    description: "Nature walks, camping skills, and exploring the great outdoors.",
+    title: "Dobrodružství v přírodě",
+    description: "Procházky přírodou, táborové dovednosti a objevování krás přírody.",
   },
   {
     icon: Palette,
-    title: "Arts & Crafts",
-    description: "Creative projects that let imaginations run wild.",
+    title: "Výtvarné aktivity",
+    description: "Kreativní projekty, které rozvíjí fantazii.",
   },
   {
     icon: Music,
-    title: "Music & Performance",
-    description: "Singing, dancing, and putting on shows together.",
+    title: "Hudba a představení",
+    description: "Zpívání, tanec a společné vystupování.",
   },
   {
     icon: Users,
-    title: "Team Building",
-    description: "Games and activities that build friendships and confidence.",
+    title: "Týmové aktivity",
+    description: "Hry a aktivity, které budují přátelství a sebevědomí.",
   },
 ];
 
 const testimonials = [
   {
-    quote: "My daughter couldn't stop talking about camp for weeks! She made so many new friends.",
-    author: "Sarah M.",
-    role: "Parent",
+    quote: "Dcera nemohla přestat o táboře mluvit celé týdny! Našla si spoustu nových kamarádů.",
+    author: "Petra M.",
+    role: "Rodič",
   },
   {
-    quote: "The counselors are amazing. They really care about every child's experience.",
-    author: "Michael T.",
-    role: "Parent",
+    quote: "Vedoucí jsou úžasní. Opravdu jim záleží na zážitku každého dítěte.",
+    author: "Martin T.",
+    role: "Rodič",
   },
   {
-    quote: "Best summer ever! I learned to build a campfire and made a really cool birdhouse.",
-    author: "Emma, age 8",
-    role: "Camper",
+    quote: "Nejlepší léto ever! Naučil jsem se rozdělávat oheň a vyrobil jsem si super budku pro ptáky.",
+    author: "Tomáš, 8 let",
+    role: "Táborník",
   },
 ];
 
@@ -54,30 +54,30 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-primary/20 text-primary-foreground px-4 py-2 rounded-full mb-6">
               <Sparkles className="w-4 h-4 text-camp-sun" />
-              <span className="text-sm font-medium text-foreground">Summer 2025 Registration Open!</span>
+              <span className="text-sm font-medium text-foreground">Registrace na léto 2025 otevřena!</span>
             </div>
             
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Where Every Child's{" "}
-              <span className="text-camp-grass">Summer</span>{" "}
-              Becomes an{" "}
-              <span className="text-camp-coral">Adventure</span>
+              Kde se každé{" "}
+              <span className="text-camp-grass">léto</span>{" "}
+              stává{" "}
+              <span className="text-camp-coral">dobrodružstvím</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join our loving community where children ages 5-12 explore, create, and grow through fun-filled summer activities in a safe, nurturing environment.
+              Připojte se k naší přátelské komunitě, kde děti ve věku 5–12 let objevují, tvoří a rostou prostřednictvím zábavných letních aktivit v bezpečném a láskyplném prostředí.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/registration">
                 <Button size="lg" className="w-full sm:w-auto gap-2 rounded-full px-8 text-base">
-                  Register Now
+                  Registrovat se
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
               <Link to="/about">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 text-base">
-                  Learn More
+                  Zjistit více
                 </Button>
               </Link>
             </div>
@@ -93,10 +93,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What Makes Camp Special
+              Co dělá náš tábor výjimečným
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Every day is an opportunity for discovery, friendship, and fun.
+              Každý den je příležitostí k objevování, přátelství a zábavě.
             </p>
           </div>
           
@@ -125,21 +125,21 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground mb-4">
-              Ready to Give Your Child an Unforgettable Summer?
+              Připraveni dopřát svému dítěti nezapomenutelné léto?
             </h2>
             <p className="text-secondary-foreground/80 mb-8 max-w-2xl mx-auto">
-              Spots fill up quickly! Secure your child's place at Domadinka today and watch them make memories that last a lifetime.
+              Místa se rychle plní! Zajistěte svému dítěti místo v Domadince ještě dnes a sledujte, jak vytváří vzpomínky na celý život.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/registration">
                 <Button size="lg" className="w-full sm:w-auto gap-2 rounded-full px-8">
-                  Register Now
+                  Registrovat se
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
               <Link to="/gallery">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 bg-background/50">
-                  View Gallery
+                  Prohlédnout galerii
                 </Button>
               </Link>
             </div>
@@ -152,10 +152,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What Families Say
+              Co říkají rodiny
             </h2>
             <p className="text-muted-foreground">
-              Hear from our amazing camp community
+              Poslechněte si naši úžasnou táborovou komunitu
             </p>
           </div>
           
@@ -168,7 +168,7 @@ const Index = () => {
                       <Star key={i} className="w-4 h-4 fill-camp-sun text-camp-sun" />
                     ))}
                   </div>
-                  <p className="text-foreground mb-4 italic">"{testimonial.quote}"</p>
+                  <p className="text-foreground mb-4 italic">„{testimonial.quote}"</p>
                   <div>
                     <p className="font-semibold text-foreground">{testimonial.author}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>

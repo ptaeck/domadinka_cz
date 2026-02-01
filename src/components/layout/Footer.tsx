@@ -18,32 +18,32 @@ const Footer = () => {
               />
             </Link>
             <p className="text-background/80 text-sm leading-relaxed">
-              Creating magical summer memories for children through fun, learning, and adventure.
+              Vytváříme kouzelné letní vzpomínky pro děti prostřednictvím zábavy, učení a dobrodružství.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="font-display text-lg font-semibold">Quick Links</h3>
+            <h3 className="font-display text-lg font-semibold">Rychlé odkazy</h3>
             <nav className="flex flex-col gap-2">
               <Link to="/about" className="text-background/80 hover:text-primary transition-colors text-sm">
-                About Us
+                O nás
               </Link>
               <Link to="/gallery" className="text-background/80 hover:text-primary transition-colors text-sm">
-                Photo Gallery
+                Fotogalerie
               </Link>
               <Link to="/registration" className="text-background/80 hover:text-primary transition-colors text-sm">
-                Registration
+                Registrace
               </Link>
               <Link to="/contact" className="text-background/80 hover:text-primary transition-colors text-sm">
-                Contact Us
+                Kontakt
               </Link>
             </nav>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="font-display text-lg font-semibold">Contact Us</h3>
+            <h3 className="font-display text-lg font-semibold">Kontaktujte nás</h3>
             <div className="space-y-3">
               <a href="mailto:info@domadinka.cz" className="flex items-center gap-3 text-background/80 hover:text-primary transition-colors text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0" />
@@ -62,7 +62,7 @@ const Footer = () => {
 
           {/* Social & Newsletter */}
           <div className="space-y-4">
-            <h3 className="font-display text-lg font-semibold">Follow Us</h3>
+            <h3 className="font-display text-lg font-semibold">Sledujte nás</h3>
             <div className="flex gap-3">
               <a
                 href="https://facebook.com"
@@ -93,7 +93,7 @@ const Footer = () => {
               </a>
             </div>
             <p className="text-background/60 text-xs">
-              Stay connected for camp updates, photos, and special announcements!
+              Buďte s námi v kontaktu pro novinky z tábora, fotky a speciální oznámení!
             </p>
           </div>
         </div>
@@ -103,8 +103,8 @@ const Footer = () => {
       <div className="border-t border-background/10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-xs text-background/60">
-            <p>© {new Date().getFullYear()} Domadinka z.s. All rights reserved.</p>
-            <p>A nonprofit organization dedicated to enriching children's lives.</p>
+            <p>© {new Date().getFullYear()} Domadinka z.s. Všechna práva vyhrazena.</p>
+            <p>Nezisková organizace věnovaná obohacování života dětí.</p>
           </div>
         </div>
       </div>
