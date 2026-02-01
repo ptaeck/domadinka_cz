@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kinder Summer Camp Design System
+   Warm, friendly palette with soft yellows, greens, and blues
+   All colors in HSL format
+*/
+
+@layer base {
+  :root {
+    /* Warm cream background */
+    --background: 45 40% 97%;
+    --foreground: 200 30% 20%;
+
+    /* Soft cream cards */
+    --card: 45 50% 99%;
+    --card-foreground: 200 30% 20%;
+
+    --popover: 45 50% 99%;
+    --popover-foreground: 200 30% 20%;
+
+    /* Sunny yellow primary */
+    --primary: 45 90% 55%;
+    --primary-foreground: 200 30% 15%;
+
+    /* Soft green secondary */
+    --secondary: 150 40% 85%;
+    --secondary-foreground: 150 40% 25%;
+
+    /* Light blue muted */
+    --muted: 200 40% 94%;
+    --muted-foreground: 200 20% 45%;
+
+    /* Sky blue accent */
+    --accent: 200 70% 85%;
+    --accent-foreground: 200 50% 25%;
+
+    /* Warm coral destructive */
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 30% 88%;
+    --input: 45 30% 88%;
+    --ring: 45 90% 55%;
+
+    --radius: 1rem;
+
+    /* Camp-specific colors */
+    --camp-sun: 45 90% 55%;
+    --camp-grass: 130 45% 50%;
+    --camp-sky: 200 70% 60%;
+    --camp-earth: 30 40% 45%;
+    --camp-coral: 15 75% 60%;
+
+    /* Sidebar (keeping for compatibility) */
+    --sidebar-background: 45 40% 97%;
+    --sidebar-foreground: 200 30% 20%;
+    --sidebar-primary: 45 90% 55%;
+    --sidebar-primary-foreground: 200 30% 15%;
+    --sidebar-accent: 200 70% 85%;
+    --sidebar-accent-foreground: 200 50% 25%;
+    --sidebar-border: 45 30% 88%;
+    --sidebar-ring: 45 90% 55%;
+  }
+
+  .dark {
+    --background: 200 30% 12%;
+    --foreground: 45 40% 95%;
+
+    --card: 200 25% 15%;
+    --card-foreground: 45 40% 95%;
+
+    --popover: 200 25% 15%;
+    --popover-foreground: 45 40% 95%;
+
+    --primary: 45 85% 50%;
+    --primary-foreground: 200 30% 10%;
+
+    --secondary: 150 30% 25%;
+    --secondary-foreground: 150 40% 90%;
+
+    --muted: 200 25% 20%;
+    --muted-foreground: 200 20% 65%;
+
+    --accent: 200 50% 25%;
+    --accent-foreground: 200 70% 90%;
+
+    --destructive: 0 55% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 25% 25%;
+    --input: 200 25% 25%;
+    --ring: 45 85% 50%;
+
+    --sidebar-background: 200 30% 12%;
+    --sidebar-foreground: 45 40% 95%;
+    --sidebar-primary: 45 85% 50%;
+    --sidebar-primary-foreground: 200 30% 10%;
+    --sidebar-accent: 200 50% 25%;
+    --sidebar-accent-foreground: 200 70% 90%;
+    --sidebar-border: 200 25% 25%;
+    --sidebar-ring: 45 85% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', system-ui, sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+}
