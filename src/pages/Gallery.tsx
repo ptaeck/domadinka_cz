@@ -67,18 +67,18 @@ const getYearColor = (year: number) => {
 
 const mainPathPoints = [
   // Row 1: going right (2006-2014, no 2010) - following upper green dots
-  { x: 5, y: 6 },      // 2006 - Domalend
-  { x: 8, y: 10 },     // 2007 - Kosmodom
-  { x: 12, y: 16 },    // 2008 - top left village
-  { x: 20, y: 20 },    // 2009
-  { x: 30, y: 16 },    // 2011
-  { x: 42, y: 12 },    // 2012 - Hartosec area
-  { x: 56, y: 10 },    // 2013 - near lake
-  { x: 70, y: 12 },    // 2014 - Pollschütz - turn down (moved in from edge)
+  { x: 6, y: 8 },      // 2006 - Domalend
+  { x: 10, y: 12 },    // 2007 - Kosmodom
+  { x: 16, y: 18 },    // 2008 - top left village
+  { x: 24, y: 20 },    // 2009
+  { x: 34, y: 16 },    // 2011
+  { x: 46, y: 12 },    // 2012 - Hartosec area
+  { x: 58, y: 10 },    // 2013 - near lake
+  { x: 70, y: 12 },    // 2014
   // Row 2: going left (2015-2020) - following middle green dots
-  { x: 92, y: 12 },    // 2015 - upper right corner
-  { x: 68, y: 34 },    // 2016 (moved in from edge)
-  { x: 54, y: 38 },    // 2017 - Schwan B. area
+  { x: 88, y: 14 },    // 2015 - upper right corner
+  { x: 74, y: 28 },    // 2016
+  { x: 58, y: 36 },    // 2017
   { x: 40, y: 42 },    // 2018
   { x: 26, y: 46 },    // 2019 - Leskau area
   { x: 14, y: 44 },    // 2020 - turn down (moved in from edge)
