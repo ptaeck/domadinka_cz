@@ -4,15 +4,17 @@ import { Camera, ChevronLeft, ChevronRight, X } from "lucide-react";
 import domaslavMap from "@/assets/domaslav-map-landscape.jpg";
 import domadinkaBadge from "@/assets/domadinka-megaphone.png";
 
-// Single path years (2008-2022)
-const singleYears = Array.from({ length: 15 }, (_, i) => 2008 + i);
+// Single path years (2006-2022)
+const singleYears = Array.from({ length: 17 }, (_, i) => 2006 + i);
 // Split path years (2023-2026) - two badges per year
 const splitYears = [2023, 2024, 2025, 2026];
 // All years for navigation
 const allYears = [...singleYears, ...splitYears];
 
-// Themes for single-path years (2008-2022)
+// Themes for single-path years (2006-2022)
 const yearThemes: Record<number, string> = {
+  2006: "Domalend",
+  2007: "Kosmodom",
   2008: "Železná",
   2009: "Šukačka",
   2010: "?",
@@ -56,16 +58,18 @@ const getYearColor = (year: number) => {
     "from-secondary to-camp-grass/30",
     "from-camp-earth/40 to-camp-sun/50",
   ];
-  return colors[(year - 2008) % colors.length];
+  return colors[(year - 2006) % colors.length];
 };
 
 // Natural path following green dots on the Kaiser map
-// Row 1: 2008-2014 going RIGHT (top area)
+// Row 1: 2006-2014 going RIGHT (top area)
 // Row 2: 2015-2020 going LEFT (middle area)  
 // Row 3: 2021-2022 + split 2023-2026 going RIGHT (bottom area)
 
 const mainPathPoints = [
-  // Row 1: going right (2008-2014) - following upper green dots
+  // Row 1: going right (2006-2014) - following upper green dots
+  { x: 6, y: 8 },      // 2006 - Domalend (before main path start)
+  { x: 7, y: 11 },     // 2007 - Kosmodom
   { x: 8, y: 14 },     // 2008 - top left village
   { x: 16, y: 18 },    // 2009
   { x: 26, y: 14 },    // 2010 - Fürnitz area
@@ -146,7 +150,7 @@ const getMainPathRotation = (index: number) => {
 const getBranchRotation = (points: typeof upperBranchPoints, index: number) => {
   if (index === 0) {
     // First branch point - direction from split point to first branch
-    return getRotation(mainPathPoints[14], points[0]);
+    return getRotation(mainPathPoints[16], points[0]);
   }
   if (index < points.length - 1) {
     return getRotation(points[index], points[index + 1]);
