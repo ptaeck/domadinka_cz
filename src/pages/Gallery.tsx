@@ -25,7 +25,7 @@ const yearThemes: Record<number, string> = {
   2016: "Řemesla",
   2017: "Vesmír",
   2018: "Farales",
-  2019: "Sirotčinec slečny Peregrinové",
+  2019: "Sirotčinec slečny Vorlové",
   2020: "Řecko",
   2021: "Domadinka",
   2022: "Staré pověsti české",
