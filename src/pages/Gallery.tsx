@@ -95,10 +95,10 @@ const upperBranchPoints = [
 
 // Lower branch (2023-2026) - continues right on lower track
 const lowerBranchPoints = [
-  { x: 38, y: 88 },    // 2023 lower - Atlantslav (moved down to avoid overlap)
-  { x: 54, y: 78 },    // 2024 lower - Jumanji
-  { x: 72, y: 82 },    // 2025 lower
-  { x: 88, y: 78 },    // 2026 lower
+  { x: 38, y: 82 },    // 2023 lower (moved up)
+  { x: 54, y: 78 },    // 2024 lower - Jumanji (moved up)
+  { x: 72, y: 82 },    // 2025 lower (moved up)
+  { x: 88, y: 78 },    // 2026 lower - Sczlur area (moved up)
 ];
 
 // Calculate rotation angle between two points (in degrees)
@@ -294,8 +294,8 @@ const Gallery = () => {
                 {/* Lower branch (2023-2026) - winding descending curve */}
                 <path
                   d={`M 24 70 
-                      C 28 78, 34 86, 38 88
-                      C 44 82, 50 77, 54 78
+                      C 28 76, 34 80, 38 82
+                      C 44 80, 50 77, 54 78
                       C 60 79, 66 81, 72 82
                       C 78 81, 84 79, 88 78`}
                   fill="none"
