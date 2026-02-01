@@ -4,8 +4,8 @@ import { Camera, ChevronLeft, ChevronRight, X } from "lucide-react";
 import domaslavMap from "@/assets/domaslav-map-landscape.jpg";
 import domadinkaBadge from "@/assets/domadinka-megaphone.png";
 
-// Single path years (2006-2022)
-const singleYears = Array.from({ length: 17 }, (_, i) => 2006 + i);
+// Single path years (2006-2022, excluding 2010)
+const singleYears = Array.from({ length: 17 }, (_, i) => 2006 + i).filter(y => y !== 2010);
 // Split path years (2023-2026) - two badges per year
 const splitYears = [2023, 2024, 2025, 2026];
 // All years for navigation
@@ -17,7 +17,6 @@ const yearThemes: Record<number, string> = {
   2007: "Kosmodom",
   2008: "Železná",
   2009: "Šukačka",
-  2010: "?",
   2011: "Kytice",
   2012: "Historie českých zemí",
   2013: "Alenka",
@@ -62,21 +61,20 @@ const getYearColor = (year: number) => {
 };
 
 // Natural path following green dots on the Kaiser map
-// Row 1: 2006-2014 going RIGHT (top area)
+// Row 1: 2006-2014 going RIGHT (top area) - excluding 2010
 // Row 2: 2015-2020 going LEFT (middle area)  
 // Row 3: 2021-2022 + split 2023-2026 going RIGHT (bottom area)
 
 const mainPathPoints = [
-  // Row 1: going right (2006-2014) - following upper green dots
-  { x: 6, y: 8 },      // 2006 - Domalend (before main path start)
-  { x: 7, y: 11 },     // 2007 - Kosmodom
-  { x: 8, y: 14 },     // 2008 - top left village
-  { x: 16, y: 18 },    // 2009
-  { x: 26, y: 14 },    // 2010 - Fürnitz area
-  { x: 37, y: 12 },    // 2011
-  { x: 50, y: 10 },    // 2012 - Hartosec area
-  { x: 64, y: 14 },    // 2013 - near lake
-  { x: 76, y: 12 },    // 2014 - Pollschütz - turn down (moved in from edge)
+  // Row 1: going right (2006-2014, no 2010) - following upper green dots
+  { x: 5, y: 6 },      // 2006 - Domalend
+  { x: 8, y: 10 },     // 2007 - Kosmodom
+  { x: 12, y: 16 },    // 2008 - top left village
+  { x: 20, y: 20 },    // 2009
+  { x: 30, y: 16 },    // 2011
+  { x: 42, y: 12 },    // 2012 - Hartosec area
+  { x: 56, y: 10 },    // 2013 - near lake
+  { x: 70, y: 12 },    // 2014 - Pollschütz - turn down (moved in from edge)
   // Row 2: going left (2015-2020) - following middle green dots
   { x: 80, y: 30 },    // 2015 - Tschetif area
   { x: 68, y: 34 },    // 2016 (moved in from edge)
@@ -150,7 +148,7 @@ const getMainPathRotation = (index: number) => {
 const getBranchRotation = (points: typeof upperBranchPoints, index: number) => {
   if (index === 0) {
     // First branch point - direction from split point to first branch
-    return getRotation(mainPathPoints[16], points[0]);
+    return getRotation(mainPathPoints[15], points[0]);
   }
   if (index < points.length - 1) {
     return getRotation(points[index], points[index + 1]);
