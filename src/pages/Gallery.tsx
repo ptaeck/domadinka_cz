@@ -75,30 +75,30 @@ const mainPathPoints = [
   { x: 78, y: 8 },     // 2014 - Pollschütz - turn down
   // Row 2: going left (2015-2020) - following middle green dots
   { x: 82, y: 32 },    // 2015 - Tschetif area
-  { x: 72, y: 36 },    // 2016 (moved up)
-  { x: 58, y: 40 },    // 2017 - Schwan B. area (moved up)
-  { x: 42, y: 46 },    // 2018 (moved up)
-  { x: 28, y: 52 },    // 2019 - Leskau area (moved up)
-  { x: 12, y: 50 },    // 2020 - turn down (moved up)
+  { x: 72, y: 30 },    // 2016 (moved up)
+  { x: 58, y: 34 },    // 2017 - Schwan B. area (moved up)
+  { x: 42, y: 38 },    // 2018 (moved up)
+  { x: 28, y: 42 },    // 2019 - Leskau area (moved up)
+  { x: 12, y: 40 },    // 2020 - turn down (moved up)
   // Row 3: going right (2021-2022) - following lower green dots
-  { x: 8, y: 72 },     // 2021 - Brak area (adjusted)
-  { x: 22, y: 80 },    // 2022 - Boley Dornschlag - split point (adjusted)
+  { x: 8, y: 62 },     // 2021 - Brak area (moved up)
+  { x: 22, y: 70 },    // 2022 - Boley Dornschlag - split point (moved up)
 ];
 
 // Upper branch (2023-2026) - continues right on upper track
 const upperBranchPoints = [
-  { x: 38, y: 78 },    // 2023 upper
-  { x: 52, y: 72 },    // 2024 upper
-  { x: 68, y: 68 },    // 2025 upper
-  { x: 82, y: 62 },    // 2026 upper - Kokaschütz area
+  { x: 38, y: 68 },    // 2023 upper (moved up)
+  { x: 52, y: 62 },    // 2024 upper (moved up)
+  { x: 68, y: 58 },    // 2025 upper (moved up)
+  { x: 82, y: 52 },    // 2026 upper - Kokaschütz area (moved up)
 ];
 
 // Lower branch (2023-2026) - continues right on lower track
 const lowerBranchPoints = [
-  { x: 38, y: 92 },    // 2023 lower
-  { x: 54, y: 88 },    // 2024 lower - Jumanji (moved up to avoid overlap)
-  { x: 72, y: 92 },    // 2025 lower
-  { x: 88, y: 88 },    // 2026 lower - Sczlur area
+  { x: 38, y: 82 },    // 2023 lower (moved up)
+  { x: 54, y: 78 },    // 2024 lower - Jumanji (moved up)
+  { x: 72, y: 82 },    // 2025 lower (moved up)
+  { x: 88, y: 78 },    // 2026 lower - Sczlur area (moved up)
 ];
 
 // Calculate rotation angle between two points (in degrees)
@@ -236,13 +236,13 @@ const Gallery = () => {
                       C 53 9, 57 14, 62 12 
                       C 67 10, 73 6, 78 8
                       C 84 10, 83 20, 82 32
-                      C 81 34, 76 35, 72 36
-                      C 68 37, 62 39, 58 40
-                      C 52 42, 46 45, 42 46
-                      C 36 47, 32 50, 28 52
-                      C 22 54, 16 52, 12 50
-                      C 8 48, 6 58, 8 72
-                      C 10 78, 16 81, 22 80`}
+                      C 80 28, 76 26, 72 30
+                      C 68 34, 64 38, 58 34
+                      C 52 30, 48 36, 42 38
+                      C 36 40, 32 44, 28 42
+                      C 22 40, 16 38, 12 40
+                      C 6 42, 4 50, 8 62
+                      C 12 68, 18 72, 22 70`}
                   fill="none"
                   stroke="hsl(var(--camp-coral))"
                   strokeWidth="0.5"
@@ -253,11 +253,11 @@ const Gallery = () => {
                 />
                 {/* Upper branch (2023-2026) - winding ascending curve */}
                 <path
-                  d={`M 22 80 
-                      C 26 78, 32 76, 38 78
-                      C 44 77, 48 73, 52 72
-                      C 58 71, 62 69, 68 68
-                      C 74 67, 78 64, 82 62`}
+                  d={`M 22 70 
+                      C 26 66, 32 66, 38 68
+                      C 44 67, 48 63, 52 62
+                      C 58 61, 62 59, 68 58
+                      C 74 57, 78 54, 82 52`}
                   fill="none"
                   stroke="hsl(var(--camp-coral))"
                   strokeWidth="0.5"
@@ -268,11 +268,11 @@ const Gallery = () => {
                 />
                 {/* Lower branch (2023-2026) - winding descending curve */}
                 <path
-                  d={`M 22 80 
-                      C 26 84, 32 88, 38 92
-                      C 44 90, 50 87, 54 88
-                      C 60 89, 66 91, 72 92
-                      C 78 91, 84 89, 88 88`}
+                  d={`M 22 70 
+                      C 26 76, 32 80, 38 82
+                      C 44 80, 50 77, 54 78
+                      C 60 79, 66 81, 72 82
+                      C 78 81, 84 79, 88 78`}
                   fill="none"
                   stroke="hsl(var(--camp-coral))"
                   strokeWidth="0.5"
