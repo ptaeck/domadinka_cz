@@ -33,7 +33,7 @@ const Footer = () => {
                 Fotogalerie
               </Link>
               <Link to="/registration" className="text-background/80 hover:text-primary transition-colors text-sm">
-                Registrace
+                Přihláška
               </Link>
               <Link to="/contact" className="text-background/80 hover:text-primary transition-colors text-sm">
                 Kontakt

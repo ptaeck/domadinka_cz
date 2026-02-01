@@ -71,7 +71,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/registration">
                 <Button size="lg" className="w-full sm:w-auto gap-2 rounded-full px-8 text-base">
-                  Registrovat se
+                  Přihlásit se
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>
@@ -133,7 +133,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/registration">
                 <Button size="lg" className="w-full sm:w-auto gap-2 rounded-full px-8">
-                  Registrovat se
+                  Přihlásit se
                   <ArrowRight className="w-4 h-4" />
                 </Button>
               </Link>

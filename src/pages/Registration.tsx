@@ -81,7 +81,7 @@ const Registration = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Registrace
+              Přihláška
             </h1>
             <p className="text-lg text-muted-foreground mb-8">
               Zajistěte svému dítěti místo na nezapomenutelném letním dobrodružství!
@@ -91,7 +91,7 @@ const Registration = () => {
               className="gap-2 rounded-full px-8"
               onClick={() => window.open("https://forms.google.com", "_blank")}
             >
-              Registrovat se
+              Přihlásit se
               <ExternalLink className="w-4 h-4" />
             </Button>
           </div>
@@ -169,11 +169,11 @@ const Registration = () => {
                 className="gap-2 rounded-full px-8"
                 onClick={() => window.open("https://forms.google.com", "_blank")}
               >
-                Vyplnit registrační formulář
+                Vyplnit přihlášku
                 <ExternalLink className="w-4 h-4" />
               </Button>
               <p className="text-sm text-muted-foreground mt-4">
-                Budete přesměrováni na náš zabezpečený registrační formulář
+                Budete přesměrováni na náš zabezpečený přihlašovací formulář
               </p>
             </div>
           </div>
