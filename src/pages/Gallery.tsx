@@ -76,7 +76,7 @@ const mainPathPoints = [
   { x: 56, y: 10 },    // 2013 - near lake
   { x: 70, y: 12 },    // 2014 - Pollschütz - turn down (moved in from edge)
   // Row 2: going left (2015-2020) - following middle green dots
-  { x: 80, y: 30 },    // 2015 - Tschetif area
+  { x: 85, y: 8 },     // 2015 - upper right corner
   { x: 68, y: 34 },    // 2016 (moved in from edge)
   { x: 54, y: 38 },    // 2017 - Schwan B. area
   { x: 40, y: 42 },    // 2018
@@ -263,8 +263,8 @@ const Gallery = () => {
                       C 35 14, 38 12, 42 12 
                       C 48 11, 52 10, 56 10 
                       C 62 10, 66 11, 70 12
-                      C 76 13, 80 22, 80 30
-                      C 78 32, 72 33, 68 34
+                      C 78 10, 84 6, 85 8
+                      C 84 16, 76 28, 68 34
                       C 62 35, 58 37, 54 38
                       C 48 40, 44 41, 40 42
                       C 34 44, 30 45, 26 46
