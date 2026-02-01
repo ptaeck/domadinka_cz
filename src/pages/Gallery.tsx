@@ -66,23 +66,23 @@ const getYearColor = (year: number) => {
 
 const mainPathPoints = [
   // Row 1: going right (2008-2014) - following upper green dots
-  { x: 6, y: 12 },     // 2008 - top left village
-  { x: 14, y: 18 },    // 2009
-  { x: 24, y: 14 },    // 2010 - Fürnitz area
-  { x: 35, y: 10 },    // 2011
-  { x: 48, y: 8 },     // 2012 - Hartosec area
-  { x: 62, y: 12 },    // 2013 - near lake
-  { x: 78, y: 8 },     // 2014 - Pollschütz - turn down
+  { x: 8, y: 14 },     // 2008 - top left village
+  { x: 16, y: 18 },    // 2009
+  { x: 26, y: 14 },    // 2010 - Fürnitz area
+  { x: 37, y: 12 },    // 2011
+  { x: 50, y: 10 },    // 2012 - Hartosec area
+  { x: 64, y: 14 },    // 2013 - near lake
+  { x: 76, y: 12 },    // 2014 - Pollschütz - turn down (moved in from edge)
   // Row 2: going left (2015-2020) - following middle green dots
-  { x: 82, y: 32 },    // 2015 - Tschetif area
-  { x: 72, y: 30 },    // 2016 (moved up)
-  { x: 58, y: 34 },    // 2017 - Schwan B. area (moved up)
-  { x: 42, y: 38 },    // 2018 (moved up)
-  { x: 28, y: 42 },    // 2019 - Leskau area (moved up)
-  { x: 12, y: 40 },    // 2020 - turn down (moved up)
+  { x: 80, y: 30 },    // 2015 - Tschetif area
+  { x: 68, y: 34 },    // 2016 (moved in from edge)
+  { x: 54, y: 38 },    // 2017 - Schwan B. area
+  { x: 40, y: 42 },    // 2018
+  { x: 26, y: 46 },    // 2019 - Leskau area
+  { x: 14, y: 44 },    // 2020 - turn down (moved in from edge)
   // Row 3: going right (2021-2022) - following lower green dots
-  { x: 8, y: 62 },     // 2021 - Brak area (moved up)
-  { x: 22, y: 70 },    // 2022 - Boley Dornschlag - split point (moved up)
+  { x: 12, y: 62 },    // 2021 - Brak area
+  { x: 24, y: 70 },    // 2022 - Boley Dornschlag - split point (moved in)
 ];
 
 // Upper branch (2023-2026) - continues right on upper track
@@ -126,9 +126,8 @@ const getOffsetForRotation = (rotationDeg: number) => {
   // CSS rotation is clockwise, so we use standard rotation matrix
   const newDotAngle = DOT_BASE_ANGLE + rotationRad;
   // We need to offset the badge center by the NEGATIVE of the rotated dot position
-  // Scale factor: dot is ~145px from center, badge is ~48px, container is ~1000px wide
-  // So 145px / 48px badge * (48/1000) ≈ 0.145 or roughly 1.5-2% of container
-  const scaleFactor = 1.4; // Adjusted for visual alignment
+  // Reduce scale factor to keep badges within map bounds
+  const scaleFactor = 1.0;
   const offsetX = -Math.cos(newDotAngle) * scaleFactor;
   const offsetY = -Math.sin(newDotAngle) * scaleFactor;
   return { offsetX, offsetY };
@@ -254,21 +253,21 @@ const Gallery = () => {
               >
                 {/* Main path (2008-2022) - organic winding trail */}
                 <path
-                  d={`M 6 12 
-                      C 8 14, 11 19, 14 18 
-                      C 17 17, 20 13, 24 14 
-                      C 28 15, 31 11, 35 10 
-                      C 40 9, 44 7, 48 8 
-                      C 53 9, 57 14, 62 12 
-                      C 67 10, 73 6, 78 8
-                      C 84 10, 83 20, 82 32
-                      C 80 28, 76 26, 72 30
-                      C 68 34, 64 38, 58 34
-                      C 52 30, 48 36, 42 38
-                      C 36 40, 32 44, 28 42
-                      C 22 40, 16 38, 12 40
-                      C 6 42, 4 50, 8 62
-                      C 12 68, 18 72, 22 70`}
+                  d={`M 8 14 
+                      C 10 16, 13 19, 16 18 
+                      C 19 17, 23 13, 26 14 
+                      C 30 15, 33 13, 37 12 
+                      C 42 11, 46 9, 50 10 
+                      C 55 11, 60 13, 64 14 
+                      C 68 15, 72 13, 76 12
+                      C 80 11, 81 22, 80 30
+                      C 78 32, 72 33, 68 34
+                      C 62 35, 58 37, 54 38
+                      C 48 40, 44 41, 40 42
+                      C 34 44, 30 45, 26 46
+                      C 20 47, 16 46, 14 44
+                      C 10 42, 10 52, 12 62
+                      C 14 66, 20 70, 24 70`}
                   fill="none"
                   stroke="hsl(var(--camp-coral))"
                   strokeWidth="0.5"
@@ -279,8 +278,8 @@ const Gallery = () => {
                 />
                 {/* Upper branch (2023-2026) - winding ascending curve */}
                 <path
-                  d={`M 22 70 
-                      C 26 66, 32 66, 38 68
+                  d={`M 24 70 
+                      C 28 68, 34 66, 38 68
                       C 44 67, 48 63, 52 62
                       C 58 61, 62 59, 68 58
                       C 74 57, 78 54, 82 52`}
@@ -294,8 +293,8 @@ const Gallery = () => {
                 />
                 {/* Lower branch (2023-2026) - winding descending curve */}
                 <path
-                  d={`M 22 70 
-                      C 26 76, 32 80, 38 82
+                  d={`M 24 70 
+                      C 28 76, 34 80, 38 82
                       C 44 80, 50 77, 54 78
                       C 60 79, 66 81, 72 82
                       C 78 81, 84 79, 88 78`}
