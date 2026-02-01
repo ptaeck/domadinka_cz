@@ -95,7 +95,7 @@ const upperBranchPoints = [
 
 // Lower branch (2023-2026) - continues right on lower track
 const lowerBranchPoints = [
-  { x: 38, y: 82 },    // 2023 lower (moved up)
+  { x: 38, y: 88 },    // 2023 lower - Atlantslav (moved down to avoid overlap)
   { x: 54, y: 78 },    // 2024 lower - Jumanji (moved up)
   { x: 72, y: 82 },    // 2025 lower (moved up)
   { x: 88, y: 78 },    // 2026 lower - Sczlur area (moved up)
