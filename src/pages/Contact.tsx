@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Building2, Landmark } from "lucide-react";
+import { Mail, Phone, MapPin, Building2, Landmark, Tent } from "lucide-react";
 
 const contactInfo = [
   {
@@ -16,10 +16,10 @@ const contactInfo = [
     href: "tel:+1234567891",
   },
   {
-    icon: Mail,
-    label: "E-mail",
-    value: "info@domadinka.cz",
-    href: "mailto:info@domadinka.cz",
+    icon: Tent,
+    label: "Adresa táboru",
+    value: "Domaslav 1\n349 53 Lestkov",
+    href: "https://maps.google.com/?q=Domaslav 1",
   },
   {
     icon: MapPin,
@@ -28,10 +28,10 @@ const contactInfo = [
     href: "https://maps.google.com/?q=Sladkovského+2757/38,+Plzeň",
   },
   {
-    icon: MapPin,
-    label: "Adresa táboru",
-    value: "Domaslav 1\n349 53 Lestkov",
-    href: "https://maps.google.com/?q=Domaslav 1",
+    icon: Mail,
+    label: "E-mail",
+    value: "info@domadinka.cz",
+    href: "mailto:info@domadinka.cz",
   },
 ];
 
