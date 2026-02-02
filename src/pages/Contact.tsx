@@ -47,7 +47,7 @@ const organizationInfo = [
 const bankInfo = {
   bankName: "MONETA Money Bank, a.s.",
   accountNumber: "366 2752 811 / 0600",
-  iban: "CZ65 0800 0000 0001 2345 6789",
+  iban: "CZ21 0600 0000 0036 6275 2811",
   swift: "AGBACZPP",
 };
 
