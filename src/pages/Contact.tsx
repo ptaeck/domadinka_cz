@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Building2, Landmark, Tent } from "lucide-react";
+import qrPlatba from "@/assets/qr-platba.jpg";
 
 const contactInfo = [
   {
@@ -119,22 +120,32 @@ const Contact = () => {
                   <Landmark className="w-6 h-6 text-camp-sky" />
                   <h3 className="font-display text-lg font-semibold text-foreground">Bankovní účet</h3>
                 </div>
-                <div className="space-y-3">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Banka</span>
-                    <span className="text-foreground font-medium">{bankInfo.bankName}</span>
+                <div className="flex flex-col sm:flex-row gap-6">
+                  <div className="space-y-3 flex-1">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-muted-foreground">Banka</span>
+                      <span className="text-foreground font-medium">{bankInfo.bankName}</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-muted-foreground">Číslo účtu</span>
+                      <span className="text-foreground font-medium">{bankInfo.accountNumber}</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-muted-foreground">IBAN</span>
+                      <span className="text-foreground font-medium text-xs sm:text-sm">{bankInfo.iban}</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-muted-foreground">SWIFT/BIC</span>
+                      <span className="text-foreground font-medium">{bankInfo.swift}</span>
+                    </div>
                   </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">Číslo účtu</span>
-                    <span className="text-foreground font-medium">{bankInfo.accountNumber}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">IBAN</span>
-                    <span className="text-foreground font-medium text-xs sm:text-sm">{bankInfo.iban}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted-foreground">SWIFT/BIC</span>
-                    <span className="text-foreground font-medium">{bankInfo.swift}</span>
+                  <div className="flex flex-col items-center gap-2">
+                    <img 
+                      src={qrPlatba} 
+                      alt="QR platba" 
+                      className="w-32 h-32 rounded-lg border border-border"
+                    />
+                    <span className="text-xs text-muted-foreground">QR platba</span>
                   </div>
                 </div>
               </CardContent>
