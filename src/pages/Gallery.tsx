@@ -4,6 +4,32 @@ import { Camera, ChevronLeft, ChevronRight, X } from "lucide-react";
 import domaslavMap from "@/assets/domaslav-map-landscape.jpg";
 import domadinkaBadge from "@/assets/domadinka-megaphone.png";
 
+// Gallery images imports
+import img2009 from "@/assets/gallery/2009-sukacka.jpg";
+import img2011 from "@/assets/gallery/2011-kytice.jpg";
+import img2012 from "@/assets/gallery/2012-historie.jpg";
+import img2013 from "@/assets/gallery/2013-alenka.jpg";
+import img2014 from "@/assets/gallery/2014-hmyzno.jpg";
+import img2015 from "@/assets/gallery/2015-bluebear.jpg";
+import img2017 from "@/assets/gallery/2017-vesmir.jpg";
+import img2018 from "@/assets/gallery/2018-farales.jpg";
+import img2019 from "@/assets/gallery/2019-sirotcinec.jpg";
+import img2020 from "@/assets/gallery/2020-domapolis.jpg";
+
+// Year to image mapping
+const yearImages: Record<number, string> = {
+  2009: img2009,
+  2011: img2011,
+  2012: img2012,
+  2013: img2013,
+  2014: img2014,
+  2015: img2015,
+  2017: img2017,
+  2018: img2018,
+  2019: img2019,
+  2020: img2020,
+};
+
 // Single path years (2006-2022, excluding 2010)
 const singleYears = Array.from({ length: 17 }, (_, i) => 2006 + i).filter((y) => y !== 2010);
 // Split path years (2023-2026) - two badges per year
@@ -465,14 +491,22 @@ const Gallery = () => {
 
           {/* Image container */}
           <div className="relative max-w-4xl w-full mx-16 aspect-[4/3]" onClick={(e) => e.stopPropagation()}>
-            <div
-              className={`w-full h-full rounded-2xl bg-gradient-to-br ${getYearColor(currentSlide.year)} flex flex-col items-center justify-center`}
-            >
-              <Camera className="w-16 h-16 text-foreground/30 mb-4" />
-              <p className="text-lg text-foreground/50 text-center font-medium px-4">
-                {getYearTitle(currentSlide.year, currentSlide.branch)}
-              </p>
-            </div>
+            {yearImages[currentSlide.year] ? (
+              <img
+                src={yearImages[currentSlide.year]}
+                alt={getYearTitle(currentSlide.year, currentSlide.branch)}
+                className="w-full h-full rounded-2xl object-cover"
+              />
+            ) : (
+              <div
+                className={`w-full h-full rounded-2xl bg-gradient-to-br ${getYearColor(currentSlide.year)} flex flex-col items-center justify-center`}
+              >
+                <Camera className="w-16 h-16 text-foreground/30 mb-4" />
+                <p className="text-lg text-foreground/50 text-center font-medium px-4">
+                  {getYearTitle(currentSlide.year, currentSlide.branch)}
+                </p>
+              </div>
+            )}
 
             {/* Year and theme indicator */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
