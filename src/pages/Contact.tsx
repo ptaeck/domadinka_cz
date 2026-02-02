@@ -140,12 +140,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="flex flex-col items-center gap-2">
-                    <img 
-                      src={qrPlatba} 
-                      alt="QR platba" 
-                      className="w-32 h-32"
-                    />
-                    <span className="text-xs text-muted-foreground">QR platba</span>
+                    <img src={qrPlatba} alt="QR platba" className="w-32 h-32" />
                   </div>
                 </div>
               </CardContent>
