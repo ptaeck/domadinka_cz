@@ -26,7 +26,7 @@ const Footer = () => {
                 O nás
               </Link>
               <Link to="/gallery" className="text-background/80 hover:text-primary transition-colors text-sm">
-                Fotogalerie
+                Historie
               </Link>
               <Link to="/registration" className="text-background/80 hover:text-primary transition-colors text-sm">
                 Přihláška

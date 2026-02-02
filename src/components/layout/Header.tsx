@@ -14,7 +14,7 @@ const mainNavLinks = [
 const allNavLinks = [
   { to: "/", label: "Domů" },
   { to: "/about", label: "O nás" },
-  { to: "/gallery", label: "Galerie" },
+  { to: "/gallery", label: "Historie" },
   { to: "/registration", label: "Přihláška" },
   { to: "/contact", label: "Kontakt" },
 ];
