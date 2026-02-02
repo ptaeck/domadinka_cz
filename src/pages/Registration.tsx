@@ -55,7 +55,7 @@ const faqs = [
   {
     question: "Jaký je poměr vedoucích a dětí?",
     answer:
-      "Udržujeme poměr 1:6 (vedoucí:děti), abychom zajistili, že každé dítě dostane náležitou pozornost a dohled.",
+      "Udržujeme poměr 1:3 (vedoucí:děti), abychom zajistili, že každé dítě dostane náležitou pozornost a dohled.",
   },
   {
     question: "Co se děje, když prší?",
