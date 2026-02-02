@@ -61,7 +61,7 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-secondary to-background py-16 md:py-24">
+      <section className="bg-gradient-to-b from-rose-100 via-orange-50 to-background py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">O Domadince</h1>
@@ -110,7 +110,7 @@ const About = () => {
       </section>
 
       {/* Mission */}
-      <section className="py-16 md:py-24 bg-secondary">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-rose-200 via-orange-100 to-rose-200">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <Target className="w-12 h-12 text-camp-grass mx-auto mb-6" />
@@ -150,7 +150,7 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="py-16 md:py-24 bg-muted/50">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-rose-50 via-orange-50/50 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Poznejte náš tým</h2>
