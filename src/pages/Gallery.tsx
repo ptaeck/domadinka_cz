@@ -34,14 +34,23 @@ const yearImages: Record<number, string> = {
   2019: img2019,
   2020: img2020,
   2021: img2021,
-  2022: img2022,
+  2022: img2022
 };
 
 // Split year images (upper/lower branches)
-const splitYearImages: Record<number, { upper?: string; lower?: string }> = {
-  2023: { upper: img2023Upper },
-  2024: { upper: img2024Upper },
-  2025: { upper: img2025Upper },
+const splitYearImages: Record<number, {
+  upper?: string;
+  lower?: string;
+}> = {
+  2023: {
+    upper: img2023Upper
+  },
+  2024: {
+    upper: img2024Upper
+  },
+  2025: {
+    upper: img2025Upper
+  }
 };
 
 // Helper to get image for year/branch
@@ -53,7 +62,9 @@ const getYearImage = (year: number, branch?: "upper" | "lower"): string | undefi
 };
 
 // Single path years (2006-2022, excluding 2010)
-const singleYears = Array.from({ length: 17 }, (_, i) => 2006 + i).filter((y) => y !== 2010);
+const singleYears = Array.from({
+  length: 17
+}, (_, i) => 2006 + i).filter(y => y !== 2010);
 // Split path years (2023-2026) - two badges per year
 const splitYears = [2023, 2024, 2025, 2026];
 // All years for navigation
@@ -76,15 +87,30 @@ const yearThemes: Record<number, string> = {
   2019: "Sirotčinec slečny Vorlové",
   2020: "Domapolis",
   2021: "Domadinka",
-  2022: "Pramaslav",
+  2022: "Pramaslav"
 };
 
 // Themes for split-path years (2023-2026) - upper and lower branches
-const splitYearThemes: Record<number, { upper: string; lower: string }> = {
-  2023: { upper: "Domorka", lower: "Atlantslav" },
-  2024: { upper: "Dobitín", lower: "Jumanji" },
-  2025: { upper: "Doma-Kinkó", lower: "Agnes" },
-  2026: { upper: "?", lower: "?" },
+const splitYearThemes: Record<number, {
+  upper: string;
+  lower: string;
+}> = {
+  2023: {
+    upper: "Domorka",
+    lower: "Atlantslav"
+  },
+  2024: {
+    upper: "Dobitín",
+    lower: "Jumanji"
+  },
+  2025: {
+    upper: "Doma-Kinkó",
+    lower: "Agnes"
+  },
+  2026: {
+    upper: "?",
+    lower: "?"
+  }
 };
 
 // Helper to get display title
@@ -97,14 +123,7 @@ const getYearTitle = (year: number, branch?: "upper" | "lower") => {
 
 // Color palette for placeholder images based on camp theme
 const getYearColor = (year: number) => {
-  const colors = [
-    "from-camp-sun/50 to-camp-coral/40",
-    "from-camp-grass/50 to-camp-sky/40",
-    "from-camp-sky/50 to-accent/40",
-    "from-camp-coral/50 to-camp-sun/40",
-    "from-secondary to-camp-grass/30",
-    "from-camp-earth/40 to-camp-sun/50",
-  ];
+  const colors = ["from-camp-sun/50 to-camp-coral/40", "from-camp-grass/50 to-camp-sky/40", "from-camp-sky/50 to-accent/40", "from-camp-coral/50 to-camp-sun/40", "from-secondary to-camp-grass/30", "from-camp-earth/40 to-camp-sun/50"];
   return colors[(year - 2006) % colors.length];
 };
 
@@ -114,45 +133,142 @@ const getYearColor = (year: number) => {
 // Row 3: 2021-2022 + split 2023-2026 going RIGHT (bottom area)
 
 const mainPathPoints = [
-  // Row 1: going right (2006-2014, no 2010) - following upper green dots
-  { x: 5, y: 6 }, // 2006 - Domalend
-  { x: 12, y: 10 }, // 2007 - Kosmodom
-  { x: 20, y: 16 }, // 2008
-  { x: 26, y: 20 }, // 2009
-  { x: 38, y: 16 }, // 2011
-  { x: 50, y: 12 }, // 2012
-  { x: 62, y: 10 }, // 2013
-  { x: 74, y: 12 }, // 2014
-  // Row 2: going left (2015-2020) - following middle green dots
-  { x: 88, y: 14 }, // 2015 - upper right corner
-  { x: 72, y: 38 }, // 2016
-  { x: 56, y: 44 }, // 2017
-  { x: 42, y: 48 }, // 2018
-  { x: 28, y: 50 }, // 2019
-  { x: 14, y: 48 }, // 2020
-  // Row 3: going right (2021-2022) - following lower green dots
-  { x: 12, y: 62 }, // 2021 - Brak area
-  { x: 24, y: 70 }, // 2022 - Boley Dornschlag - split point (moved in)
+// Row 1: going right (2006-2014, no 2010) - following upper green dots
+{
+  x: 5,
+  y: 6
+},
+// 2006 - Domalend
+{
+  x: 12,
+  y: 10
+},
+// 2007 - Kosmodom
+{
+  x: 20,
+  y: 16
+},
+// 2008
+{
+  x: 26,
+  y: 20
+},
+// 2009
+{
+  x: 38,
+  y: 16
+},
+// 2011
+{
+  x: 50,
+  y: 12
+},
+// 2012
+{
+  x: 62,
+  y: 10
+},
+// 2013
+{
+  x: 74,
+  y: 12
+},
+// 2014
+// Row 2: going left (2015-2020) - following middle green dots
+{
+  x: 88,
+  y: 14
+},
+// 2015 - upper right corner
+{
+  x: 72,
+  y: 38
+},
+// 2016
+{
+  x: 56,
+  y: 44
+},
+// 2017
+{
+  x: 42,
+  y: 48
+},
+// 2018
+{
+  x: 28,
+  y: 50
+},
+// 2019
+{
+  x: 14,
+  y: 48
+},
+// 2020
+// Row 3: going right (2021-2022) - following lower green dots
+{
+  x: 12,
+  y: 62
+},
+// 2021 - Brak area
+{
+  x: 24,
+  y: 70
+} // 2022 - Boley Dornschlag - split point (moved in)
 ];
 
 // Upper branch (2023-2026) - continues right on upper track
-const upperBranchPoints = [
-  { x: 38, y: 68 }, // 2023 upper (moved up)
-  { x: 52, y: 62 }, // 2024 upper (moved up)
-  { x: 68, y: 58 }, // 2025 upper (moved up)
-  { x: 82, y: 52 }, // 2026 upper - Kokaschütz area (moved up)
+const upperBranchPoints = [{
+  x: 38,
+  y: 68
+},
+// 2023 upper (moved up)
+{
+  x: 52,
+  y: 62
+},
+// 2024 upper (moved up)
+{
+  x: 68,
+  y: 58
+},
+// 2025 upper (moved up)
+{
+  x: 82,
+  y: 52
+} // 2026 upper - Kokaschütz area (moved up)
 ];
 
 // Lower branch (2023-2026) - continues right on lower track
-const lowerBranchPoints = [
-  { x: 38, y: 88 }, // 2023 lower - Atlantslav (moved down to avoid overlap)
-  { x: 54, y: 78 }, // 2024 lower - Jumanji (moved up)
-  { x: 72, y: 82 }, // 2025 lower (moved up)
-  { x: 88, y: 78 }, // 2026 lower - Sczlur area (moved up)
+const lowerBranchPoints = [{
+  x: 38,
+  y: 88
+},
+// 2023 lower - Atlantslav (moved down to avoid overlap)
+{
+  x: 54,
+  y: 78
+},
+// 2024 lower - Jumanji (moved up)
+{
+  x: 72,
+  y: 82
+},
+// 2025 lower (moved up)
+{
+  x: 88,
+  y: 78
+} // 2026 lower - Sczlur area (moved up)
 ];
 
 // Calculate rotation angle between two points (in degrees)
-const getRotation = (from: { x: number; y: number }, to: { x: number; y: number }) => {
+const getRotation = (from: {
+  x: number;
+  y: number;
+}, to: {
+  x: number;
+  y: number;
+}) => {
   const dx = to.x - from.x;
   const dy = to.y - from.y;
   return Math.atan2(dy, dx) * (180 / Math.PI);
@@ -180,7 +296,10 @@ const getOffsetForRotation = (rotationDeg: number) => {
   const scaleFactor = 1.0;
   const offsetX = -Math.cos(newDotAngle) * scaleFactor;
   const offsetY = -Math.sin(newDotAngle) * scaleFactor;
-  return { offsetX, offsetY };
+  return {
+    offsetX,
+    offsetY
+  };
 };
 
 // Get rotation for main path points
@@ -205,77 +324,69 @@ const getBranchRotation = (points: typeof upperBranchPoints, index: number) => {
 };
 
 // Build sequential slide list: single years + split years with upper/lower variants
-type LightboxSlide = { year: number; branch?: "upper" | "lower" };
-const allSlides: LightboxSlide[] = [
-  ...singleYears.map((year) => ({ year })),
-  ...splitYears.flatMap((year) => [
-    { year, branch: "upper" as const },
-    { year, branch: "lower" as const },
-  ]),
-];
-
+type LightboxSlide = {
+  year: number;
+  branch?: "upper" | "lower";
+};
+const allSlides: LightboxSlide[] = [...singleYears.map(year => ({
+  year
+})), ...splitYears.flatMap(year => [{
+  year,
+  branch: "upper" as const
+}, {
+  year,
+  branch: "lower" as const
+}])];
 const Gallery = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState<number | null>(null);
-
   const openLightbox = (year: number, branch?: "upper" | "lower") => {
-    const index = allSlides.findIndex((s) => s.year === year && s.branch === branch);
+    const index = allSlides.findIndex(s => s.year === year && s.branch === branch);
     setCurrentSlideIndex(index >= 0 ? index : null);
   };
-
   const closeLightbox = () => setCurrentSlideIndex(null);
-
   const goToPrevSlide = () => {
     if (currentSlideIndex === null) return;
     if (currentSlideIndex > 0) {
       setCurrentSlideIndex(currentSlideIndex - 1);
     }
   };
-
   const goToNextSlide = () => {
     if (currentSlideIndex === null) return;
     if (currentSlideIndex < allSlides.length - 1) {
       setCurrentSlideIndex(currentSlideIndex + 1);
     }
   };
-
   const currentSlide = currentSlideIndex !== null ? allSlides[currentSlideIndex] : null;
   const hasPrev = currentSlideIndex !== null && currentSlideIndex > 0;
   const hasNext = currentSlideIndex !== null && currentSlideIndex < allSlides.length - 1;
 
   // Keyboard navigation for lightbox
-  const handleKeyDown = useCallback(
-    (e: KeyboardEvent) => {
-      if (currentSlideIndex === null) return;
-
-      if (e.key === "ArrowLeft") {
-        e.preventDefault();
-        goToPrevSlide();
-      } else if (e.key === "ArrowRight") {
-        e.preventDefault();
-        goToNextSlide();
-      } else if (e.key === "Escape") {
-        e.preventDefault();
-        closeLightbox();
-      }
-    },
-    [currentSlideIndex],
-  );
-
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (currentSlideIndex === null) return;
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      goToPrevSlide();
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      goToNextSlide();
+    } else if (e.key === "Escape") {
+      e.preventDefault();
+      closeLightbox();
+    }
+  }, [currentSlideIndex]);
   useEffect(() => {
     if (currentSlideIndex !== null) {
       window.addEventListener("keydown", handleKeyDown);
       return () => window.removeEventListener("keydown", handleKeyDown);
     }
   }, [currentSlideIndex, handleKeyDown]);
-
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-camp-grass/20 via-accent/30 to-background py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">Časová osa Domadinky</h1>
-            <p className="text-muted-foreground">Cesta 20 lety vzpomínek v Domaslavi (2006–2026)</p>
+            <p className="text-muted-foreground">Cesta 20 lety vzpomínek na Domaslav (2006–2026)</p>
           </div>
         </div>
       </section>
@@ -289,14 +400,9 @@ const Gallery = () => {
               <img src={domaslavMap} alt="Historická mapa Domaslavska" className="w-full h-auto" />
 
               {/* SVG Path overlay connecting the years with natural curves */}
-              <svg
-                className="absolute inset-0 w-full h-full pointer-events-none"
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-              >
+              <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
                 {/* Main path (2006-2022) - organic winding trail */}
-                <path
-                  d={`M 5 6 
+                <path d={`M 5 6 
                       C 6 8, 7 9, 8 10
                       C 10 13, 11 15, 12 16
                       C 15 18, 18 20, 20 20 
@@ -311,72 +417,37 @@ const Gallery = () => {
                       C 34 44, 30 45, 26 46
                       C 20 47, 16 46, 14 44
                       C 10 42, 10 52, 12 62
-                      C 14 66, 20 70, 24 70`}
-                  fill="none"
-                  stroke="hsl(var(--camp-coral))"
-                  strokeWidth="0.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeDasharray="1 0.8"
-                  opacity="0.85"
-                />
+                      C 14 66, 20 70, 24 70`} fill="none" stroke="hsl(var(--camp-coral))" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 0.8" opacity="0.85" />
                 {/* Upper branch (2023-2026) - winding ascending curve */}
-                <path
-                  d={`M 24 70 
+                <path d={`M 24 70 
                       C 28 68, 34 66, 38 68
                       C 44 67, 48 63, 52 62
                       C 58 61, 62 59, 68 58
-                      C 74 57, 78 54, 82 52`}
-                  fill="none"
-                  stroke="hsl(var(--camp-coral))"
-                  strokeWidth="0.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeDasharray="1 0.8"
-                  opacity="0.85"
-                />
+                      C 74 57, 78 54, 82 52`} fill="none" stroke="hsl(var(--camp-coral))" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 0.8" opacity="0.85" />
                 {/* Lower branch (2023-2026) - winding descending curve */}
-                <path
-                  d={`M 24 70 
+                <path d={`M 24 70 
                       C 28 76, 34 80, 38 82
                       C 44 80, 50 77, 54 78
                       C 60 79, 66 81, 72 82
-                      C 78 81, 84 79, 88 78`}
-                  fill="none"
-                  stroke="hsl(var(--camp-coral))"
-                  strokeWidth="0.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeDasharray="1 0.8"
-                  opacity="0.85"
-                />
+                      C 78 81, 84 79, 88 78`} fill="none" stroke="hsl(var(--camp-coral))" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 0.8" opacity="0.85" />
               </svg>
 
               {/* Main path badges (2008-2022) */}
               {singleYears.map((year, index) => {
-                const point = mainPathPoints[index];
-                const rotation = getMainPathRotation(index);
-                const { offsetX, offsetY } = getOffsetForRotation(rotation);
-
-                return (
-                  <div
-                    key={year}
-                    className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
-                    style={{
-                      left: `${point.x + offsetX}%`,
-                      top: `${point.y + offsetY}%`,
-                    }}
-                  >
-                    <button
-                      onClick={() => openLightbox(year)}
-                      className="relative flex flex-col items-center transition-all duration-300 hover:scale-110 z-10"
-                    >
-                      <img
-                        src={domadinkaBadge}
-                        alt=""
-                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
-                        style={{ transform: `rotate(${rotation}deg)` }}
-                      />
+              const point = mainPathPoints[index];
+              const rotation = getMainPathRotation(index);
+              const {
+                offsetX,
+                offsetY
+              } = getOffsetForRotation(rotation);
+              return <div key={year} className="absolute transform -translate-x-1/2 -translate-y-1/2 group" style={{
+                left: `${point.x + offsetX}%`,
+                top: `${point.y + offsetY}%`
+              }}>
+                    <button onClick={() => openLightbox(year)} className="relative flex flex-col items-center transition-all duration-300 hover:scale-110 z-10">
+                      <img src={domadinkaBadge} alt="" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain" style={{
+                    transform: `rotate(${rotation}deg)`
+                  }} />
                       <span className="mt-1 px-2 py-1 rounded-md text-[10px] sm:text-xs font-bold bg-background text-foreground shadow-md border border-border/50 group-hover:shadow-lg transition-all duration-200 text-center leading-snug">
                         <span className="block">{year}</span>
                         <span className="block font-semibold text-muted-foreground text-[9px] sm:text-[10px]">
@@ -384,35 +455,25 @@ const Gallery = () => {
                         </span>
                       </span>
                     </button>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
 
               {/* Upper branch badges (2023-2026) */}
               {splitYears.map((year, index) => {
-                const point = upperBranchPoints[index];
-                const rotation = getBranchRotation(upperBranchPoints, index);
-                const { offsetX, offsetY } = getOffsetForRotation(rotation);
-
-                return (
-                  <div
-                    key={`${year}-upper`}
-                    className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
-                    style={{
-                      left: `${point.x + offsetX}%`,
-                      top: `${point.y + offsetY}%`,
-                    }}
-                  >
-                    <button
-                      onClick={() => openLightbox(year, "upper")}
-                      className="relative flex flex-col items-center transition-all duration-300 hover:scale-110 z-10"
-                    >
-                      <img
-                        src={domadinkaBadge}
-                        alt=""
-                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
-                        style={{ transform: `rotate(${rotation}deg)` }}
-                      />
+              const point = upperBranchPoints[index];
+              const rotation = getBranchRotation(upperBranchPoints, index);
+              const {
+                offsetX,
+                offsetY
+              } = getOffsetForRotation(rotation);
+              return <div key={`${year}-upper`} className="absolute transform -translate-x-1/2 -translate-y-1/2 group" style={{
+                left: `${point.x + offsetX}%`,
+                top: `${point.y + offsetY}%`
+              }}>
+                    <button onClick={() => openLightbox(year, "upper")} className="relative flex flex-col items-center transition-all duration-300 hover:scale-110 z-10">
+                      <img src={domadinkaBadge} alt="" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain" style={{
+                    transform: `rotate(${rotation}deg)`
+                  }} />
                       <span className="mt-1 px-2 py-1 rounded-md text-[10px] sm:text-xs font-bold bg-background text-foreground shadow-md border border-border/50 group-hover:shadow-lg transition-all duration-200 text-center leading-snug">
                         <span className="block">{year}</span>
                         <span className="block font-semibold text-muted-foreground text-[9px] sm:text-[10px]">
@@ -420,35 +481,25 @@ const Gallery = () => {
                         </span>
                       </span>
                     </button>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
 
               {/* Lower branch badges (2023-2026) */}
               {splitYears.map((year, index) => {
-                const point = lowerBranchPoints[index];
-                const rotation = getBranchRotation(lowerBranchPoints, index);
-                const { offsetX, offsetY } = getOffsetForRotation(rotation);
-
-                return (
-                  <div
-                    key={`${year}-lower`}
-                    className="absolute transform -translate-x-1/2 -translate-y-1/2 group"
-                    style={{
-                      left: `${point.x + offsetX}%`,
-                      top: `${point.y + offsetY}%`,
-                    }}
-                  >
-                    <button
-                      onClick={() => openLightbox(year, "lower")}
-                      className="relative flex flex-col items-center transition-all duration-300 hover:scale-110 z-10"
-                    >
-                      <img
-                        src={domadinkaBadge}
-                        alt=""
-                        className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain"
-                        style={{ transform: `rotate(${rotation}deg)` }}
-                      />
+              const point = lowerBranchPoints[index];
+              const rotation = getBranchRotation(lowerBranchPoints, index);
+              const {
+                offsetX,
+                offsetY
+              } = getOffsetForRotation(rotation);
+              return <div key={`${year}-lower`} className="absolute transform -translate-x-1/2 -translate-y-1/2 group" style={{
+                left: `${point.x + offsetX}%`,
+                top: `${point.y + offsetY}%`
+              }}>
+                    <button onClick={() => openLightbox(year, "lower")} className="relative flex flex-col items-center transition-all duration-300 hover:scale-110 z-10">
+                      <img src={domadinkaBadge} alt="" className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 object-contain" style={{
+                    transform: `rotate(${rotation}deg)`
+                  }} />
                       <span className="mt-1 px-2 py-1 rounded-md text-[10px] sm:text-xs font-bold bg-background text-foreground shadow-md border border-border/50 group-hover:shadow-lg transition-all duration-200 text-center leading-snug">
                         <span className="block">{year}</span>
                         <span className="block font-semibold text-muted-foreground text-[9px] sm:text-[10px]">
@@ -456,9 +507,8 @@ const Gallery = () => {
                         </span>
                       </span>
                     </button>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
 
             {/* Legend */}
@@ -474,63 +524,38 @@ const Gallery = () => {
           <div className="mt-10 text-center p-6 bg-muted rounded-2xl max-w-xl mx-auto">
             <Camera className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
             {/*
-            <h3 className="font-display text-base font-semibold text-foreground mb-2">Přidejte své fotky</h3>
-            <p className="text-sm text-muted-foreground">
+             <h3 className="font-display text-base font-semibold text-foreground mb-2">Přidejte své fotky</h3>
+             <p className="text-sm text-muted-foreground">
               Klikněte na libovolný rok na mapě. Tyto zástupné obrázky nahraďte skutečnými fotkami z historie Domadinky.
-            </p>
-            */}
+             </p>
+             */}
           </div>
         </div>
       </section>
 
       {/* Lightbox Modal */}
-      {currentSlide && (
-        <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center animate-fade-in"
-          onClick={closeLightbox}
-        >
+      {currentSlide && <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center animate-fade-in" onClick={closeLightbox}>
           {/* Close button */}
-          <button
-            onClick={closeLightbox}
-            className="absolute top-4 right-4 p-2 text-white/80 hover:text-white transition-colors z-10"
-            aria-label="Zavřít"
-          >
+          <button onClick={closeLightbox} className="absolute top-4 right-4 p-2 text-white/80 hover:text-white transition-colors z-10" aria-label="Zavřít">
             <X className="w-8 h-8" />
           </button>
 
           {/* Left arrow */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              goToPrevSlide();
-            }}
-            disabled={!hasPrev}
-            className={`absolute left-4 p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all ${
-              hasPrev ? "text-white hover:bg-white/20" : "text-white/30 cursor-not-allowed"
-            }`}
-            aria-label="Předchozí"
-          >
+          <button onClick={e => {
+        e.stopPropagation();
+        goToPrevSlide();
+      }} disabled={!hasPrev} className={`absolute left-4 p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all ${hasPrev ? "text-white hover:bg-white/20" : "text-white/30 cursor-not-allowed"}`} aria-label="Předchozí">
             <ChevronLeft className="w-8 h-8" />
           </button>
 
           {/* Image container */}
-          <div className="relative max-w-4xl w-full mx-16 aspect-[4/3]" onClick={(e) => e.stopPropagation()}>
-            {getYearImage(currentSlide.year, currentSlide.branch) ? (
-              <img
-                src={getYearImage(currentSlide.year, currentSlide.branch)}
-                alt={getYearTitle(currentSlide.year, currentSlide.branch)}
-                className="w-full h-full rounded-2xl object-cover"
-              />
-            ) : (
-              <div
-                className={`w-full h-full rounded-2xl bg-gradient-to-br ${getYearColor(currentSlide.year)} flex flex-col items-center justify-center`}
-              >
+          <div className="relative max-w-4xl w-full mx-16 aspect-[4/3]" onClick={e => e.stopPropagation()}>
+            {getYearImage(currentSlide.year, currentSlide.branch) ? <img src={getYearImage(currentSlide.year, currentSlide.branch)} alt={getYearTitle(currentSlide.year, currentSlide.branch)} className="w-full h-full rounded-2xl object-cover" /> : <div className={`w-full h-full rounded-2xl bg-gradient-to-br ${getYearColor(currentSlide.year)} flex flex-col items-center justify-center`}>
                 <Camera className="w-16 h-16 text-foreground/30 mb-4" />
                 <p className="text-lg text-foreground/50 text-center font-medium px-4">
                   {getYearTitle(currentSlide.year, currentSlide.branch)}
                 </p>
-              </div>
-            )}
+              </div>}
 
             {/* Year and theme indicator */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
@@ -541,23 +566,13 @@ const Gallery = () => {
           </div>
 
           {/* Right arrow */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              goToNextSlide();
-            }}
-            disabled={!hasNext}
-            className={`absolute right-4 p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all ${
-              hasNext ? "text-white hover:bg-white/20" : "text-white/30 cursor-not-allowed"
-            }`}
-            aria-label="Další"
-          >
+          <button onClick={e => {
+        e.stopPropagation();
+        goToNextSlide();
+      }} disabled={!hasNext} className={`absolute right-4 p-3 rounded-full bg-white/10 backdrop-blur-sm transition-all ${hasNext ? "text-white hover:bg-white/20" : "text-white/30 cursor-not-allowed"}`} aria-label="Další">
             <ChevronRight className="w-8 h-8" />
           </button>
-        </div>
-      )}
-    </Layout>
-  );
+        </div>}
+    </Layout>;
 };
-
 export default Gallery;
