@@ -23,9 +23,15 @@ const contactInfo = [
   },
   {
     icon: MapPin,
-    label: "Adresa",
+    label: "Adresa spolku",
     value: "Sladkovského 2757/38\nVýchodní Předměstí, 326 00 Plzeň",
     href: "https://maps.google.com/?q=Sladkovského+2757/38,+Plzeň",
+  },
+  {
+    icon: MapPin,
+    label: "Adresa táboru",
+    value: "Domaslav 1\n349 53 Lestkov",
+    href: "https://maps.google.com/?q=Domaslav 1",
   },
 ];
 
@@ -48,12 +54,8 @@ const Contact = () => {
       <section className="bg-gradient-to-b from-camp-sky/20 to-background py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Kontakt
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              Máte otázky? Rádi se vám ozveme!
-            </p>
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">Kontakt</h1>
+            <p className="text-lg text-muted-foreground">Máte otázky? Rádi se vám ozveme!</p>
           </div>
         </div>
       </section>
@@ -64,9 +66,7 @@ const Contact = () => {
           <div className="max-w-2xl mx-auto space-y-8">
             {/* Contact Info */}
             <div>
-              <h2 className="font-display text-2xl font-bold text-foreground mb-6 text-center">
-                Spojte se s námi
-              </h2>
+              <h2 className="font-display text-2xl font-bold text-foreground mb-6 text-center">Spojte se s námi</h2>
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <a
@@ -88,15 +88,12 @@ const Contact = () => {
               </div>
             </div>
 
-
             {/* Organization Info (VAT) */}
             <Card className="border-2 border-border">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Building2 className="w-6 h-6 text-camp-grass" />
-                  <h3 className="font-display text-lg font-semibold text-foreground">
-                    Údaje o organizaci
-                  </h3>
+                  <h3 className="font-display text-lg font-semibold text-foreground">Údaje o organizaci</h3>
                 </div>
                 <div className="space-y-3">
                   {organizationInfo.map((item, index) => (
@@ -114,9 +111,7 @@ const Contact = () => {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <Landmark className="w-6 h-6 text-camp-sky" />
-                  <h3 className="font-display text-lg font-semibold text-foreground">
-                    Bankovní účet
-                  </h3>
+                  <h3 className="font-display text-lg font-semibold text-foreground">Bankovní účet</h3>
                 </div>
                 <div className="space-y-3">
                   <div className="flex justify-between text-sm">
