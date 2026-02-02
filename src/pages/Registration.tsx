@@ -23,7 +23,7 @@ const whatToBring = [
   "Láhev na vodu",
   "Náhradní oblečení",
   "Malý batoh",
-  "Pláštěnka",
+  "Repelent proti klíšťatům",
 ];
 const faqs = [
   {
