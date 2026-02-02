@@ -10,8 +10,8 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen flex flex-col relative">
       {/* Fixed subtle background image */}
-      <div 
-        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-[0.06]"
+      <div
+        className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat opacity-[0.16]"
         style={{ backgroundImage: `url(${campBackground})` }}
       />
       <Header />
