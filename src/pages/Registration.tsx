@@ -176,37 +176,19 @@ const Registration = () => {
               <h2 className="font-display text-3xl font-bold text-secondary-foreground mb-4">Co s sebou</h2>
               <p className="text-secondary-foreground/80">Ujistěte se, že je váš táborník připraven na skvělý den!</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* What to bring */}
-              <div>
-                <h3 className="font-display text-xl font-semibold text-secondary-foreground mb-4 flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-camp-grass" />
-                  S sebou
-                </h3>
-                <div className="space-y-3">
-                  {whatToBring.map((item, index) => (
-                    <div key={index} className="flex items-center gap-3 bg-background/50 rounded-lg px-4 py-3">
-                      <CheckCircle className="w-5 h-5 text-camp-grass flex-shrink-0" />
-                      <span className="text-foreground">{item}</span>
-                    </div>
-                  ))}
+            <div className="grid sm:grid-cols-2 gap-3">
+              {whatToBring.map((item, index) => (
+                <div key={index} className="flex items-center gap-3 bg-background/50 rounded-lg px-4 py-3">
+                  <CheckCircle className="w-5 h-5 text-camp-grass flex-shrink-0" />
+                  <span className="text-foreground">{item}</span>
                 </div>
-              </div>
-              {/* Forbidden items */}
-              <div>
-                <h3 className="font-display text-xl font-semibold text-secondary-foreground mb-4 flex items-center gap-2">
-                  <XCircle className="w-5 h-5 text-camp-coral" />
-                  Zakázané věci
-                </h3>
-                <div className="space-y-3">
-                  {forbiddenItems.map((item, index) => (
-                    <div key={index} className="flex items-center gap-3 bg-background/50 rounded-lg px-4 py-3">
-                      <XCircle className="w-5 h-5 text-camp-coral flex-shrink-0" />
-                      <span className="text-foreground">{item}</span>
-                    </div>
-                  ))}
+              ))}
+              {forbiddenItems.map((item, index) => (
+                <div key={index} className="flex items-center gap-3 bg-background/50 rounded-lg px-4 py-3">
+                  <XCircle className="w-5 h-5 text-camp-coral flex-shrink-0" />
+                  <span className="text-foreground">{item}</span>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
