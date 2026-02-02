@@ -15,8 +15,13 @@ import img2017 from "@/assets/gallery/2017-vesmir.jpg";
 import img2018 from "@/assets/gallery/2018-farales.jpg";
 import img2019 from "@/assets/gallery/2019-sirotcinec.jpg";
 import img2020 from "@/assets/gallery/2020-domapolis.jpg";
+import img2021 from "@/assets/gallery/2021-domadinka.jpg";
+import img2022 from "@/assets/gallery/2022-pramaslav.jpg";
+import img2023Upper from "@/assets/gallery/2023-domorka.jpg";
+import img2024Upper from "@/assets/gallery/2024-dobitin.jpg";
+import img2025Upper from "@/assets/gallery/2025-doma-kinko.jpg";
 
-// Year to image mapping
+// Year to image mapping (single path years)
 const yearImages: Record<number, string> = {
   2009: img2009,
   2011: img2011,
@@ -28,6 +33,23 @@ const yearImages: Record<number, string> = {
   2018: img2018,
   2019: img2019,
   2020: img2020,
+  2021: img2021,
+  2022: img2022,
+};
+
+// Split year images (upper/lower branches)
+const splitYearImages: Record<number, { upper?: string; lower?: string }> = {
+  2023: { upper: img2023Upper },
+  2024: { upper: img2024Upper },
+  2025: { upper: img2025Upper },
+};
+
+// Helper to get image for year/branch
+const getYearImage = (year: number, branch?: "upper" | "lower"): string | undefined => {
+  if (branch && splitYearImages[year]) {
+    return splitYearImages[year][branch];
+  }
+  return yearImages[year];
 };
 
 // Single path years (2006-2022, excluding 2010)
@@ -491,9 +513,9 @@ const Gallery = () => {
 
           {/* Image container */}
           <div className="relative max-w-4xl w-full mx-16 aspect-[4/3]" onClick={(e) => e.stopPropagation()}>
-            {yearImages[currentSlide.year] ? (
+            {getYearImage(currentSlide.year, currentSlide.branch) ? (
               <img
-                src={yearImages[currentSlide.year]}
+                src={getYearImage(currentSlide.year, currentSlide.branch)}
                 alt={getYearTitle(currentSlide.year, currentSlide.branch)}
                 className="w-full h-full rounded-2xl object-cover"
               />
