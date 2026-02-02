@@ -21,7 +21,6 @@ const whatToBring = [
   "Opalovací krém (SPF 30+)",
   "Klobouk nebo čepice",
   "Láhev na vodu",
-  "Svačinu a oběd",
   "Náhradní oblečení",
   "Malý batoh",
 ];
