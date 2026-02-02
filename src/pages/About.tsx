@@ -1,44 +1,65 @@
 import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Target, Users, Shield, Sparkles, Star } from "lucide-react";
-const values = [{
-  icon: Heart,
-  title: "Soucit",
-  description: "Ke každému dítěti přistupujeme s laskavostí, porozuměním a respektem."
-}, {
-  icon: Shield,
-  title: "Bezpečnost",
-  description: "Bezpečné a pečující prostředí, kde děti mohou prospívat."
-}, {
-  icon: Sparkles,
-  title: "Kreativita",
-  description: "Podporujeme fantazii a sebevyjádření ve všem, co děláme."
-}, {
-  icon: Users,
-  title: "Komunita",
-  description: "Budujeme trvalá přátelství a pocit sounáležitosti."
-}];
-const team = [{
-  name: "Tereza Pilná",
-  email: "tereza.pilna@domadinka.cz"
-}, {
-  name: "Jan Šíp",
-  email: "jan.sip@domadinka.cz"
-}, {
-  name: "Ema Sosnová",
-  email: "ema.sosnova@domadinka.cz"
-}, {
-  name: "Viktorie Sichingerová",
-  email: "viktorie.sichingerova@domadinka.cz"
-}, {
-  name: "Kryštof Kunc",
-  email: "krystof.kunc@domadinka.cz"
-}, {
-  name: "Ondřej Sosna",
-  email: "ondrej.sosna@domadinka.cz"
-}];
+const values = [
+  {
+    icon: Heart,
+    title: "Soucit",
+    description: "Ke každému dítěti přistupujeme s laskavostí, porozuměním a respektem.",
+  },
+  {
+    icon: Shield,
+    title: "Bezpečnost",
+    description: "Bezpečné a pečující prostředí, kde děti mohou prospívat.",
+  },
+  {
+    icon: Sparkles,
+    title: "Kreativita",
+    description: "Podporujeme fantazii a sebevyjádření ve všem, co děláme.",
+  },
+  {
+    icon: Users,
+    title: "Komunita",
+    description: "Budujeme trvalá přátelství a pocit sounáležitosti.",
+  },
+];
+const team = [
+  {
+    name: "Tereza Pilná",
+    email: "tereza.pilna@domadinka.cz",
+  },
+  {
+    name: "Jan Šíp",
+    email: "jan.sip@domadinka.cz",
+  },
+  {
+    name: "Ema Sosnová",
+    email: "ema.sosnova@domadinka.cz",
+  },
+  {
+    name: "Viktorie Sichingerová",
+    email: "viktorie.sichingerova@domadinka.cz",
+  },
+  {
+    name: "Kryštof Kunc",
+    email: "krystof.kunc@domadinka.cz",
+  },
+  {
+    name: "Ondřej Sosna",
+    email: "ondrej.sosna@domadinka.cz",
+  },
+  {
+    name: "Jana Ježková",
+    email: "jana.jezkova@domadinka.cz",
+  },
+  {
+    name: "Tereza Vydarená",
+    email: "tereza.vydarena@domadinka.cz",
+  },
+];
 const About = () => {
-  return <Layout>
+  return (
+    <Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-secondary to-background py-16 md:py-24">
         <div className="container mx-auto px-4">
@@ -57,7 +78,11 @@ const About = () => {
               <div>
                 <h2 className="font-display text-3xl font-bold text-foreground mb-6">Náš příběh</h2>
                 <div className="space-y-4 text-muted-foreground">
-                  <p>Domadinka z.s. začala s jednoduchým snem: vytvořit místo, kde každé dítě může zažít radost z léta. Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, která každý rok slouží více než padesáti rodinám.</p>
+                  <p>
+                    Domadinka z.s. začala s jednoduchým snem: vytvořit místo, kde každé dítě může zažít radost z léta.
+                    Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, která každý rok slouží více
+                    než padesáti rodinám.
+                  </p>
                   <p>
                     Založena skupinou nadšených pedagogů a rodičů, věřili jsme, že každé dítě si zaslouží přístup k
                     obohacujícím letním zážitkům bez ohledu na své zázemí. Toto přesvědčení nadále pohání vše, co
@@ -109,7 +134,8 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {values.map((value, index) => <Card key={index} className="text-center border-2 border-border">
+            {values.map((value, index) => (
+              <Card key={index} className="text-center border-2 border-border">
                 <CardContent className="p-6">
                   <div className="w-14 h-14 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-7 h-7 text-camp-sky" />
@@ -117,7 +143,8 @@ const About = () => {
                   <h3 className="font-display text-lg font-semibold text-foreground mb-2">{value.title}</h3>
                   <p className="text-sm text-muted-foreground">{value.description}</p>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -133,19 +160,27 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {team.map((member, index) => <Card key={index} className="border-2 border-border">
+            {team.map((member, index) => (
+              <Card key={index} className="border-2 border-border">
                 <CardContent className="p-6 text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-camp-sky to-camp-grass rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl font-bold text-white">
-                      {member.name.split(" ").map(n => n[0]).join("")}
+                      {member.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
                     </span>
                   </div>
                   <h3 className="font-display text-lg font-semibold text-foreground">{member.name}</h3>
-                  <a href={`mailto:${member.email}`} className="text-sm text-muted-foreground hover:text-camp-sky transition-colors mt-1 block">
+                  <a
+                    href={`mailto:${member.email}`}
+                    className="text-sm text-muted-foreground hover:text-camp-sky transition-colors mt-1 block"
+                  >
                     {member.email}
                   </a>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -232,6 +267,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  );
 };
 export default About;
