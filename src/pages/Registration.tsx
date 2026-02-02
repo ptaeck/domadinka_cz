@@ -25,13 +25,7 @@ const whatToBring = [
   "Malý batoh",
   "Repelent proti klíšťatům",
 ];
-const forbiddenItems = [
-  "Mobilní telefon",
-  "Sladkosti",
-  "Elektronické hry",
-  "Cennosti a šperky",
-  "Ostré předměty (nože, nůžky)",
-];
+const forbiddenItems = ["Mobilní telefon", "Sladkosti", "Cennosti a šperky", "Ostré předměty (vytahovací nože, nůžky)"];
 const faqs = [
   {
     question: "Jaký věk přijímáte?",
