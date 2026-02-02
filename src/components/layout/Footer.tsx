@@ -11,11 +11,7 @@ const Footer = () => {
           {/* Logo & About */}
           <div className="space-y-4">
             <Link to="/" className="inline-block">
-              <img 
-                src={logoLight} 
-                alt="Domadinka z.s." 
-                className="h-16 md:h-20 w-auto mix-blend-lighten"
-              />
+              <img src={logoLight} alt="Domadinka z.s." className="h-16 md:h-20 w-auto mix-blend-lighten" />
             </Link>
             <p className="text-background/80 text-sm leading-relaxed">
               Vytváříme kouzelné letní vzpomínky pro děti prostřednictvím zábavy, učení a dobrodružství.
@@ -45,22 +41,32 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-display text-lg font-semibold">Kontaktujte nás</h3>
             <div className="space-y-3">
-              <a href="mailto:info@domadinka.cz" className="flex items-center gap-3 text-background/80 hover:text-primary transition-colors text-sm">
+              <a
+                href="mailto:info@domadinka.cz"
+                className="flex items-center gap-3 text-background/80 hover:text-primary transition-colors text-sm"
+              >
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 info@domadinka.cz
               </a>
-              <a href="tel:+1234567890" className="flex items-center gap-3 text-background/80 hover:text-primary transition-colors text-sm">
+              <a
+                href="tel:+1234567890"
+                className="flex items-center gap-3 text-background/80 hover:text-primary transition-colors text-sm"
+              >
                 <Phone className="w-4 h-4 flex-shrink-0" />
                 (123) 456-7890
               </a>
               <div className="flex items-start gap-3 text-background/80 text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>Sladkovského 2757/38<br />Východní Předměstí, 326 00 Plzeň</span>
+                <span>
+                  Sladkovského 2757/38
+                  <br />
+                  Východní Předměstí, 326 00 Plzeň
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Social & Newsletter */}
+          {/* Social & Newsletter 
           <div className="space-y-4">
             <h3 className="font-display text-lg font-semibold">Sledujte nás</h3>
             <div className="flex gap-3">
@@ -95,7 +101,7 @@ const Footer = () => {
             <p className="text-background/60 text-xs">
               Buďte s námi v kontaktu pro novinky z tábora, fotky a speciální oznámení!
             </p>
-          </div>
+          </div>*/}
         </div>
       </div>
 
