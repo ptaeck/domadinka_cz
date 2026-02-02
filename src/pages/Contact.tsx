@@ -41,12 +41,12 @@ const organizationInfo = [
     value: "Domadinka z.s.",
     href: "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1286444&typ=UPLNY",
   },
-  { label: "IČO", value: "23512911" },
+  { label: "IČO", value: "235 12 911" },
 ];
 
 const bankInfo = {
   bankName: "Moneta",
-  accountNumber: "3662752811/0600",
+  accountNumber: "366 2752 811 / 0600",
   iban: "CZ65 0800 0000 0001 2345 6789",
   swift: "AGBACZPP",
 };
@@ -103,7 +103,9 @@ const Contact = () => {
                   {organizationInfo.map((item, index) => (
                     <div key={index} className="flex justify-between text-sm">
                       <span className="text-muted-foreground">{item.label}</span>
-                      <span className="text-foreground font-medium">{item.value}</span>
+                      <a href={item.href}>
+                        <span className="text-foreground font-medium">{item.value}</span>
+                      </a>
                     </div>
                   ))}
                 </div>
