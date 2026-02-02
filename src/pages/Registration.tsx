@@ -3,79 +3,48 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Calendar, Clock, Users, DollarSign, CheckCircle, ExternalLink, Backpack } from "lucide-react";
-
-const sessions = [
-  {
-    name: "1. turnus",
-    dates: "1. srpna – 8. srpna 2025",
-    status: "Otevřeno",
-  },
-  {
-    name: "2. turnus",
-    dates: "15. srpna – 22. srpna 2026",
-    status: "Otevřeno",
-  },
-  {
-    name: "3. turnus",
-    dates: "14. července – 25. července 2025",
-    status: "Otevřeno",
-  },
-  {
-    name: "4. turnus",
-    dates: "28. července – 8. srpna 2025",
-    status: "Omezená místa",
-  },
-];
-
-const whatToBring = [
-  "Pohodlné oblečení na aktivity venku",
-  "Uzavřené boty (tenisky doporučeny)",
-  "Opalovací krém (SPF 30+)",
-  "Klobouk nebo čepice",
-  "Láhev na vodu",
-  "Svačinu a oběd",
-  "Náhradní oblečení",
-  "Malý batoh",
-];
-
-const faqs = [
-  {
-    question: "Jaký věk přijímáte?",
-    answer:
-      "Domadinka přijímá děti ve věku 5–14 let. Děti rozdělujeme do skupin podle věku, aby aktivity byly pro všechny vhodné a zajímavé.",
-  },
-  {
-    question: "Jaká je provozní doba tábora?",
-    answer: "Tábor probíhá od soboty do soboty v uvedeném termínu turnusu.",
-  },
-  {
-    question: "Je oběd součástí?",
-    answer: "Děti mají zajištěnou snídani, oběd a večeři a dvě svačiny během dne včetně celodenního pitného režimu.",
-  },
-  {
-    question: "Jaký je poměr vedoucích a dětí?",
-    answer:
-      "Udržujeme poměr 1:3 (vedoucí:děti), abychom zajistili, že každé dítě dostane náležitou pozornost a dohled.",
-  },
-  {
-    question: "Co se děje, když prší?",
-    answer:
-      "Máme připraveno spoustu aktivit do interiéru na deštivé dny, včetně výtvarných činností, her, filmů a halových sportů.",
-  },
-  {
-    question: "Nabízíte slevy?",
-    answer: "Ano! Nabízíme slevy pro sourozence.",
-  },
-  {
-    question: "Jaká je vaše storno politika?",
-    answer:
-      "Plné vrácení peněz je možné do 30 dnů před začátkem turnusu. Poté je možné 50% vrácení do 14 dnů před turnusem. V období kratším než 14 dnů peníze nevracíme.",
-  },
-];
-
+const sessions = [{
+  name: "1. turnus",
+  dates: "1. srpna – 8. srpna 2025",
+  status: "Otevřeno"
+}, {
+  name: "2. turnus",
+  dates: "15. srpna – 22. srpna 2026",
+  status: "Otevřeno"
+}, {
+  name: "3. turnus",
+  dates: "14. července – 25. července 2025",
+  status: "Otevřeno"
+}, {
+  name: "4. turnus",
+  dates: "28. července – 8. srpna 2025",
+  status: "Omezená místa"
+}];
+const whatToBring = ["Pohodlné oblečení na aktivity venku", "Uzavřené boty (tenisky doporučeny)", "Opalovací krém (SPF 30+)", "Klobouk nebo čepice", "Láhev na vodu", "Svačinu a oběd", "Náhradní oblečení", "Malý batoh"];
+const faqs = [{
+  question: "Jaký věk přijímáte?",
+  answer: "Domadinka přijímá děti ve věku 5–14 let. Děti rozdělujeme do skupin podle věku, aby aktivity byly pro všechny vhodné a zajímavé."
+}, {
+  question: "Jaká je provozní doba tábora?",
+  answer: "Tábor probíhá od soboty do soboty v uvedeném termínu turnusu."
+}, {
+  question: "Je oběd součástí?",
+  answer: "Děti mají zajištěnou snídani, oběd a večeři a dvě svačiny během dne včetně celodenního pitného režimu."
+}, {
+  question: "Jaký je poměr vedoucích a dětí?",
+  answer: "Udržujeme poměr 1:3 (vedoucí:děti), abychom zajistili, že každé dítě dostane náležitou pozornost a dohled."
+}, {
+  question: "Co se děje, když prší?",
+  answer: "Máme připraveno spoustu aktivit do interiéru na deštivé dny, včetně výtvarných činností, her, filmů a halových sportů."
+}, {
+  question: "Nabízíte slevy?",
+  answer: "Ano! Nabízíme slevy pro sourozence."
+}, {
+  question: "Jaká je vaše storno politika?",
+  answer: "Plné vrácení peněz je možné do 30 dnů před začátkem turnusu. Poté je možné 50% vrácení do 14 dnů před turnusem. V období kratším než 14 dnů peníze nevracíme."
+}];
 const Registration = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-primary/20 to-background py-16 md:py-24">
         <div className="container mx-auto px-4">
@@ -84,11 +53,7 @@ const Registration = () => {
             <p className="text-lg text-muted-foreground mb-8">
               Zajistěte svému dítěti místo na nezapomenutelném letním dobrodružství!
             </p>
-            <Button
-              size="lg"
-              className="gap-2 rounded-full px-8"
-              onClick={() => window.open("https://forms.google.com", "_blank")}
-            >
+            <Button size="lg" className="gap-2 rounded-full px-8" onClick={() => window.open("https://forms.google.com", "_blank")}>
               Přihlásit se
               <ExternalLink className="w-4 h-4" />
             </Button>
@@ -104,21 +69,21 @@ const Registration = () => {
               <CardContent className="p-6">
                 <Users className="w-10 h-10 text-camp-grass mx-auto mb-3" />
                 <h3 className="font-display font-semibold text-foreground mb-1">Věk</h3>
-                <p className="text-muted-foreground">5–12 let</p>
+                <p className="text-muted-foreground">5–14 let</p>
               </CardContent>
             </Card>
             <Card className="text-center border-2 border-border">
               <CardContent className="p-6">
                 <Clock className="w-10 h-10 text-camp-sky mx-auto mb-3" />
                 <h3 className="font-display font-semibold text-foreground mb-1">Provozní doba</h3>
-                <p className="text-muted-foreground">8:30 – 16:00</p>
+                <p className="text-muted-foreground">od soboty do soboty</p>
               </CardContent>
             </Card>
             <Card className="text-center border-2 border-border">
               <CardContent className="p-6">
                 <Calendar className="w-10 h-10 text-camp-coral mx-auto mb-3" />
                 <h3 className="font-display font-semibold text-foreground mb-1">Délka</h3>
-                <p className="text-muted-foreground">2týdenní turnusy</p>
+                <p className="text-muted-foreground">8 denní turnusy</p>
               </CardContent>
             </Card>
             <Card className="text-center border-2 border-border">
@@ -134,18 +99,11 @@ const Registration = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-3xl font-bold text-foreground mb-8 text-center">Letní turnusy 2025</h2>
             <div className="grid sm:grid-cols-2 gap-4 mb-12">
-              {sessions.map((session, index) => (
-                <Card key={index} className="border-2 border-border hover:border-primary/50 transition-colors">
+              {sessions.map((session, index) => <Card key={index} className="border-2 border-border hover:border-primary/50 transition-colors">
                   <CardHeader className="pb-2">
                     <CardTitle className="font-display text-lg flex items-center justify-between">
                       {session.name}
-                      <span
-                        className={`text-xs px-3 py-1 rounded-full ${
-                          session.status === "Otevřeno"
-                            ? "bg-camp-grass/20 text-camp-grass"
-                            : "bg-camp-coral/20 text-camp-coral"
-                        }`}
-                      >
+                      <span className={`text-xs px-3 py-1 rounded-full ${session.status === "Otevřeno" ? "bg-camp-grass/20 text-camp-grass" : "bg-camp-coral/20 text-camp-coral"}`}>
                         {session.status}
                       </span>
                     </CardTitle>
@@ -156,17 +114,12 @@ const Registration = () => {
                       {session.dates}
                     </p>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
 
             {/* Register CTA */}
             <div className="text-center mb-16">
-              <Button
-                size="lg"
-                className="gap-2 rounded-full px-8"
-                onClick={() => window.open("https://forms.google.com", "_blank")}
-              >
+              <Button size="lg" className="gap-2 rounded-full px-8" onClick={() => window.open("https://forms.google.com", "_blank")}>
                 Vyplnit přihlášku
                 <ExternalLink className="w-4 h-4" />
               </Button>
@@ -188,12 +141,10 @@ const Registration = () => {
               <p className="text-secondary-foreground/80">Ujistěte se, že je váš táborník připraven na skvělý den!</p>
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
-              {whatToBring.map((item, index) => (
-                <div key={index} className="flex items-center gap-3 bg-background/50 rounded-lg px-4 py-3">
+              {whatToBring.map((item, index) => <div key={index} className="flex items-center gap-3 bg-background/50 rounded-lg px-4 py-3">
                   <CheckCircle className="w-5 h-5 text-camp-grass flex-shrink-0" />
                   <span className="text-foreground">{item}</span>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -208,24 +159,16 @@ const Registration = () => {
               <p className="text-muted-foreground">Najděte odpovědi na běžné otázky o Domadince</p>
             </div>
             <Accordion type="single" collapsible className="space-y-3">
-              {faqs.map((faq, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`item-${index}`}
-                  className="bg-card border-2 border-border rounded-lg px-4"
-                >
+              {faqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`} className="bg-card border-2 border-border rounded-lg px-4">
                   <AccordionTrigger className="text-left font-medium hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
+                </AccordionItem>)}
             </Accordion>
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Registration;
