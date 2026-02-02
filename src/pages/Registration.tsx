@@ -75,7 +75,7 @@ const Registration = () => {
               <CardContent className="p-6">
                 <Calendar className="w-10 h-10 text-camp-coral mx-auto mb-3" />
                 <h3 className="font-display font-semibold text-foreground mb-1">Délka</h3>
-                <p className="text-muted-foreground">8 denní turnusy</p>
+                <p className="text-muted-foreground">8 dní</p>
               </CardContent>
             </Card>
             <Card className="text-center border-2 border-border">
