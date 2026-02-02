@@ -550,7 +550,7 @@ const Gallery = () => {
 
           {/* Image container */}
           <div className="relative max-w-4xl w-full mx-16 aspect-[4/3]" onClick={e => e.stopPropagation()}>
-            {getYearImage(currentSlide.year, currentSlide.branch) ? <img src={getYearImage(currentSlide.year, currentSlide.branch)} alt={getYearTitle(currentSlide.year, currentSlide.branch)} className="w-full h-full rounded-2xl object-cover" /> : <div className={`w-full h-full rounded-2xl bg-gradient-to-br ${getYearColor(currentSlide.year)} flex flex-col items-center justify-center`}>
+            {getYearImage(currentSlide.year, currentSlide.branch) ? <img src={getYearImage(currentSlide.year, currentSlide.branch)} alt={getYearTitle(currentSlide.year, currentSlide.branch)} className="w-full h-full rounded-2xl object-cover" style={currentSlide.year === 2024 && currentSlide.branch === "upper" ? { objectPosition: "center calc(50% - 100px)" } : undefined} /> : <div className={`w-full h-full rounded-2xl bg-gradient-to-br ${getYearColor(currentSlide.year)} flex flex-col items-center justify-center`}>
                 <Camera className="w-16 h-16 text-foreground/30 mb-4" />
                 <p className="text-lg text-foreground/50 text-center font-medium px-4">
                   {getYearTitle(currentSlide.year, currentSlide.branch)}
