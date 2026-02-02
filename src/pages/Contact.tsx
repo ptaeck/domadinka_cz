@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Building2, Landmark, Tent } from "lucide-react";
-import qrPlatba from "@/assets/qr-platba.png";
+import qrPlatba from "@/assets/qr-platba.jpg";
 
 const contactInfo = [
   {
@@ -143,7 +143,7 @@ const Contact = () => {
                     <img 
                       src={qrPlatba} 
                       alt="QR platba" 
-                      className="w-32 h-32"
+                      className="w-32 h-32 rounded-lg border border-border"
                     />
                     <span className="text-xs text-muted-foreground">QR platba</span>
                   </div>
