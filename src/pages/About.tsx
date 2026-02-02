@@ -1,6 +1,6 @@
 import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Target, Users, Star, Shield, Sparkles } from "lucide-react";
+import { Heart, Target, Users, Shield, Sparkles, Star } from "lucide-react";
 const values = [{
   icon: Heart,
   title: "Soucit",
