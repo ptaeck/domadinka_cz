@@ -472,7 +472,6 @@ const Gallery = () => {
 
           {/* Note about adding photos */}
           <div className="mt-10 text-center p-6 bg-muted rounded-2xl max-w-xl mx-auto">
-            <Camera className="w-8 h-8 text-muted-foreground mx-auto mb-3" />
             <h3 className="font-display text-base font-semibold text-foreground mb-2">Přidejte své fotky</h3>
             <p className="text-sm text-muted-foreground">
               Klikněte na libovolný rok na mapě. Tyto zástupné obrázky nahraďte skutečnými fotkami z historie Domadinky.
