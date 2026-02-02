@@ -36,15 +36,19 @@ const contactInfo = [
 ];
 
 const organizationInfo = [
-  { label: "IČO", value: "12345678" },
-  { label: "DIČ", value: "CZ12345678" },
+  {
+    label: "Název subjektu",
+    value: "Domadinka z.s.",
+    href: "https://or.justice.cz/ias/ui/rejstrik-firma.vysledky?subjektId=1286444&typ=UPLNY",
+  },
+  { label: "IČO", value: "23512911" },
 ];
 
 const bankInfo = {
-  bankName: "Česká spořitelna",
-  accountNumber: "123456789/0800",
+  bankName: "Moneta",
+  accountNumber: "3662752811/0600",
   iban: "CZ65 0800 0000 0001 2345 6789",
-  swift: "GIBACZPX",
+  swift: "AGBACZPP",
 };
 
 const Contact = () => {
