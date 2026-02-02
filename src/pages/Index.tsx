@@ -117,7 +117,7 @@ const Index = () => {
               </Link>
               <Link to="/gallery">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 bg-background/50">
-                  Prohlédnout galerii
+                  Prohlédnout historii
                 </Button>
               </Link>
             </div>
