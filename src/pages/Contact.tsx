@@ -5,13 +5,13 @@ import { Mail, Phone, MapPin, Building2, Landmark, Tent } from "lucide-react";
 const contactInfo = [
   {
     icon: Phone,
-    label: "Hlavní vedoucí 1",
+    label: "Hlavní vedoucí (Turnus 1)",
     value: "(123) 456-7890",
     href: "tel:+1234567890",
   },
   {
     icon: Phone,
-    label: "Hlavní vedoucí 2",
+    label: "Hlavní vedoucí (Turnus 2)",
     value: "(123) 456-7891",
     href: "tel:+1234567891",
   },
