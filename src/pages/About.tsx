@@ -75,7 +75,7 @@ const About = () => {
                   <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <Star className="w-12 h-12 text-primary-foreground" />
                   </div>
-                  <p className="font-display text-2xl font-bold text-foreground">15+ let</p>
+                  <p className="font-display text-2xl font-bold text-foreground">více než 20 let</p>
                   <p className="text-muted-foreground">letní magie</p>
                 </div>
               </div>
