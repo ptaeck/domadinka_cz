@@ -19,7 +19,7 @@ const contactInfo = [
     icon: Tent,
     label: "Adresa táboru",
     value: "Domaslav 1\n349 53 Lestkov",
-    href: "https://maps.google.com/?q=Domaslav 1",
+    href: "https://mapy.com/cs/zakladni?q=Domaslav%20čp%201",
   },
   {
     icon: MapPin,
