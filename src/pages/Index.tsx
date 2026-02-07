@@ -148,7 +148,7 @@ const Index = () => {
               </Card>)}
           </div>
         </div>
-      </section>
+      </section>*/}
     </Layout>;
 };
 export default Index;
