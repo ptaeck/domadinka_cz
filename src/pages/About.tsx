@@ -1,6 +1,13 @@
 import Layout from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Target, Users, Shield, Sparkles, Star } from "lucide-react";
+import terezaPilna from "@/assets/team/tereza-pilna.png";
+import janSip from "@/assets/team/jan-sip.png";
+import viktorieSichingerova from "@/assets/team/viktorie-sichingerova.jpg";
+import krystofKunc from "@/assets/team/krystof-kunc.png";
+import ondrejSosna from "@/assets/team/ondrej-sosna.png";
+import janaJezkova from "@/assets/team/jana-jezkova.png";
+import terezaVydarena from "@/assets/team/tereza-vydarena.jpg";
 const values = [{
   icon: Heart,
   title: "Soucit",
@@ -20,28 +27,36 @@ const values = [{
 }];
 const team = [{
   name: "Tereza Pilná",
-  email: "tereza.pilna@domadinka.cz"
+  email: "tereza.pilna@domadinka.cz",
+  photo: terezaPilna,
 }, {
   name: "Jan Šíp",
-  email: "jan.sip@domadinka.cz"
+  email: "jan.sip@domadinka.cz",
+  photo: janSip,
 }, {
   name: "Ema Sosnová",
-  email: "ema.sosnova@domadinka.cz"
+  email: "ema.sosnova@domadinka.cz",
+  photo: null,
 }, {
   name: "Viktorie Sichingerová",
-  email: "viktorie.sichingerova@domadinka.cz"
+  email: "viktorie.sichingerova@domadinka.cz",
+  photo: viktorieSichingerova,
 }, {
   name: "Kryštof Kunc",
-  email: "krystof.kunc@domadinka.cz"
+  email: "krystof.kunc@domadinka.cz",
+  photo: krystofKunc,
 }, {
   name: "Ondřej Sosna",
-  email: "ondrej.sosna@domadinka.cz"
+  email: "ondrej.sosna@domadinka.cz",
+  photo: ondrejSosna,
 }, {
   name: "Jana Ježková",
-  email: "jana.jezkova@domadinka.cz"
+  email: "jana.jezkova@domadinka.cz",
+  photo: janaJezkova,
 }, {
   name: "Tereza Vydarená",
-  email: "tereza.vydarena@domadinka.cz"
+  email: "tereza.vydarena@domadinka.cz",
+  photo: terezaVydarena,
 }];
 const About = () => {
   return <Layout>
@@ -145,10 +160,16 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {team.map((member, index) => <Card key={index} className="border-2 border-border">
                 <CardContent className="p-6 text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-camp-sky to-camp-grass rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">
-                      {member.name.split(" ").map(n => n[0]).join("")}
-                    </span>
+                  <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+                    {member.photo ? (
+                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-camp-sky to-camp-grass flex items-center justify-center">
+                        <span className="text-2xl font-bold text-white">
+                          {member.name.split(" ").map(n => n[0]).join("")}
+                        </span>
+                      </div>
+                    )}
                   </div>
                   <h3 className="font-display text-lg font-semibold text-foreground">{member.name}</h3>
                   <a href={`mailto:${member.email}`} className="text-sm text-muted-foreground hover:text-camp-sky transition-colors mt-1 block">
