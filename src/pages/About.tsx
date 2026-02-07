@@ -50,7 +50,7 @@ const team = [{
   name: "Ondřej Sosna",
   email: "ondrej.sosna@domadinka.cz",
   photo: ondrejSosna,
-  photoClass: "scale-150 object-[center_25%]",
+  photoClass: "scale-[2] object-[center_30%]",
 }, {
   name: "Jana Ježková",
   email: "jana.jezkova@domadinka.cz",
