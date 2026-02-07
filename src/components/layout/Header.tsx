@@ -41,7 +41,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <img alt="Domadinka z.s." className="h-12 w-auto md:hidden" src={logo} />
-            <img alt="Domadinka z.s." className="hidden md:block md:h-16 w-auto" src="/lovable-uploads/642f2701-f157-4168-ae28-7050d08a12c3.png" />
+            <img alt="Domadinka z.s." className="hidden md:block md:h-16 w-auto mix-blend-multiply" src="/lovable-uploads/642f2701-f157-4168-ae28-7050d08a12c3.png" />
           </Link>
 
           {/* Always Visible Navigation */}
