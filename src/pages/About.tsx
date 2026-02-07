@@ -29,6 +29,7 @@ const team = [{
   name: "Tereza Pilná",
   email: "tereza.pilna@domadinka.cz",
   photo: terezaPilna,
+  photoClass: "scale-150 object-[center_30%]",
 }, {
   name: "Jan Šíp",
   email: "jan.sip@domadinka.cz",
@@ -49,6 +50,7 @@ const team = [{
   name: "Ondřej Sosna",
   email: "ondrej.sosna@domadinka.cz",
   photo: ondrejSosna,
+  photoClass: "scale-150 object-[center_25%]",
 }, {
   name: "Jana Ježková",
   email: "jana.jezkova@domadinka.cz",
@@ -162,7 +164,7 @@ const About = () => {
                 <CardContent className="p-6 text-center">
                   <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
                     {member.photo ? (
-                      <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                      <img src={member.photo} alt={member.name} className={`w-full h-full object-cover ${member.photoClass || ""}`} />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-camp-sky to-camp-grass flex items-center justify-center">
                         <span className="text-2xl font-bold text-white">
