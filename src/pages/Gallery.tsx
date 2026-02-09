@@ -101,7 +101,7 @@ const splitYearThemes: Record<number, {
   },
   2024: {
     upper: "Dobitín",
-    lower: "Jumanji"
+    lower: "Domanji"
   },
   2025: {
     upper: "Doma-Kinkó",
