@@ -20,6 +20,8 @@ import img2022 from "@/assets/gallery/2022-pramaslav.jpg";
 import img2023Upper from "@/assets/gallery/2023-domorka.jpg";
 import img2024Upper from "@/assets/gallery/2024-dobitin.jpg";
 import img2025Upper from "@/assets/gallery/2025-doma-kinko.jpg";
+import img2023Lower from "@/assets/gallery/2023-atlantslav.jpg";
+import img2025Lower from "@/assets/gallery/2025-kmen-domaju.jpg";
 
 // Year to image mapping (single path years)
 const yearImages: Record<number, string> = {
@@ -43,13 +45,15 @@ const splitYearImages: Record<number, {
   lower?: string;
 }> = {
   2023: {
-    upper: img2023Upper
+    upper: img2023Upper,
+    lower: img2023Lower
   },
   2024: {
     upper: img2024Upper
   },
   2025: {
-    upper: img2025Upper
+    upper: img2025Upper,
+    lower: img2025Lower
   }
 };
 
