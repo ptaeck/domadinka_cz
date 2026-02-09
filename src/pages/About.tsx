@@ -44,6 +44,7 @@ const team = [{
   name: "Viktorie Sichingerová",
   email: "viktorie.sichingerova@domadinka.cz",
   photo: viktorieSichingerova,
+  photoClass: "scale-150 object-[center_30%]",
 }, {
   name: "Kryštof Kunc",
   email: "krystof.kunc@domadinka.cz",
