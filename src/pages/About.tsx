@@ -8,6 +8,7 @@ import krystofKunc from "@/assets/team/krystof-kunc.png";
 import ondrejSosna from "@/assets/team/ondrej-sosna.png";
 import janaJezkova from "@/assets/team/jana-jezkova.png";
 import terezaVydarena from "@/assets/team/tereza-vydarena.jpg";
+import emaSosnova from "@/assets/team/ema-sosnova.png";
 const values = [{
   icon: Heart,
   title: "Soucit",
@@ -37,7 +38,8 @@ const team = [{
 }, {
   name: "Ema Sosnová",
   email: "ema.sosnova@domadinka.cz",
-  photo: null,
+  photo: emaSosnova,
+  photoClass: "scale-150 object-[center_25%]",
 }, {
   name: "Viktorie Sichingerová",
   email: "viktorie.sichingerova@domadinka.cz",
