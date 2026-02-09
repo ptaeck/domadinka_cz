@@ -105,7 +105,7 @@ const splitYearThemes: Record<number, {
   },
   2025: {
     upper: "Doma-Kinkó",
-    lower: "Agnes"
+    lower: "Kmen Domajů"
   },
   2026: {
     upper: "?",
