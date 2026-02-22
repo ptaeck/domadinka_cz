@@ -7,8 +7,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Hlavní vedoucí (Turnus 1)",
-    value: "(123) 456-7890",
-    href: "tel:+1234567890",
+    value: "+420 608 030 422\n+420 778 532 257",
+    href: "tel:+420608030422",
   },
   {
     icon: Phone,
