@@ -4,44 +4,44 @@ import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
 import { Users, Sparkles, TreePine, Palette, Music, ArrowRight, Star } from "lucide-react";
 const features = [
-  {
-    icon: TreePine,
-    title: "Dobrodružství v přírodě",
-    description: "Procházky přírodou, táborové dovednosti a objevování krás přírody.",
-  },
-  {
-    icon: Palette,
-    title: "Výtvarné aktivity",
-    description: "Kreativní projekty, které rozvíjí fantazii.",
-  },
-  {
-    icon: Music,
-    title: "Hudba a představení",
-    description: "Zpívání, tanec a společné vystupování.",
-  },
-  {
-    icon: Users,
-    title: "Týmové aktivity",
-    description: "Hry a aktivity, které budují přátelství a sebevědomí.",
-  },
-];
+{
+  icon: TreePine,
+  title: "Dobrodružství v přírodě",
+  description: "Procházky přírodou, táborové dovednosti a objevování krás přírody."
+},
+{
+  icon: Palette,
+  title: "Výtvarné aktivity",
+  description: "Kreativní projekty, které rozvíjí fantazii."
+},
+{
+  icon: Music,
+  title: "Hudba a představení",
+  description: "Zpívání, tanec a společné vystupování."
+},
+{
+  icon: Users,
+  title: "Týmové aktivity",
+  description: "Hry a aktivity, které budují přátelství a sebevědomí."
+}];
+
 const testimonials = [
-  {
-    quote: "Dcera nemohla přestat o táboře mluvit celé týdny! Našla si spoustu nových kamarádů.",
-    author: "Petra M.",
-    role: "Rodič",
-  },
-  {
-    quote: "Vedoucí jsou úžasní. Opravdu jim záleží na zážitku každého dítěte.",
-    author: "Martin T.",
-    role: "Rodič",
-  },
-  {
-    quote: "Nejlepší léto ever! Naučil jsem se rozdělávat oheň a vyrobil jsem si super budku pro ptáky.",
-    author: "Tomáš, 8 let",
-    role: "Táborník",
-  },
-];
+{
+  quote: "Dcera nemohla přestat o táboře mluvit celé týdny! Našla si spoustu nových kamarádů.",
+  author: "Petra M.",
+  role: "Rodič"
+},
+{
+  quote: "Vedoucí jsou úžasní. Opravdu jim záleží na zážitku každého dítěte.",
+  author: "Martin T.",
+  role: "Rodič"
+},
+{
+  quote: "Nejlepší léto ever! Naučil jsem se rozdělávat oheň a vyrobil jsem si super budku pro ptáky.",
+  author: "Tomáš, 8 let",
+  role: "Táborník"
+}];
+
 const Index = () => {
   return (
     <Layout>
@@ -51,7 +51,7 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-primary/20 text-primary-foreground px-4 py-2 rounded-full mb-6">
               <Sparkles className="w-4 h-4 text-camp-sun" />
-              <span className="text-sm font-medium text-foreground">Registrace na léto 2026 otevřena!</span>
+              <span className="text-sm font-medium text-foreground">Přihlášky na léto 2026 spuštěny!</span>
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
@@ -59,9 +59,9 @@ const Index = () => {
               <span className="text-camp-coral">dobrodružstvím</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Připojte se k naší přátelské komunitě, kde děti ve věku 5–14 let objevují, tvoří a rostou prostřednictvím
-              zábavných letních aktivit v bezpečném a láskyplném prostředí.
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Připojte se k naší táborové komunitě, kde děti ve věku 7–14 let objevují, tvoří a rostou prostřednictvím letních aktivit v bezpečném a láskyplném prostředí.
+
+
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -97,8 +97,8 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <Card key={index} className="border-2 border-border hover:border-primary/50 transition-colors group">
+            {features.map((feature, index) =>
+            <Card key={index} className="border-2 border-border hover:border-primary/50 transition-colors group">
                 <CardContent className="p-6 text-center">
                   <div className="w-14 h-14 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors">
                     <feature.icon className="w-7 h-7 text-accent-foreground group-hover:text-primary-foreground transition-colors" />
@@ -107,7 +107,7 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground">{feature.description}</p>
                 </CardContent>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -141,30 +141,30 @@ const Index = () => {
       </section>
 
       {/* Testimonials
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Co říkají rodiny</h2>
-            <p className="text-muted-foreground">Poslechněte si naši úžasnou táborovou komunitu</p>
-          </div>
+                     <section className="py-16 md:py-24">
+                      <div className="container mx-auto px-4">
+                        <div className="text-center mb-12">
+                          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Co říkají rodiny</h2>
+                          <p className="text-muted-foreground">Poslechněte si naši úžasnou táborovou komunitu</p>
+                        </div>
+                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                          {testimonials.map((testimonial, index) => <Card key={index} className="bg-card border-2 border-border">
+                              <CardContent className="p-6">
+                                <div className="flex gap-1 mb-4">
+                                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-camp-sun text-camp-sun" />)}
+                                </div>
+                                <p className="text-foreground mb-4 italic">„{testimonial.quote}"</p>
+                                <div>
+                                  <p className="font-semibold text-foreground">{testimonial.author}</p>
+                                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                                </div>
+                              </CardContent>
+                            </Card>)}
+                        </div>
+                      </div>
+                     </section>*/
+      }
+    </Layout>);
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {testimonials.map((testimonial, index) => <Card key={index} className="bg-card border-2 border-border">
-                <CardContent className="p-6">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-camp-sun text-camp-sun" />)}
-                  </div>
-                  <p className="text-foreground mb-4 italic">„{testimonial.quote}"</p>
-                  <div>
-                    <p className="font-semibold text-foreground">{testimonial.author}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                  </div>
-                </CardContent>
-              </Card>)}
-          </div>
-        </div>
-      </section>*/}
-    </Layout>
-  );
 };
 export default Index;
