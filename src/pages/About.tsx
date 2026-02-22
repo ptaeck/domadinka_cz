@@ -88,16 +88,16 @@ Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, ke kt
 
 
                 </p>
-                  <p>
-                    Založena skupinou nadšených pedagogů a rodičů, věřili jsme, že každé dítě si zaslouží přístup k
-                    obohacujícím letním zážitkům bez ohledu na své zázemí. Toto přesvědčení nadále pohání vše, co
-                    děláme.
-                  </p>
-                  <p>
-                    Dnes jsme hrdí na to, že jsme nezisková organizace zaměřená na poskytování bezpečných, zábavných a
-                    vzdělávacích letních programů, které pomáhají dětem růst, učit se a navazovat přátelství na celý
-                    život.
-                  </p>
+                  <p>Domadinka z.s. vznikla spoluprací nadšených pedagogů, rodičů a táborníků, kteří na táborech v Domaslavi vyrostli. Společně věříme, že se každé dítě zaslouží přístup k obohacujícím letním zážitkům bez ohledu na své zázemí. Toto přesvědčení nadále pohání vše, co děláme.
+
+
+
+                </p>
+                  <p>Dnes jsme hrdí na to, že jsme nezisková organizace zaměřená na poskytování bezpečných a vzdělávacích letních programů, které pomáhají dětem růst, učit se a navazovat přátelství na celý život.
+
+
+
+                </p>
                 </div>
               </div>
               <div className="bg-accent/50 rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
@@ -120,10 +120,10 @@ Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, ke kt
           <div className="max-w-3xl mx-auto text-center">
             <Target className="w-12 h-12 text-camp-grass mx-auto mb-6" />
             <h2 className="font-display text-3xl md:text-4xl font-bold text-secondary-foreground mb-6">Naše mise</h2>
-            <p className="text-xl text-secondary-foreground/80 leading-relaxed">
-              Poskytovat bezpečný, inkluzivní a radostný letní zážitek, kde děti mohou objevovat své zájmy, rozvíjet
-              nové dovednosti, budovat trvalá přátelství a vytvářet vzpomínky, které je budou inspirovat po celý život.
-            </p>
+            <p className="text-xl text-secondary-foreground/80 leading-relaxed">Poskytovat bezpečný, inkluzivní a radostný letní zážitek, kde děti mohou objevovat své zájmy a talenty, rozvíjet nové dovednosti, budovat trvalá přátelství a vytvářet vzpomínky, které je budou inspirovat po celý život.
+
+
+          </p>
           </div>
         </div>
       </section>
