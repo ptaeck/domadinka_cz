@@ -72,17 +72,9 @@ const Registration = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">Přihláška</h1>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground">
               Zajistěte svému dítěti místo na nezapomenutelném letním dobrodružství!
             </p>
-            <Button
-              size="lg"
-              className="gap-2 rounded-full px-8"
-              onClick={() => window.open("https://forms.google.com", "_blank")}
-            >
-              Přihlásit se
-              <ExternalLink className="w-4 h-4" />
-            </Button>
           </div>
         </div>
       </section>
