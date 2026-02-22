@@ -6,7 +6,7 @@ import { Users, Sparkles, TreePine, Palette, Music, ArrowRight, Star } from "luc
 const features = [
 {
   icon: TreePine,
-  title: "Dobrodružství v přírodě",
+  title: "Místo a příroda",
   description: "Putování přírodou a genius loci krajiny pod Krasíkovem."
 },
 {
