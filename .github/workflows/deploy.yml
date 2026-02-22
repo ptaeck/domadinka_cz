@@ -1,21 +1,33 @@
 name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
       - main
+  workflow_dispatch:   # lets you trigger manually from Actions tab
+
 permissions:
-  id-token: write
-  contents: write
+  contents: read       # ← was 'write', should be 'read'
   pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:                                              # ← ADDED (critical)
+      name: github-pages
+      url: ${{ steps.deploy_to_pages.outputs.github_pages_url }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Vite GitHub Pages Deployer
+        id: deploy_to_pages                                   # ← ADDED
         uses: skywarth/vite-github-pages-deployer@v1.5.0
         with:
           public_base_path: /
