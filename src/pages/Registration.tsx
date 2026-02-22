@@ -6,7 +6,7 @@ import { Calendar, Clock, Users, DollarSign, CheckCircle, ExternalLink, Backpack
 const sessions = [{
   name: "1. turnus",
   dates: "1. srpna – 8. srpna 2026",
-  status: "Otevřeno"
+  status: "Omezená místa"
 }, {
   name: "2. turnus",
   dates: "15. srpna – 22. srpna 2026",
