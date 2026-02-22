@@ -123,6 +123,7 @@ const Registration = () => {
                   </CardContent>
                 </Card>)}
             </div>
+            <p className="text-sm text-muted-foreground text-center mt-4">Budete přesměrováni na přihlašovací formulář</p>
           </div>
         </div>
       </section>
