@@ -62,13 +62,13 @@ const Registration = () => {
               <CardContent className="p-6">
                 <Users className="w-10 h-10 text-camp-grass mx-auto mb-3" />
                 <h3 className="font-display font-semibold text-foreground mb-1">Věk</h3>
-                <p className="text-muted-foreground">5–14 let</p>
+                <p className="text-muted-foreground">7–14 let</p>
               </CardContent>
             </Card>
             <Card className="text-center border-2 border-border">
               <CardContent className="p-6">
                 <Clock className="w-10 h-10 text-camp-sky mx-auto mb-3" />
-                <h3 className="font-display font-semibold text-foreground mb-1">Provozní doba</h3>
+                <h3 className="font-display font-semibold text-foreground mb-1">TERMÍN</h3>
                 <p className="text-muted-foreground">od soboty do soboty</p>
               </CardContent>
             </Card>
@@ -76,14 +76,16 @@ const Registration = () => {
               <CardContent className="p-6">
                 <Calendar className="w-10 h-10 text-camp-coral mx-auto mb-3" />
                 <h3 className="font-display font-semibold text-foreground mb-1">Délka</h3>
-                <p className="text-muted-foreground">7 dní</p>
+                <p className="text-muted-foreground">8 dní</p>
               </CardContent>
             </Card>
             <Card className="text-center border-2 border-border">
               <CardContent className="p-6">
                 <DollarSign className="w-10 h-10 text-camp-sun mx-auto mb-3" />
                 <h3 className="font-display font-semibold text-foreground mb-1">Cena</h3>
-                <p className="text-muted-foreground">8 500 Kč za turnus</p>
+                <p className="text-muted-foreground">4 900 Kč za turnus
+
+              </p>
               </CardContent>
             </Card>
           </div>
@@ -166,6 +168,4 @@ const Registration = () => {
           </div>
         </div>
       </section>
-    </Layout>;
-};
-export default Registration;
+    </Layout>;};export default Registration;
