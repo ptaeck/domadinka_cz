@@ -43,15 +43,15 @@ const Footer = () => {
             <div className="space-y-3">
               <a
                 href="mailto:info@domadinka.cz"
-                className="flex items-center gap-3 text-background/80 hover:text-primary transition-colors text-sm"
-              >
+                className="flex items-center gap-3 text-background/80 hover:text-primary transition-colors text-sm">
+
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 info@domadinka.cz
               </a>
               <a
                 href="tel:+1234567890"
-                className="flex items-center gap-3 text-background/80 hover:text-primary transition-colors text-sm"
-              >
+                className="flex items-center gap-3 text-background/80 hover:text-primary transition-colors text-sm">
+
                 <Phone className="w-4 h-4 flex-shrink-0" />
                 (123) 456-7890
               </a>
@@ -67,41 +67,41 @@ const Footer = () => {
           </div>
 
           {/* Social & Newsletter 
-          <div className="space-y-4">
-            <h3 className="font-display text-lg font-semibold">Sledujte nás</h3>
-            <div className="flex gap-3">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-            </div>
-            <p className="text-background/60 text-xs">
-              Buďte s námi v kontaktu pro novinky z tábora, fotky a speciální oznámení!
-            </p>
-          </div>*/}
+            <div className="space-y-4">
+             <h3 className="font-display text-lg font-semibold">Sledujte nás</h3>
+             <div className="flex gap-3">
+               <a
+                 href="https://facebook.com"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="w-10 h-10 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
+                 aria-label="Facebook"
+               >
+                 <Facebook className="w-5 h-5" />
+               </a>
+               <a
+                 href="https://instagram.com"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="w-10 h-10 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
+                 aria-label="Instagram"
+               >
+                 <Instagram className="w-5 h-5" />
+               </a>
+               <a
+                 href="https://twitter.com"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="w-10 h-10 rounded-full bg-background/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-colors"
+                 aria-label="Twitter"
+               >
+                 <Twitter className="w-5 h-5" />
+               </a>
+             </div>
+             <p className="text-background/60 text-xs">
+               Buďte s námi v kontaktu pro novinky z tábora, fotky a speciální oznámení!
+             </p>
+            </div>*/}
         </div>
       </div>
 
@@ -114,8 +114,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default Footer;
