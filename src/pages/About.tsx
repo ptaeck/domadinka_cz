@@ -16,7 +16,7 @@ const values = [{
 }, {
   icon: Shield,
   title: "Bezpečnost",
-  description: "Bezpečné a pečující prostředí, kde děti mohou prospívat."
+  description: "Bezpečné a pečující prostředí, kde děti mohou růst."
 }, {
   icon: Sparkles,
   title: "Kreativita",
