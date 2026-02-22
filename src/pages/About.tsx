@@ -12,7 +12,7 @@ import emaSosnova from "@/assets/team/ema-sosnova.png";
 const values = [{
   icon: Heart,
   title: "Respekt",
-  description: "Ke každému dítěti a jeho potřebám přistupujeme s laskavostí, porozuměním a respektem."
+  description: "Ke každému dítěti a jeho potřebám přistupujeme s laskavostí a porozuměním."
 }, {
   icon: Shield,
   title: "Bezpečnost",
