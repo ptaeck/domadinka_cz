@@ -28,7 +28,7 @@ const faqs = [{
   answer: "Udržujeme poměr 1:3 (vedoucí:děti), abychom zajistili, že každé dítě dostane náležitou pozornost a individuální přístup."
 }, {
   question: "Co se děje, když prší?",
-  answer: "Máme připraveno spoustu aktivit do interiéru na deštivé dny, včetně výtvarných činností, her, filmů a halových sportů."
+  answer: "Máme připraveno spoustu aktivit do interiéru na deštivé dny, včetně výtvarných činností nebo společenských her."
 }, {
   question: "Nabízíte slevy?",
   answer: "Ano! Nabízíme slevy pro sourozence."
