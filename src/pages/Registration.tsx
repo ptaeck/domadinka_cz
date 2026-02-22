@@ -118,9 +118,9 @@ const Registration = () => {
                 Vyplnit přihlášku
                 <ExternalLink className="w-4 h-4" />
               </Button>
-              <p className="text-sm text-muted-foreground mt-4">
-                Budete přesměrováni na náš zabezpečený přihlašovací formulář
-              </p>
+              <p className="text-sm text-muted-foreground mt-4">Budete přesměrováni na přihlašovací formulář
+
+            </p>
             </div>
           </div>
         </div>
