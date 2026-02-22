@@ -133,7 +133,7 @@ const Registration = () => {
             <div className="text-center mb-10">
               <Backpack className="w-12 h-12 text-camp-earth mx-auto mb-4" />
               <h2 className="font-display text-3xl font-bold text-secondary-foreground mb-4">Co s sebou</h2>
-              <p className="text-secondary-foreground/80">Ujistěte se, že je váš táborník připraven na skvělý den!</p>
+              <p className="text-secondary-foreground/80">Ujistěte se, že je váš táborník připraven na celý týden!</p>
             </div>
             <div className="grid sm:grid-cols-2 gap-3">
               {whatToBring.map((item, index) => <div key={index} className="flex items-center gap-3 bg-background/50 rounded-lg px-4 py-3">
