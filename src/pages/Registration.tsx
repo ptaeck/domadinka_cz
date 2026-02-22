@@ -5,7 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Calendar, Clock, Users, DollarSign, CheckCircle, ExternalLink, Backpack, XCircle } from "lucide-react";
 const sessions = [{
   name: "1. turnus",
-  dates: "1. srpna – 8. srpna 2025",
+  dates: "1. srpna – 8. srpna 2026",
   status: "Otevřeno"
 }, {
   name: "2. turnus",
