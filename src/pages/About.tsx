@@ -236,9 +236,9 @@ Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, ke kt
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Objevování přírody</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Poznávají přírodu, učí se o životním prostředí a užívají si čerstvý vzduch.
-                    </p>
+                    <p className="text-sm text-muted-foreground">Poznávají přírodu, tráví v ní většinu táborových dní a užívají si čerstvý vzduch.
+
+                  </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
