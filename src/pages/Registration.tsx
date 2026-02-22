@@ -105,10 +105,14 @@ const Registration = () => {
                       </span>
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="space-y-1">
                     <p className="text-muted-foreground flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
                       {session.dates}
+                    </p>
+                    <p className="text-muted-foreground flex items-center gap-2">
+                      <Users className="w-4 h-4" />
+                      {session.lead}
                     </p>
                   </CardContent>
                 </Card>)}
