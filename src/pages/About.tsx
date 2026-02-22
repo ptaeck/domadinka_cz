@@ -83,12 +83,12 @@ const About = () => {
               <div>
                 <h2 className="font-display text-3xl font-bold text-foreground mb-6">Náš příběh</h2>
                 <div className="space-y-4 text-muted-foreground">
-                  <p>Domadinka z.s. začala s jednoduchým úkolem: pokusit se vytvořit místo, kde každé dítě může zažít radost z léta.
-Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, ke které se každý rok vradí děti z více než padesáti rodin.
+                  <p>Domadinka z.s. začala s jednoduchým úkolem: pokusit se vytvořit místo, kde každé dítě může zažít radost z léta. Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, ke které se každý rok vrací děti z více než padesáti rodin.
+
 
 
                 </p>
-                  <p>Domadinka z.s. vznikla spoluprací nadšených pedagogů, rodičů a táborníků, kteří na táborech v Domaslavi vyrostli. Společně věříme, že se každé dítě zaslouží přístup k obohacujícím letním zážitkům bez ohledu na své zázemí. Toto přesvědčení nadále pohání vše, co děláme.
+                  <p>Domadinka z.s. vznikla spoluprací nadšených pedagogů, rodičů a táborníků, kteří na táborech v Domaslavi vyrostli. Společně věříme, že si každé dítě zaslouží přístup k obohacujícím letním zážitkům bez ohledu na své zázemí. Toto přesvědčení nadále pohání vše, co děláme.
 
 
 
