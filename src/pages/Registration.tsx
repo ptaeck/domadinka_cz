@@ -26,7 +26,8 @@ const whatToBring = [
   "Klobouk nebo čepice",
   "Láhev na vodu",
   "Náhradní oblečení",
-  "Malý batoh",
+  "Batoh na výlet",
+  "Spacák, polštář, plyšáka",
   "Repelent proti klíšťatům",
 ];
 const forbiddenItems = ["Mobilní telefon", "Sladkosti", "Cennosti a šperky", "Ostré předměty (vytahovací nože, nůžky)"];
