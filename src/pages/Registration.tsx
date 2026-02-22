@@ -16,7 +16,7 @@ const whatToBring = ["Pohodlné oblečení na aktivity venku", "Uzavřené boty 
 const forbiddenItems = ["Mobilní telefon", "Sladkosti", "Cennosti a šperky", "Ostré předměty (vytahovací nože, nůžky)"];
 const faqs = [{
   question: "Jaký věk přijímáte?",
-  answer: "Domadinka přijímá děti ve věku 5–14 let. Nerozdělujeme děti podle věku: Všechny děti jsou v několika smíšených skupinách, aby aktivity byly společné a podporovaly vzájemné učení."
+  answer: "Domadinka přijímá děti ve věku 7–14 let. Nerozdělujeme děti podle věku: Všechny děti jsou v několika smíšených skupinách, aby aktivity byly společné a podporovaly vzájemné učení."
 }, {
   question: "Jaká je provozní doba tábora?",
   answer: "Tábor probíhá od soboty do soboty v uvedeném termínu turnusu."
