@@ -30,38 +30,38 @@ const team = [{
   name: "Tereza Pilná",
   email: "tereza.pilna@domadinka.cz",
   photo: terezaPilna,
-  photoClass: "scale-150 object-[center_30%]",
+  photoClass: "scale-150 object-[center_30%]"
 }, {
   name: "Jan Šíp",
   email: "jan.sip@domadinka.cz",
-  photo: janSip,
+  photo: janSip
 }, {
   name: "Ema Sosnová",
   email: "ema.sosnova@domadinka.cz",
   photo: emaSosnova,
-  photoClass: "scale-150 object-[center_40%]",
+  photoClass: "scale-150 object-[center_40%]"
 }, {
   name: "Viktorie Sichingerová",
   email: "viktorie.sichingerova@domadinka.cz",
   photo: viktorieSichingerova,
-  photoClass: "scale-150 object-[center_40%]",
+  photoClass: "scale-150 object-[center_40%]"
 }, {
   name: "Kryštof Kunc",
   email: "krystof.kunc@domadinka.cz",
-  photo: krystofKunc,
+  photo: krystofKunc
 }, {
   name: "Ondřej Sosna",
   email: "ondrej.sosna@domadinka.cz",
   photo: ondrejSosna,
-  photoClass: "scale-[2] object-[center_30%]",
+  photoClass: "scale-[2] object-[center_30%]"
 }, {
   name: "Jana Ježková",
   email: "jana.jezkova@domadinka.cz",
-  photo: janaJezkova,
+  photo: janaJezkova
 }, {
   name: "Tereza Vydarená",
   email: "tereza.vydarena@domadinka.cz",
-  photo: terezaVydarena,
+  photo: terezaVydarena
 }];
 const About = () => {
   return <Layout>
@@ -83,11 +83,11 @@ const About = () => {
               <div>
                 <h2 className="font-display text-3xl font-bold text-foreground mb-6">Náš příběh</h2>
                 <div className="space-y-4 text-muted-foreground">
-                  <p>
-                    Domadinka z.s. začala s jednoduchým snem: vytvořit místo, kde každé dítě může zažít radost z léta.
-                    Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, která každý rok slouží více
-                    než padesáti rodinám.
-                  </p>
+                  <p>Domadinka z.s. začala s jednoduchým úkolem: vytvořit místo, kde každé dítě může zažít radost z léta. Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, ke které se každý rok vradí děti z více než padesáti rodin.
+
+
+
+                </p>
                   <p>
                     Založena skupinou nadšených pedagogů a rodičů, věřili jsme, že každé dítě si zaslouží přístup k
                     obohacujícím letním zážitkům bez ohledu na své zázemí. Toto přesvědčení nadále pohání vše, co
@@ -166,15 +166,15 @@ const About = () => {
             {team.map((member, index) => <Card key={index} className="border-2 border-border">
                 <CardContent className="p-6 text-center">
                   <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
-                    {member.photo ? (
-                      <img src={member.photo} alt={member.name} className={`w-full h-full object-cover ${member.photoClass || ""}`} />
-                    ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-camp-sky to-camp-grass flex items-center justify-center">
+                    {member.photo ?
+                <img src={member.photo} alt={member.name} className={`w-full h-full object-cover ${member.photoClass || ""}`} /> :
+
+                <div className="w-full h-full bg-gradient-to-br from-camp-sky to-camp-grass flex items-center justify-center">
                         <span className="text-2xl font-bold text-white">
-                          {member.name.split(" ").map(n => n[0]).join("")}
+                          {member.name.split(" ").map((n) => n[0]).join("")}
                         </span>
                       </div>
-                    )}
+                }
                   </div>
                   <h3 className="font-display text-lg font-semibold text-foreground">{member.name}</h3>
                   <a href={`mailto:${member.email}`} className="text-sm text-muted-foreground hover:text-camp-sky transition-colors mt-1 block">
