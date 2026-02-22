@@ -11,7 +11,7 @@ import terezaVydarena from "@/assets/team/tereza-vydarena.jpg";
 import emaSosnova from "@/assets/team/ema-sosnova.png";
 const values = [{
   icon: Heart,
-  title: "Soucit",
+  title: "Respekt",
   description: "Ke každému dítěti přistupujeme s laskavostí, porozuměním a respektem."
 }, {
   icon: Shield,
