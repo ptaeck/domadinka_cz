@@ -22,7 +22,7 @@ const features = [
 {
   icon: Users,
   title: "Týmové aktivity",
-  description: "Hry a aktivity, které budují přátelství a sebevědomí."
+  description: "Hry a aktivity, které budují týmovost a zdravé sebevědomí."
 }];
 
 const testimonials = [
