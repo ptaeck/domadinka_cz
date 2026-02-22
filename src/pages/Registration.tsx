@@ -83,8 +83,8 @@ const Registration = () => {
               <CardContent className="p-6">
                 <DollarSign className="w-10 h-10 text-camp-sun mx-auto mb-3" />
                 <h3 className="font-display font-semibold text-foreground mb-1">Cena</h3>
-                <p className="text-muted-foreground">4 900 Kč za turnus
-
+                <p className="text-muted-foreground">4 900 Kč základní
+4 200 Kč sourozenec
               </p>
               </CardContent>
             </Card>
