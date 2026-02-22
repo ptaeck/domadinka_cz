@@ -9,7 +9,7 @@ const sessions = [
     dates: "1. srpna – 8. srpna 2026",
     status: "Omezená místa",
     lead: "Ema Sosnová a Viktorie Sichingerová",
-    formUrl: "https://forms.google.com/turnus1",
+    formUrl: "https://forms.gle/v24UMBHWyaT2znqT8",
   },
   {
     name: "2. turnus",
