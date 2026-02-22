@@ -7,7 +7,7 @@ const features = [
 {
   icon: TreePine,
   title: "Dobrodružství v přírodě",
-  description: "Procházky přírodou, táborové dovednosti a objevování krás přírody."
+  description: "Putování přírodou a genius loci krajiny pod Krasíkovem."
 },
 {
   icon: Palette,
