@@ -258,9 +258,9 @@ Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, ke kt
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Nezapomenutelné vzpomínky</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Odnášejí si domů příběhy, výrobky a vzpomínky, které budou navždy cenit.
-                    </p>
+                    <p className="text-sm text-muted-foreground">Odnášejí si domů příběhy, výtvory a vzpomínky, které budou navždy cenit.
+
+                  </p>
                   </div>
                 </div>
               </div>
