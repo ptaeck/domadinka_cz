@@ -13,8 +13,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Hlavní vedoucí (Turnus 2)",
-    value: "(123) 456-7891",
-    href: "tel:+1234567891",
+    value: "+420 724 299 459\n+420 606 926 732",
+    href: "tel:+420724299459",
   },
   {
     icon: Tent,
