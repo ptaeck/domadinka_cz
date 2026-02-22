@@ -25,7 +25,7 @@ const faqs = [{
   answer: "Děti mají zajištěnou snídani, oběd a večeři a dvě svačiny během dne včetně celodenního pitného režimu."
 }, {
   question: "Jaký je poměr vedoucích a dětí?",
-  answer: "Udržujeme poměr 1:3 (vedoucí:děti), abychom zajistili, že každé dítě dostane náležitou pozornost a dohled."
+  answer: "Udržujeme poměr 1:3 (vedoucí:děti), abychom zajistili, že každé dítě dostane náležitou pozornost a individuální přístup."
 }, {
   question: "Co se děje, když prší?",
   answer: "Máme připraveno spoustu aktivit do interiéru na deštivé dny, včetně výtvarných činností, her, filmů a halových sportů."
