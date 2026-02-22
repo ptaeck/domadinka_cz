@@ -6,11 +6,13 @@ import { Calendar, Clock, Users, DollarSign, CheckCircle, ExternalLink, Backpack
 const sessions = [{
   name: "1. turnus",
   dates: "1. srpna – 8. srpna 2026",
-  status: "Omezená místa"
+  status: "Omezená místa",
+  lead: "Ema Sosnová a Viktorie Sichingerová"
 }, {
   name: "2. turnus",
   dates: "15. srpna – 22. srpna 2026",
   status: "Omezená místa"
+  lead: "Ondřej Sosna a Tereza Pilná"
 }];
 const whatToBring = ["Pohodlné oblečení na aktivity venku", "Uzavřené boty (tenisky doporučeny)", "Opalovací krém (SPF 30+)", "Klobouk nebo čepice", "Láhev na vodu", "Náhradní oblečení", "Malý batoh", "Repelent proti klíšťatům"];
 const forbiddenItems = ["Mobilní telefon", "Sladkosti", "Cennosti a šperky", "Ostré předměty (vytahovací nože, nůžky)"];
