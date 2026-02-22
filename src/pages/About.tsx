@@ -247,9 +247,9 @@ Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, ke kt
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Rozvoj dovedností</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Učí se nové věci, od plavání po tvoření, a získávají sebevědomí.
-                    </p>
+                    <p className="text-sm text-muted-foreground">Učí se nové věci, od výtvarných technik po osobnostní růst a získávání sebevědomí.
+
+                  </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
