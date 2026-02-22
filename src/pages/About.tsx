@@ -83,8 +83,8 @@ const About = () => {
               <div>
                 <h2 className="font-display text-3xl font-bold text-foreground mb-6">Náš příběh</h2>
                 <div className="space-y-4 text-muted-foreground">
-                  <p>Domadinka z.s. začala s jednoduchým úkolem: vytvořit místo, kde každé dítě může zažít radost z léta. Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, ke které se každý rok vradí děti z více než padesáti rodin.
-
+                  <p>Domadinka z.s. začala s jednoduchým úkolem: pokusit se vytvořit místo, kde každé dítě může zažít radost z léta.
+Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, ke které se každý rok vradí děti z více než padesáti rodin.
 
 
                 </p>
