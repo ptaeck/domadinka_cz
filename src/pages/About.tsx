@@ -223,9 +223,9 @@ Co začalo jako malý komunitní program, vyrostlo v oblíbenou instituci, ke kt
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Pečující vedoucí</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Náš vyškolený tým poskytuje vedení, podporu a spoustu povzbuzení.
-                    </p>
+                    <p className="text-sm text-muted-foreground">Náš nadšený a profesionální tým poskytuje vedení a maximální podporuení.
+
+                  </p>
                   </div>
                 </div>
               </div>
