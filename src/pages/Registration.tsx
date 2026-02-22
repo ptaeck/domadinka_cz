@@ -7,12 +7,14 @@ const sessions = [{
   name: "1. turnus",
   dates: "1. srpna – 8. srpna 2026",
   status: "Omezená místa",
-  lead: "Ema Sosnová a Viktorie Sichingerová"
+  lead: "Ema Sosnová a Viktorie Sichingerová",
+  formUrl: "https://forms.google.com/turnus1"
 }, {
   name: "2. turnus",
   dates: "15. srpna – 22. srpna 2026",
   status: "Omezená místa",
-  lead: "Ondřej Sosna a Tereza Pilná"
+  lead: "Ondřej Sosna a Tereza Pilná",
+  formUrl: "https://forms.google.com/turnus2"
 }];
 const whatToBring = ["Pohodlné oblečení na aktivity venku", "Uzavřené boty (tenisky doporučeny)", "Opalovací krém (SPF 30+)", "Klobouk nebo čepice", "Láhev na vodu", "Náhradní oblečení", "Malý batoh", "Repelent proti klíšťatům"];
 const forbiddenItems = ["Mobilní telefon", "Sladkosti", "Cennosti a šperky", "Ostré předměty (vytahovací nože, nůžky)"];
@@ -105,7 +107,7 @@ const Registration = () => {
                       </span>
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-1">
+                  <CardContent className="space-y-3">
                     <p className="text-muted-foreground flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
                       {session.dates}
@@ -114,19 +116,12 @@ const Registration = () => {
                       <Users className="w-4 h-4" />
                       {session.lead}
                     </p>
+                    <Button size="sm" className="gap-2 rounded-full w-full mt-2" onClick={() => window.open(session.formUrl, "_blank")}>
+                      Vyplnit přihlášku
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
                   </CardContent>
                 </Card>)}
-            </div>
-
-            {/* Register CTA */}
-            <div className="text-center mb-16">
-              <Button size="lg" className="gap-2 rounded-full px-8" onClick={() => window.open("https://forms.google.com", "_blank")}>
-                Vyplnit přihlášku
-                <ExternalLink className="w-4 h-4" />
-              </Button>
-              <p className="text-sm text-muted-foreground mt-4">Budete přesměrováni na přihlašovací formulář
-
-            </p>
             </div>
           </div>
         </div>
