@@ -16,7 +16,7 @@ const features = [
 },
 {
   icon: Music,
-  title: "Hudba a představení",
+  title: "Hudba a divadlo",
   description: "Zpívání, tanec a společné vystupování."
 },
 {
