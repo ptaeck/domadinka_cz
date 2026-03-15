@@ -14,7 +14,7 @@ const sessions = [
   {
     name: "2. turnus",
     dates: "15. srpna – 22. srpna 2026",
-    status: "Obsazeno",
+    status: "",
     lead: "Ondřej Sosna a Tereza Pilná",
     formUrl: "",
     soldOut: true,
@@ -124,11 +124,13 @@ const Registration = () => {
                   <CardHeader className="pb-2">
                     <CardTitle className="font-display text-lg flex items-center justify-between">
                       {session.name}
-                      <span
-                        className={`text-xs px-3 py-1 rounded-full ${session.status === "Otevřeno" ? "bg-camp-grass/20 text-camp-grass" : "bg-camp-coral/20 text-camp-coral"}`}
-                      >
-                        {session.status}
-                      </span>
+                      {session.status && (
+                        <span
+                          className={`text-xs px-3 py-1 rounded-full ${session.status === "Otevřeno" ? "bg-camp-grass/20 text-camp-grass" : "bg-camp-coral/20 text-camp-coral"}`}
+                        >
+                          {session.status}
+                        </span>
+                      )}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
