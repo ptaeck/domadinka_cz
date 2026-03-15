@@ -139,16 +139,14 @@ const Registration = () => {
                       <Users className="w-4 h-4" />
                       {session.lead}
                     </p>
-                    {index === 0 && (
-                      <Button
-                        size="sm"
-                        className="gap-2 rounded-full w-full mt-2"
-                        onClick={() => window.open(session.formUrl, "_blank")}
-                      >
-                        Vyplnit přihlášku
-                        <ExternalLink className="w-4 h-4" />
-                      </Button>
-                    )}
+                    <Button
+                      size="sm"
+                      className="gap-2 rounded-full w-full mt-2"
+                      onClick={() => window.open(session.formUrl, "_blank")}
+                    >
+                      Vyplnit přihlášku
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
