@@ -14,9 +14,10 @@ const sessions = [
   {
     name: "2. turnus",
     dates: "15. srpna – 22. srpna 2026",
-    status: "Omezená místa",
+    status: "Obsazeno",
     lead: "Ondřej Sosna a Tereza Pilná",
-    formUrl: "https://forms.gle/s8mqmVr3HHih4FgV9",
+    formUrl: "",
+    soldOut: true,
   },
 ];
 const whatToBring = [
