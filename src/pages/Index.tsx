@@ -51,7 +51,7 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-primary/20 text-primary-foreground px-4 py-2 rounded-full mb-6">
               <Sparkles className="w-4 h-4 text-camp-sun" />
-              <span className="text-sm font-medium text-foreground">Přihlášky na léto 2026 spuštěny!</span>
+              <span className="text-sm font-medium text-foreground">Přihlášky na léto 2027 otevřeme v lednu!</span>
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
