@@ -12,6 +12,7 @@ const sessions = [
     status: ""
     lead: "Ondřej Sosna a Tereza Pilná",
     formUrl: "https://forms.gle/",
+    soldOut: true
   },
   {
     name: "2. turnus",
