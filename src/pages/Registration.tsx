@@ -6,16 +6,16 @@ import { Calendar, Clock, Users, DollarSign, CheckCircle, ExternalLink, Backpack
 const sessions = [
   {
     name: "1. turnus",
-    dates: "1. srpna – 8. srpna 2026",
+    dates: "31. července – 7. srpna 2027",
     status: "Omezená místa",
-    lead: "Ema Sosnová a Viktorie Sichingerová",
+    lead: "Ondřej Sosna a Tereza Pilná",
     formUrl: "https://forms.gle/v24UMBHWyaT2znqT8",
   },
   {
     name: "2. turnus",
-    dates: "15. srpna – 22. srpna 2026",
+    dates: "14. srpna – 21. srpna 2026",
     status: "",
-    lead: "Ondřej Sosna a Tereza Pilná",
+    lead: "Ema Sosnová a Viktorie Sichingerová",
     formUrl: "",
     soldOut: true,
   },
@@ -117,7 +117,7 @@ const Registration = () => {
 
           {/* Sessions */}
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl font-bold text-foreground mb-8 text-center">LETNÍ TURNUSY 2026</h2>
+            <h2 className="font-display text-3xl font-bold text-foreground mb-8 text-center">LETNÍ TURNUSY 2027</h2>
             <div className="grid sm:grid-cols-2 gap-4 mb-12">
               {sessions.map((session, index) => (
                 <Card key={index} className="border-2 border-border hover:border-primary/50 transition-colors">
