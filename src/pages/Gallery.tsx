@@ -114,8 +114,8 @@ const splitYearThemes: Record<number, {
     lower: "Kmen Domajů"
   },
   2026: {
-    upper: "Los Domos",
-    lower: "Domacirkus"
+    upper: "Domacirkus",
+    lower: "Los Domos"
   },
   2027: {
     upper: "???",
