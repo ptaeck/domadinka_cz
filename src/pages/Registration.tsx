@@ -9,7 +9,7 @@ const sessions = [
     name: "1. turnus",
     dates: "31. července – 7. srpna 2027",
     //status: "Omezená místa",
-    status: ""
+    status: "",
     lead: "Ondřej Sosna a Tereza Pilná",
     formUrl: "https://forms.gle/",
     soldOut: true,
@@ -120,7 +120,9 @@ const Registration = () => {
 
           {/* Sessions */}
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl font-bold text-foreground mb-8 text-center">LETNÍ TURNUSY {registrationYear}</h2>
+            <h2 className="font-display text-3xl font-bold text-foreground mb-8 text-center">
+              LETNÍ TURNUSY {registrationYear}
+            </h2>
             <div className="grid sm:grid-cols-2 gap-4 mb-12">
               {sessions.map((session, index) => (
                 <Card key={index} className="border-2 border-border hover:border-primary/50 transition-colors">
