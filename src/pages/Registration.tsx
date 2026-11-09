@@ -153,9 +153,7 @@ const Registration = () => {
                 </Card>
               ))}
             </div>
-            <p className="text-sm text-muted-foreground text-center mt-4">
-              Přihlášky otevíráme v lednu 2027
-            </p>
+            <p className="text-sm text-muted-foreground text-center mt-4">Přihlášky otevíráme v lednu 2027 :-)</p>
           </div>
         </div>
       </section>
