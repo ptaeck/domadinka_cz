@@ -225,44 +225,44 @@ const mainPathPoints = [
 
 // Upper branch (2023-2026) - continues right on upper track
 const upperBranchPoints = [{
-  x: 38,
+  x: 34,
   y: 68
 },
 // 2023 upper (moved up)
 {
-  x: 52,
+  x: 46,
   y: 62
 },
 // 2024 upper (moved up)
 {
-  x: 68,
+  x: 58,
   y: 58
 },
 // 2025 upper (moved up)
 {
-  x: 82,
+  x: 70,
   y: 52
 } // 2026 upper - Kokaschütz area (moved up)
 ];
 
 // Lower branch (2023-2026) - continues right on lower track
 const lowerBranchPoints = [{
-  x: 38,
+  x: 34,
   y: 88
 },
 // 2023 lower - Atlantslav (moved down to avoid overlap)
 {
-  x: 54,
+  x: 48,
   y: 78
 },
 // 2024 lower - Jumanji (moved up)
 {
-  x: 72,
+  x: 62,
   y: 82
 },
 // 2025 lower (moved up)
 {
-  x: 88,
+  x: 76,
   y: 78
 } // 2026 lower - Sczlur area (moved up)
 ];
@@ -426,16 +426,16 @@ const Gallery = () => {
                       C 14 66, 20 70, 24 70`} fill="none" stroke="hsl(var(--camp-coral))" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 0.8" opacity="0.85" />
                 {/* Upper branch (2023-2026) - winding ascending curve */}
                 <path d={`M 24 70 
-                      C 28 68, 34 66, 38 68
-                      C 44 67, 48 63, 52 62
-                      C 58 61, 62 59, 68 58
-                      C 74 57, 78 54, 82 52`} fill="none" stroke="hsl(var(--camp-coral))" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 0.8" opacity="0.85" />
+                      C 27 68, 31 66, 34 68
+                      C 39 67, 43 63, 46 62
+                      C 51 61, 54 59, 58 58
+                      C 63 57, 67 54, 70 52`} fill="none" stroke="hsl(var(--camp-coral))" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 0.8" opacity="0.85" />
                 {/* Lower branch (2023-2026) - winding descending curve */}
                 <path d={`M 24 70 
-                      C 28 76, 34 80, 38 82
-                      C 44 80, 50 77, 54 78
-                      C 60 79, 66 81, 72 82
-                      C 78 81, 84 79, 88 78`} fill="none" stroke="hsl(var(--camp-coral))" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 0.8" opacity="0.85" />
+                      C 27 76, 31 80, 34 82
+                      C 39 80, 44 77, 48 78
+                      C 53 79, 58 81, 62 82
+                      C 67 81, 72 79, 76 78`} fill="none" stroke="hsl(var(--camp-coral))" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 0.8" opacity="0.85" />
               </svg>
 
               {/* Main path badges (2008-2022) */}
