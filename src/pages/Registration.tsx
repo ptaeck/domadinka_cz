@@ -8,7 +8,8 @@ const sessions = [
   {
     name: "1. turnus",
     dates: "31. července – 7. srpna 2027",
-    status: "Omezená místa",
+    //status: "Omezená místa",
+    status: ""
     lead: "Ondřej Sosna a Tereza Pilná",
     formUrl: "https://forms.gle/",
   },
