@@ -9,15 +9,15 @@ const sessions = [
     dates: "31. července – 7. srpna 2027",
     status: "Omezená místa",
     lead: "Ondřej Sosna a Tereza Pilná",
-    formUrl: "https://forms.gle/v24UMBHWyaT2znqT8",
+    formUrl: "https://forms.gle/",
   },
   {
     name: "2. turnus",
     dates: "14. srpna – 21. srpna 2026",
     status: "",
     lead: "Ema Sosnová a Viktorie Sichingerová",
-    formUrl: "",
-    soldOut: true,
+    formUrl: "https://forms.gle/",
+    soldOut: false,
   },
 ];
 const whatToBring = [
