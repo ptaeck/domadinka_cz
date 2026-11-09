@@ -24,6 +24,7 @@ import img2023Lower from "@/assets/gallery/2023-atlantslav.jpg";
 import img2024Lower from "@/assets/gallery/2024-domanji.jpg";
 import img2025Lower from "@/assets/gallery/2025-kmen-domaju.jpg";
 import img2026UpperAsset from "@/assets/gallery/2026-domacirkus.jpg.asset.json";
+import img2026LowerAsset from "@/assets/gallery/2026-los-domos2.png.asset.json";
 
 // Year to image mapping (single path years)
 const yearImages: Record<number, string> = {
@@ -59,7 +60,8 @@ const splitYearImages: Record<number, {
     lower: img2025Lower
   },
   2026: {
-    upper: img2026UpperAsset.url
+    upper: img2026UpperAsset.url,
+    lower: img2026LowerAsset.url
   }
 };
 
