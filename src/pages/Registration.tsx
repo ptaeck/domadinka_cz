@@ -13,7 +13,7 @@ const sessions = [
   },
   {
     name: "2. turnus",
-    dates: "14. srpna – 21. srpna 2026",
+    dates: "14. srpna – 21. srpna 2027",
     status: "",
     lead: "Ema Sosnová a Viktorie Sichingerová",
     formUrl: "https://forms.gle/",
