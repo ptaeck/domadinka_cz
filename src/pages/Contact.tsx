@@ -7,7 +7,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Hlavní vedoucí (Turnus 1)",
-    {/* O+T */}
+    // O+T
     value: "+420 724 299 459\n+420 606 926 732",
 
     href: "tel:+420608030422",
@@ -15,7 +15,7 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Hlavní vedoucí (Turnus 2)",
-    {/* V+E */}
+    // V+E
     value: "+420 608 030 422\n+420 778 532 257",
     href: "tel:+420724299459",
   },
@@ -58,7 +58,7 @@ const bankInfo = {
 const Contact = () => {
   return (
     <Layout>
-      {/* Hero Section */}
+      // Hero Section
       <section className="bg-gradient-to-b from-camp-sky/20 to-background py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -68,11 +68,11 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Content */}
+      // Contact Content
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto space-y-8">
-            {/* Contact Info */}
+            // Contact Info
             <div>
               <h2 className="font-display text-2xl font-bold text-foreground mb-6 text-center">Spojte se s námi</h2>
               <div className="space-y-4">
@@ -96,7 +96,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Organization Info (VAT) */}
+            // Organization Info (VAT)
             <Card className="border-2 border-border">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
@@ -116,7 +116,7 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            {/* Bank Account */}
+            // Bank Account
             <Card className="border-2 border-border">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
