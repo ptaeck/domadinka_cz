@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
+import { heroBannerText } from "@/lib/registration";
 import { Users, Sparkles, TreePine, Palette, Music, ArrowRight, Star } from "lucide-react";
 const features = [
 {
@@ -51,7 +52,7 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-primary/20 text-primary-foreground px-4 py-2 rounded-full mb-6">
               <Sparkles className="w-4 h-4 text-camp-sun" />
-              <span className="text-sm font-medium text-foreground">Přihlášky na léto 2027 otevřeme v lednu!</span>
+              <span className="text-sm font-medium text-foreground">{heroBannerText}</span>
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">

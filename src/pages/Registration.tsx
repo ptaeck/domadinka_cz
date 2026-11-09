@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Calendar, Clock, Users, DollarSign, CheckCircle, ExternalLink, Backpack, XCircle } from "lucide-react";
+import { registrationsOpen, sessionNoteText } from "@/lib/registration";
 const sessions = [
   {
     name: "1. turnus",
@@ -144,8 +145,15 @@ const Registration = () => {
                     </p>
                     <Button
                       size="sm"
-                      className="gap-2 rounded-full w-full mt-2 bg-muted text-muted-foreground disabled:opacity-100"
-                      disabled
+                      className={`gap-2 rounded-full w-full mt-2 ${
+                        registrationsOpen
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-muted text-muted-foreground disabled:opacity-100"
+                      }`}
+                      disabled={!registrationsOpen}
+                      onClick={() => {
+                        if (registrationsOpen) window.open(session.formUrl, "_blank", "noreferrer");
+                      }}
                     >
                       {session.soldOut ? "OBSAZENO" : "Vyplnit přihlášku"}
                     </Button>
@@ -153,7 +161,7 @@ const Registration = () => {
                 </Card>
               ))}
             </div>
-            <p className="text-sm text-muted-foreground text-center mt-4">Přihlášky otevíráme v lednu 2027 :-)</p>
+            <p className="text-sm text-muted-foreground text-center mt-4">{sessionNoteText}</p>
           </div>
         </div>
       </section>
