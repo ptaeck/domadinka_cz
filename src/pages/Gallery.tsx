@@ -72,7 +72,7 @@ const singleYears = Array.from({
   length: 17
 }, (_, i) => 2006 + i).filter(y => y !== 2010);
 // Split path years (2023-2026) - two badges per year
-const splitYears = [2023, 2024, 2025, 2026];
+const splitYears = [2023, 2024, 2025, 2026, 2027];
 // All years for navigation
 const allYears = [...singleYears, ...splitYears];
 
@@ -116,6 +116,10 @@ const splitYearThemes: Record<number, {
   2026: {
     upper: "Los Domos",
     lower: "Domacirkus"
+  },
+  2027: {
+    upper: "???",
+    lower: "???"
   }
 };
 
@@ -242,7 +246,11 @@ const upperBranchPoints = [{
 {
   x: 70,
   y: 52
-} // 2026 upper - Kokaschütz area (moved up)
+}, // 2026 upper
+{
+  x: 84,
+  y: 46
+} // 2027 upper - Kokaschütz area (moved up)
 ];
 
 // Lower branch (2023-2026) - continues right on lower track
@@ -264,7 +272,11 @@ const lowerBranchPoints = [{
 {
   x: 76,
   y: 78
-} // 2026 lower - Sczlur area (moved up)
+}, // 2026 lower
+{
+  x: 90,
+  y: 82
+} // 2027 lower - Sczlur area (moved up)
 ];
 
 // Calculate rotation angle between two points (in degrees)
@@ -429,13 +441,15 @@ const Gallery = () => {
                       C 27 68, 31 66, 34 68
                       C 39 67, 43 63, 46 62
                       C 51 61, 54 59, 58 58
-                      C 63 57, 67 54, 70 52`} fill="none" stroke="hsl(var(--camp-coral))" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 0.8" opacity="0.85" />
+                      C 63 57, 67 54, 70 52
+                      C 75 50, 80 48, 84 46`} fill="none" stroke="hsl(var(--camp-coral))" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 0.8" opacity="0.85" />
                 {/* Lower branch (2023-2026) - winding descending curve */}
                 <path d={`M 24 70 
                       C 27 76, 31 80, 34 82
                       C 39 80, 44 77, 48 78
                       C 53 79, 58 81, 62 82
-                      C 67 81, 72 79, 76 78`} fill="none" stroke="hsl(var(--camp-coral))" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 0.8" opacity="0.85" />
+                      C 67 81, 72 79, 76 78
+                      C 81 77, 86 79, 90 82`} fill="none" stroke="hsl(var(--camp-coral))" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="1 0.8" opacity="0.85" />
               </svg>
 
               {/* Main path badges (2008-2022) */}
