@@ -272,7 +272,7 @@ const upperBranchPoints = [
   }, // 2026 upper
   {
     x: 84,
-    y: 66,
+    y: 46,
   }, // 2027 upper - Kokaschütz area (moved up)
 ];
 
