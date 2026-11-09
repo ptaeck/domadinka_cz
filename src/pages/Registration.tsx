@@ -142,30 +142,19 @@ const Registration = () => {
                       <Users className="w-4 h-4" />
                       {session.lead}
                     </p>
-                    {session.soldOut ? (
-                      <Button
-                        size="sm"
-                        className="gap-2 rounded-full w-full mt-2 bg-destructive text-destructive-foreground hover:bg-destructive/90 cursor-not-allowed"
-                        disabled
-                      >
-                        OBSAZENO
-                      </Button>
-                    ) : (
-                      <Button
-                        size="sm"
-                        className="gap-2 rounded-full w-full mt-2"
-                        onClick={() => window.open(session.formUrl, "_blank")}
-                      >
-                        Vyplnit přihlášku
-                        <ExternalLink className="w-4 h-4" />
-                      </Button>
-                    )}
+                    <Button
+                      size="sm"
+                      className="gap-2 rounded-full w-full mt-2 bg-muted text-muted-foreground disabled:opacity-100"
+                      disabled
+                    >
+                      {session.soldOut ? "OBSAZENO" : "Vyplnit přihlášku"}
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
             </div>
             <p className="text-sm text-muted-foreground text-center mt-4">
-              Budete přesměrováni na přihlašovací formulář
+              Přihlášky otevíráme v lednu 2027
             </p>
           </div>
         </div>
