@@ -1,16 +1,32 @@
 import { describe, expect, it } from "vitest";
-import { heroBannerText, registrationsOpen, sessionNoteText } from "@/lib/registration";
+import { getRegistrationState } from "@/lib/registration";
 
-describe("registration open/close switch", () => {
-  it("keeps the turnus buttons disabled while registrations are closed", () => {
-    expect(registrationsOpen).toBe(false);
+describe("registration open/close state", () => {
+  it("is open in January for the current year", () => {
+    expect(getRegistrationState(new Date(2026, 0, 15))).toEqual({
+      registrationYear: 2026,
+      registrationsOpen: true,
+    });
   });
 
-  it("shows the homepage banner announcing the January opening", () => {
-    expect(heroBannerText).toBe("Přihlášky na léto 2027 otevřeme v lednu!");
+  it("stays open through August", () => {
+    expect(getRegistrationState(new Date(2026, 7, 31))).toEqual({
+      registrationYear: 2026,
+      registrationsOpen: true,
+    });
   });
 
-  it("shows the opening-date note under the turnus boxes", () => {
-    expect(sessionNoteText).toBe("Přihlášky otevíráme v lednu 2027 :-)");
+  it("disables on 1. September and rolls the year over", () => {
+    expect(getRegistrationState(new Date(2026, 8, 1))).toEqual({
+      registrationYear: 2027,
+      registrationsOpen: false,
+    });
+  });
+
+  it("stays closed for the next year through December", () => {
+    expect(getRegistrationState(new Date(2026, 11, 20))).toEqual({
+      registrationYear: 2027,
+      registrationsOpen: false,
+    });
   });
 });

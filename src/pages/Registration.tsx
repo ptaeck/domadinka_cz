@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Calendar, Clock, Users, DollarSign, CheckCircle, ExternalLink, Backpack, XCircle } from "lucide-react";
-import { registrationsOpen, sessionNoteText } from "@/lib/registration";
+import { registrationsOpen, registrationYear, sessionNoteText } from "@/lib/registration";
 const sessions = [
   {
     name: "1. turnus",
@@ -118,7 +118,7 @@ const Registration = () => {
 
           {/* Sessions */}
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl font-bold text-foreground mb-8 text-center">LETNÍ TURNUSY 2027</h2>
+            <h2 className="font-display text-3xl font-bold text-foreground mb-8 text-center">LETNÍ TURNUSY {registrationYear}</h2>
             <div className="grid sm:grid-cols-2 gap-4 mb-12">
               {sessions.map((session, index) => (
                 <Card key={index} className="border-2 border-border hover:border-primary/50 transition-colors">
